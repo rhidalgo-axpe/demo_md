@@ -1,0 +1,4 @@
+framework module MeetingDoctorsController {
+  header "MeetingDoctorsController-Swift.h"
+  requires objc
+}

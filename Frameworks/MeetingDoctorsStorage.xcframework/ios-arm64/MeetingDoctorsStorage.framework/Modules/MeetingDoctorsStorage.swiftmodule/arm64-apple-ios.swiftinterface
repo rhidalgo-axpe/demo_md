@@ -1,0 +1,1839 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MeetingDoctorsStorage
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CoreLocation
+import Foundation
+import MeetingDoctorsController
+import MeetingDoctorsCore
+import MeetingDoctorsSchema
+import MeetingDoctorsSocket
+import Realm
+import RealmSwift
+import RxSwift
+import Swift
+import _Concurrency
+import _StringProcessing
+extension MeetingDoctorsController.CustomerUserModel : MeetingDoctorsStorage.Persistable {
+  public var managedObject: MeetingDoctorsStorage.CustomerUserEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.CustomerUserEntity) throws
+  public typealias ManagedObject = MeetingDoctorsStorage.CustomerUserEntity
+}
+public protocol RealmStoreAssembly {
+  var configuration: RealmSwift.Realm.Configuration { get }
+  var provider: MeetingDoctorsStorage.RealmStoreProvider { get }
+  func resolve() -> RealmSwift.Realm?
+}
+public class RealmStoreAssembler : MeetingDoctorsStorage.RealmStoreAssembly {
+  final public let configuration: RealmSwift.Realm.Configuration
+  final public let provider: MeetingDoctorsStorage.RealmStoreProvider
+  public init(with configuration: RealmSwift.Realm.Configuration, provider: MeetingDoctorsStorage.RealmStoreProvider)
+  convenience public init(with configuration: MeetingDoctorsStorage.RealmConfigurationAssembly, provider: MeetingDoctorsStorage.RealmStoreProviderAssembly)
+  public func resolve() -> RealmSwift.Realm?
+  @objc deinit
+}
+extension MeetingDoctorsStorage.RealmStoreAssembler : MeetingDoctorsCore.Assembler {
+  public typealias Component = RealmSwift.Realm
+}
+extension MeetingDoctorsController.CustomerInstallationModel : MeetingDoctorsStorage.Persistable {
+  public var managedObject: MeetingDoctorsStorage.CustomerInstallationEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.CustomerInstallationEntity) throws
+  public typealias ManagedObject = MeetingDoctorsStorage.CustomerInstallationEntity
+}
+@objc @_inheritsConvenienceInitializers public class VideoCallUserEntity : RealmSwift.Object {
+  @objc dynamic public var userHash: Swift.String?
+  @objc dynamic public var name: Swift.String?
+  @objc dynamic public var avatar: Swift.String?
+  @objc dynamic public var userDescription: Swift.String?
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.VideoCallUserEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case userHash
+    case name
+    case avatar
+    case userDescription
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+public class RealmRepository<E> : MeetingDoctorsController.Repository where E : RealmSwiftObject {
+  convenience public init(configuration: RealmSwift.Realm.Configuration)
+  public init(provider: MeetingDoctorsStorage.RealmStoreProvider, configuration: RealmSwift.Realm.Configuration)
+  public func fetch(by id: Swift.String) -> RxSwift.Observable<E?>
+  public func fetch() -> RxSwift.Observable<([E], MeetingDoctorsController.Changeset?)>
+  public func query(with predicate: Foundation.NSPredicate, sorted descriptors: [Foundation.NSSortDescriptor] = [], offset: Swift.Int = 0, limit: Swift.Int = 0) -> RxSwift.Observable<([E], MeetingDoctorsController.Changeset?)>
+  public func save(entity: E, update: Swift.Bool = true) -> RxSwift.Observable<Swift.Void>
+  public func save<S>(collection: S, update: Swift.Bool, clear: Swift.Bool) -> RxSwift.Observable<Swift.Void> where E == S.Element, S : Swift.Sequence
+  public func update(properties: [MeetingDoctorsController.AttributeValueType]) -> RxSwift.Observable<Swift.Void>
+  public func delete(entity: E) -> RxSwift.Observable<Swift.Void>
+  public func delete<S>(collection: S) -> RxSwift.Observable<Swift.Void> where E == S.Element, S : Swift.Sequence
+  public func delete(with predicate: Foundation.NSPredicate) -> RxSwift.Observable<Swift.Void>
+  public func clear(cascading: Swift.Bool = true) -> RxSwift.Observable<Swift.Void>
+  public func fetch(by id: Swift.String, completion: @escaping (Swift.Result<E?, Swift.Error>) -> Swift.Void)
+  public func fetch(completion: @escaping (Swift.Result<[E], Swift.Error>) -> Swift.Void)
+  public func query(with predicate: Foundation.NSPredicate, sorted descriptors: [Foundation.NSSortDescriptor], offset _: Swift.Int, limit _: Swift.Int, completion: @escaping (Swift.Result<[E], Swift.Error>) -> Swift.Void)
+  public func save(entity: E, update: Swift.Bool = true, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func save<S>(collection: S, update: Swift.Bool, clear: Swift.Bool, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void) where E == S.Element, S : Swift.Sequence
+  public func update(properties: [MeetingDoctorsController.AttributeValueType], completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func delete(entity: E, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func delete<S>(collection: S, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void) where E == S.Element, S : Swift.Sequence
+  public func delete(with predicate: Foundation.NSPredicate, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func clear(cascading: Swift.Bool, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public typealias EntityType = E
+  @objc deinit
+}
+extension MeetingDoctorsController.MedicationModel : MeetingDoctorsStorage.Persistable {
+  public typealias ManagedObject = MeetingDoctorsStorage.MedicationEntity
+  public var managedObject: MeetingDoctorsStorage.MedicationEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.MedicationEntity) throws
+}
+@objc @_inheritsConvenienceInitializers public class IMCEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  final public let weight: RealmSwift.RealmProperty<Swift.Int?>
+  final public let height: RealmSwift.RealmProperty<Swift.Int?>
+  final public let value: RealmSwift.RealmProperty<Swift.Float?>
+  @objc dynamic public var patientHash: Swift.String?
+  @objc dynamic public var updatedAt: Foundation.Date?
+  @objc dynamic public var createdAt: Foundation.Date?
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override public static func indexedProperties() -> [Swift.String]
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.IMCEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case weight
+    case height
+    case value
+    case patientHash
+    case updatedAt
+    case createdAt
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+@objc @_inheritsConvenienceInitializers public class CustomerAuthEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  @objc dynamic public var accessToken: Swift.String?
+  @objc dynamic public var tokenType: Swift.String?
+  @objc dynamic public var user: MeetingDoctorsStorage.CustomerUserEntity?
+  public var expiresIn: RealmSwift.RealmOptional<Swift.Double>
+  @objc dynamic public var updatedAt: Foundation.Date?
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.CustomerAuthEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case accessToken
+    case tokenType
+    case user
+    case expiresIn
+    case updatedAt
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+extension MeetingDoctorsController.InstallationModel : MeetingDoctorsStorage.Persistable {
+  public var managedObject: MeetingDoctorsStorage.InstallationEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.InstallationEntity) throws
+  public typealias ManagedObject = MeetingDoctorsStorage.InstallationEntity
+}
+@objc @_inheritsConvenienceInitializers public class ContactEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  @objc dynamic public var channel: Swift.String?
+  @objc dynamic public var name: Swift.String?
+  @objc dynamic public var overview: Swift.String?
+  @objc dynamic public var specialityId: Swift.String?
+  @objc dynamic public var specialityCode: Swift.String?
+  @objc dynamic public var speciality: Swift.String?
+  @objc dynamic public var nextOnlineAt: Foundation.Date?
+  @objc dynamic public var nextOfflineAt: Foundation.Date?
+  @objc dynamic public var timezoneValue: Swift.String?
+  @objc dynamic public var saturated: Swift.String?
+  @objc dynamic public var collegiateNumber: Swift.String?
+  final public let timezoneOffset: RealmSwift.RealmOptional<Swift.Int>
+  final public let updatedAt: RealmSwift.RealmOptional<Foundation.TimeInterval>
+  final public let onHolidays: RealmSwift.RealmOptional<Swift.Bool>
+  final public let conversations: RealmSwift.List<MeetingDoctorsStorage.ConversationEntity>
+  final public let schedules: RealmSwift.List<MeetingDoctorsStorage.ScheduleEntity>
+  final public let isVcAvailable: RealmSwift.RealmOptional<Swift.Bool>
+  final public let index: RealmSwift.RealmOptional<Swift.Int>
+  final public let isAccessible: RealmSwift.RealmOptional<Swift.Bool>
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override public static func indexedProperties() -> [Swift.String]
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.ContactEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case channel
+    case name
+    case overview
+    case specialityId
+    case specialityCode
+    case speciality
+    case avatarValue
+    case statusValue
+    case roleValue
+    case nextOnlineAt
+    case nextOfflineAt
+    case timezoneValue
+    case saturated
+    case collegiateNumber
+    case timezoneOffset
+    case updatedAt
+    case onHolidays
+    case conversations
+    case schedules
+    case isVcAvailable
+    case isAccessible
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+extension MeetingDoctorsStorage.ContactEntity {
+  public var avatarURL: Foundation.URL? {
+    get
+    set
+  }
+}
+extension MeetingDoctorsStorage.ContactEntity {
+  public enum Status : Swift.String {
+    case unknown
+    case offline
+    case online
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var status: MeetingDoctorsStorage.ContactEntity.Status? {
+    get
+    set
+  }
+}
+extension MeetingDoctorsStorage.ContactEntity {
+  public enum Role : Swift.String {
+    case unknown
+    case commercial
+    case administrative
+    case doctor
+    case support
+    case free
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var role: MeetingDoctorsStorage.ContactEntity.Role? {
+    get
+    set
+  }
+}
+extension MeetingDoctorsStorage.ContactEntity {
+  public var timezone: Foundation.TimeZone? {
+    get
+    set
+  }
+}
+extension MeetingDoctorsController.DerivationReportModel : MeetingDoctorsStorage.Persistable {
+  public typealias ManagedObject = MeetingDoctorsStorage.DerivationReportEntity
+  public var managedObject: MeetingDoctorsStorage.DerivationReportEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.DerivationReportEntity) throws
+}
+extension MeetingDoctorsController.CompanyReportModel : MeetingDoctorsStorage.Persistable {
+  public typealias ManagedObject = MeetingDoctorsStorage.CompanyReportEntity
+  public var managedObject: MeetingDoctorsStorage.CompanyReportEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.CompanyReportEntity) throws
+}
+extension MeetingDoctorsController.ProfessionalReportModel : MeetingDoctorsStorage.Persistable {
+  public typealias ManagedObject = MeetingDoctorsStorage.ProfessionalReportEntity
+  public var managedObject: MeetingDoctorsStorage.ProfessionalReportEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.ProfessionalReportEntity) throws
+}
+public protocol RealmStoreProvider {
+  func store(with configuration: RealmSwift.Realm.Configuration) throws -> RealmSwift.Realm
+}
+public struct RealmStoreCreator : MeetingDoctorsStorage.RealmStoreProvider {
+  public init(type: RealmSwift.Realm.Type)
+  public func store(with configuration: RealmSwift.Realm.Configuration) throws -> RealmSwift.Realm
+}
+extension MeetingDoctorsSchema.ContactSchema : MeetingDoctorsStorage.Persistable {
+  public var managedObject: MeetingDoctorsStorage.ContactEntity {
+    get
+  }
+  public init(managedObject _: MeetingDoctorsStorage.ContactEntity) throws
+  public typealias ManagedObject = MeetingDoctorsStorage.ContactEntity
+}
+extension MeetingDoctorsSchema.RoleSchema.RoleType {
+  public var object: MeetingDoctorsStorage.ContactEntity.Role {
+    get
+  }
+}
+extension MeetingDoctorsSchema.ContactSchema.Status {
+  public var object: MeetingDoctorsStorage.ContactEntity.Status {
+    get
+  }
+}
+public protocol RealmStoreProviderAssembly {
+  func resolve() -> MeetingDoctorsStorage.RealmStoreProvider?
+}
+public class RealmStoreProviderAssembler : MeetingDoctorsStorage.RealmStoreProviderAssembly {
+  public init()
+  public func resolve() -> MeetingDoctorsStorage.RealmStoreProvider?
+  @objc deinit
+}
+extension MeetingDoctorsStorage.RealmStoreProviderAssembler : MeetingDoctorsCore.Assembler {
+  public typealias Component = MeetingDoctorsStorage.RealmStoreProvider
+}
+public class PersistableRepository<Model> : MeetingDoctorsController.Repository where Model : MeetingDoctorsStorage.Persistable {
+  public init<R>(_ repository: R) where R : MeetingDoctorsController.Repository, Model.ManagedObject == R.EntityType
+  public func fetch(by id: Swift.String) -> RxSwift.Observable<Model?>
+  public func fetch() -> RxSwift.Observable<([Model], MeetingDoctorsController.Changeset?)>
+  public func query(with predicate: Foundation.NSPredicate, sorted descriptors: [Foundation.NSSortDescriptor] = [], offset: Swift.Int = 0, limit: Swift.Int = 0) -> RxSwift.Observable<([Model], MeetingDoctorsController.Changeset?)>
+  public func save(entity: Model, update: Swift.Bool) -> RxSwift.Observable<Swift.Void>
+  public func save<S>(collection: S, update: Swift.Bool, clear: Swift.Bool) -> RxSwift.Observable<Swift.Void> where Model == S.Element, S : Swift.Sequence
+  public func update(properties: [MeetingDoctorsController.AttributeValueType]) -> RxSwift.Observable<Swift.Void>
+  public func delete(entity: Model) -> RxSwift.Observable<Swift.Void>
+  public func delete<S>(collection: S) -> RxSwift.Observable<Swift.Void> where Model == S.Element, S : Swift.Sequence
+  public func delete(with predicate: Foundation.NSPredicate) -> RxSwift.Observable<Swift.Void>
+  public func clear(cascading: Swift.Bool = true) -> RxSwift.Observable<Swift.Void>
+  public func fetch(by id: Swift.String, completion: @escaping (Swift.Result<Model?, Swift.Error>) -> Swift.Void)
+  public func fetch(completion: @escaping (Swift.Result<[Model], Swift.Error>) -> Swift.Void)
+  public func query(with predicate: Foundation.NSPredicate, sorted: [Foundation.NSSortDescriptor], offset: Swift.Int, limit: Swift.Int, completion: @escaping (Swift.Result<[Model], Swift.Error>) -> Swift.Void)
+  public func save(entity: Model, update: Swift.Bool, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func save<S>(collection: S, update: Swift.Bool, clear: Swift.Bool, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void) where Model == S.Element, S : Swift.Sequence
+  public func update(properties: [MeetingDoctorsController.AttributeValueType], completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func delete(entity: Model, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func delete<S>(collection: S, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void) where Model == S.Element, S : Swift.Sequence
+  public func delete(with predicate: Foundation.NSPredicate, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func clear(cascading: Swift.Bool, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public typealias EntityType = Model
+  @objc deinit
+}
+extension MeetingDoctorsController.DiseaseModel : MeetingDoctorsStorage.Persistable {
+  public typealias ManagedObject = MeetingDoctorsStorage.DiseaseEntity
+  public var managedObject: MeetingDoctorsStorage.DiseaseEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.DiseaseEntity) throws
+}
+@objc @_inheritsConvenienceInitializers public class MedicalCoverageEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  @objc dynamic public var name: Swift.String?
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.MedicalCoverageEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case name
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+@objc @_inheritsConvenienceInitializers public class MedicalProfessionalEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  @objc dynamic public var name: Swift.String?
+  @objc dynamic public var typeValue: Swift.String?
+  @objc dynamic public var phone: Swift.String?
+  @objc dynamic public var address: Swift.String?
+  @objc dynamic public var zip: Swift.String?
+  final public let latitude: RealmSwift.RealmOptional<Swift.Double>
+  final public let longitude: RealmSwift.RealmOptional<Swift.Double>
+  final public let coverages: RealmSwift.List<MeetingDoctorsStorage.TagEntity>
+  final public let specialities: RealmSwift.List<MeetingDoctorsStorage.TagEntity>
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.MedicalProfessionalEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case name
+    case typeValue
+    case phone
+    case address
+    case zip
+    case latitude
+    case longitude
+    case coverages
+    case specialities
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+extension MeetingDoctorsStorage.MedicalProfessionalEntity {
+  public var location: CoreLocation.CLLocationCoordinate2D? {
+    get
+  }
+}
+extension MeetingDoctorsStorage.MedicalProfessionalEntity {
+  public enum Kind : Swift.String {
+    case unknown
+    case professional
+    case center
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var type: MeetingDoctorsStorage.MedicalProfessionalEntity.Kind {
+    get
+    set
+  }
+}
+public protocol Persistable {
+  associatedtype ManagedObject : RealmSwiftObject
+  var managedObject: Self.ManagedObject { get }
+  init(managedObject: Self.ManagedObject) throws
+}
+public protocol StoreMigrationProvider : MeetingDoctorsStorage.AutoMockable {
+  func migrations(until schemaVersion: Swift.UInt64) -> [MeetingDoctorsStorage.StoreMigration]
+}
+public struct RealmStoreMigrationProvider : MeetingDoctorsStorage.StoreMigrationProvider {
+  public init()
+  public func migrations(until schemaVersion: Swift.UInt64) -> [MeetingDoctorsStorage.StoreMigration]
+  public subscript(version: Swift.UInt64) -> MeetingDoctorsStorage.StoreMigration? {
+    get
+    set(newValue)
+  }
+}
+@objc @_inheritsConvenienceInitializers public class MessageEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  @objc dynamic public var room: Swift.String?
+  @objc dynamic public var sender: Swift.String?
+  @objc dynamic public var content: Swift.String?
+  final public let conversation: RealmSwift.LinkingObjects<MeetingDoctorsStorage.ConversationEntity>
+  final public let timestamp: RealmSwift.RealmOptional<Foundation.TimeInterval>
+  final public let width: RealmSwift.RealmOptional<Swift.Int>
+  final public let height: RealmSwift.RealmOptional<Swift.Int>
+  final public let size: RealmSwift.RealmOptional<Swift.Int>
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override public static func indexedProperties() -> [Swift.String]
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.MessageEntity {
+  public enum Attributes : MeetingDoctorsController.AttributeValueType {
+    public var parameter: MeetingDoctorsController.AttributeValue {
+      get
+    }
+    case id(Swift.String)
+    case room(Swift.String)
+    case sender(Swift.String)
+    case content(Swift.String)
+    case statusValue(Swift.String)
+    case kindValue(Swift.String)
+    case attachmentValue(Swift.String)
+    case thumbnailValue(Swift.String)
+    case timestamp(Foundation.TimeInterval)
+    case width(Swift.Int)
+    case height(Swift.Int)
+    case size(Swift.Int)
+  }
+}
+extension MeetingDoctorsStorage.MessageEntity {
+  public enum Status : Swift.String {
+    case pending
+    case sent
+    case delivered
+    case received
+    case read
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var status: MeetingDoctorsStorage.MessageEntity.Status? {
+    get
+    set
+  }
+}
+extension MeetingDoctorsStorage.MessageEntity {
+  public enum Kind : Swift.String {
+    case text
+    case image
+    case file
+    case note
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var kind: MeetingDoctorsStorage.MessageEntity.Kind? {
+    get
+    set
+  }
+}
+extension MeetingDoctorsStorage.MessageEntity {
+  public var attachment: Foundation.URL? {
+    get
+    set
+  }
+}
+extension MeetingDoctorsStorage.MessageEntity {
+  public var thumbnail: Foundation.URL? {
+    get
+    set
+  }
+}
+public protocol RealmConfigurationAssembly {
+  func resolve() -> RealmSwift.Realm.Configuration?
+}
+public class RealmConfigurationAssembler : MeetingDoctorsStorage.RealmConfigurationAssembly {
+  public var encryption: MeetingDoctorsController.EncryptionProvider? {
+    get
+  }
+  public init(buildType: MeetingDoctorsCore.BuildConfigurationType, encryption: MeetingDoctorsController.EncryptionProviderAssembly, migration: MeetingDoctorsStorage.RealmStoreMigrationProviderAssembly)
+  public func resolve() -> RealmSwift.Realm.Configuration?
+  @objc deinit
+}
+extension MeetingDoctorsStorage.RealmConfigurationAssembler : MeetingDoctorsCore.Assembler {
+  public typealias Component = RealmSwift.Realm.Configuration
+}
+@objc @_inheritsConvenienceInitializers public class UserEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  @objc dynamic public var firstName: Swift.String?
+  @objc dynamic public var lastName: Swift.String?
+  @objc dynamic public var email: Swift.String?
+  @objc dynamic public var phone: Swift.String?
+  @objc dynamic public var documentId: Swift.String?
+  @objc dynamic public var birthday: Foundation.Date?
+  @objc dynamic public var cardNumber: Swift.String?
+  @objc dynamic public var contract: Swift.String?
+  @objc dynamic public var coverage: Swift.String?
+  @objc dynamic public var company: Swift.String?
+  @objc dynamic public var isBanned: Swift.Bool
+  @objc dynamic public var features: MeetingDoctorsStorage.UserFeaturesEntity?
+  @objc dynamic public var termsAcceptedAt: Foundation.Date?
+  @objc dynamic public var companyGroupCode: Swift.String?
+  final public let account: RealmSwift.LinkingObjects<MeetingDoctorsStorage.AccountEntity>
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.UserEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case firstName
+    case lastName
+    case email
+    case phone
+    case documentId
+    case genderValue
+    case statusValue
+    case birthday
+    case cardNumber
+    case contract
+    case coverage
+    case company
+    case isBanned
+    case features
+    case termsAcceptedAt
+    case companyGroupCode
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+extension MeetingDoctorsStorage.UserEntity {
+  public enum Gender : Swift.String {
+    case unknown
+    case male
+    case female
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var gender: MeetingDoctorsStorage.UserEntity.Gender? {
+    get
+    set
+  }
+}
+extension MeetingDoctorsStorage.UserEntity {
+  public enum RegistrationStatus : Swift.String {
+    case unknown
+    case freemium
+    case processing
+    case formalized
+    case canceled
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var status: MeetingDoctorsStorage.UserEntity.RegistrationStatus? {
+    get
+    set
+  }
+}
+@objc @_inheritsConvenienceInitializers public class UserFeaturesEntity : RealmSwift.Object {
+  @objc dynamic public var videoCall: Swift.Bool
+  @objc dynamic public var videoCall1to1: Swift.Bool
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case videoCall
+    case videoCall1to1
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum StorageError : Swift.Error {
+  public enum ManagedObjectFailureReason {
+    case nilPropertyFoundInPersistableInitializer
+    public static func == (a: MeetingDoctorsStorage.StorageError.ManagedObjectFailureReason, b: MeetingDoctorsStorage.StorageError.ManagedObjectFailureReason) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum PersistableFailureReason {
+    case invalidPersistableState
+    case invalidPersistenceMapping
+    public static func == (a: MeetingDoctorsStorage.StorageError.PersistableFailureReason, b: MeetingDoctorsStorage.StorageError.PersistableFailureReason) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  case managedObjectFailed(reason: MeetingDoctorsStorage.StorageError.ManagedObjectFailureReason)
+  case persitableFailed(reason: MeetingDoctorsStorage.StorageError.PersistableFailureReason)
+}
+@objc @_inheritsConvenienceInitializers public class AllergyEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  @objc dynamic public var name: Swift.String?
+  @objc dynamic public var details: Swift.String?
+  @objc dynamic public var patientHash: Swift.String?
+  final public let severity: RealmSwift.RealmOptional<Swift.Int>
+  @objc dynamic public var updatedAt: Foundation.Date
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override public static func indexedProperties() -> [Swift.String]
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.AllergyEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case name
+    case severity
+    case details
+    case patientHash
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+@objc @_inheritsConvenienceInitializers public class VideoCallReportEntity : RealmSwift.Object {
+  @objc dynamic public var name: Swift.String?
+  @objc dynamic public var patientHash: Swift.String?
+  @objc dynamic public var pdfUrl: Swift.String?
+  @objc dynamic public var owner: MeetingDoctorsStorage.VideoCallUserEntity?
+  @objc dynamic public var maker: MeetingDoctorsStorage.VideoCallUserEntity?
+  @objc dynamic public var createdAt: Swift.String?
+  @objc dynamic public var updatedAt: Swift.String?
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.VideoCallReportEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case name
+    case patientHash
+    case id
+    case pdfUrl
+    case owner
+    case maker
+    case createdAt
+    case updatedAt
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+@objc @_inheritsConvenienceInitializers public class MedicalSpecialityEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  @objc dynamic public var name: Swift.String?
+  @objc dynamic public var coverageId: Swift.String?
+  @objc dynamic public var details: Swift.String?
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.MedicalSpecialityEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case name
+    case coverageId
+    case details
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+public class RealmRepositoryControllerAssembler : MeetingDoctorsController.RepositoryControllerAssembly {
+  public var configuration: RealmSwift.Realm.Configuration? {
+    get
+  }
+  public var provider: MeetingDoctorsStorage.RealmStoreProvider? {
+    get
+  }
+  public init(configuration: MeetingDoctorsStorage.RealmConfigurationAssembly, provider: MeetingDoctorsStorage.RealmStoreProviderAssembly)
+  public func resolve() -> MeetingDoctorsController.RepositoryController?
+  @objc deinit
+}
+extension MeetingDoctorsStorage.RealmRepositoryControllerAssembler : MeetingDoctorsCore.Assembler {
+  public typealias Component = MeetingDoctorsController.RepositoryController
+}
+extension MeetingDoctorsController.MedicalProfessionalModel : MeetingDoctorsStorage.Persistable {
+  public typealias ManagedObject = MeetingDoctorsStorage.MedicalProfessionalEntity
+  public var managedObject: MeetingDoctorsStorage.MedicalProfessionalEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.MedicalProfessionalEntity) throws
+}
+extension MeetingDoctorsStorage.MedicalProfessionalEntity.Kind {
+  public var model: MeetingDoctorsController.MedicalProfessionalModel.Kind {
+    get
+  }
+}
+public struct RealmRepositoryController : MeetingDoctorsController.RepositoryController {
+  public var installation: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.InstallationModel> {
+    get
+  }
+  public var customerInstallation: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.CustomerInstallationModel> {
+    get
+  }
+  public var customerAuth: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.CustomerAuthModel> {
+    get
+  }
+  public var authentication: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.AccountModel> {
+    get
+  }
+  public var user: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.UserModel> {
+    get
+  }
+  public var inbox: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.InboxContactModel> {
+    get
+  }
+  public var conversations: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.ConversationModel> {
+    get
+  }
+  public var messages: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.MessageModel> {
+    get
+  }
+  public var schedules: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.ScheduleModel> {
+    get
+  }
+  public var allergy: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.AllergyModel> {
+    get
+  }
+  public var disease: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.DiseaseModel> {
+    get
+  }
+  public var medication: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.MedicationModel> {
+    get
+  }
+  public var imc: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.IMCModel> {
+    get
+  }
+  public var videoCallReport: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.VideoCallReportModel> {
+    get
+  }
+  public var derivationReport: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.DerivationReportModel> {
+    get
+  }
+  public var coverage: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.MedicalCoverageModel> {
+    get
+  }
+  public var speciality: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.MedicalSpecialityModel> {
+    get
+  }
+  public var professional: MeetingDoctorsController.AnyRepository<MeetingDoctorsController.MedicalProfessionalModel> {
+    get
+  }
+  public init(configuration: RealmSwift.Realm.Configuration)
+  public init(provider: MeetingDoctorsStorage.RealmStoreProvider, configuration: RealmSwift.Realm.Configuration)
+  public func clear() -> RxSwift.Observable<Swift.Void>
+}
+public protocol CascadeDeleting {
+  func delete<S>(_ objects: S, cascading: Swift.Bool) where S : Swift.Sequence, S.Element : RealmSwiftObject
+  func delete(_ object: RealmSwift.Object, cascading: Swift.Bool)
+}
+public protocol RealmStore : MeetingDoctorsStorage.CascadeDeleting {
+  init() throws
+  init(configuration: RealmSwift.Realm.Configuration) throws
+  func write(_ block: (() throws -> Swift.Void)) throws
+  func add(_ object: RealmSwift.Object, update: Swift.Bool)
+  func add<S>(_ objects: S, update: Swift.Bool) where S : Swift.Sequence, S.Element : RealmSwiftObject
+  @discardableResult
+  func create<T>(_ type: T.Type, value: Any, update: Swift.Bool) -> T where T : RealmSwiftObject
+  func delete<S>(_ objects: S) where S : Swift.Sequence, S.Element : RealmSwiftObject
+  func deleteAll()
+  func objects<T>(_ type: T.Type) -> RealmSwift.Results<T> where T : RealmSwiftObject
+  func object<T, K>(ofType type: T.Type, forPrimaryKey key: K) -> T? where T : RealmSwiftObject
+  func observe(_ block: @escaping RealmSwift.NotificationBlock) -> RealmSwift.NotificationToken
+}
+extension RealmSwift.Realm : MeetingDoctorsStorage.RealmStore {
+  public init() throws
+  public init(configuration: RealmSwift.Realm.Configuration) throws
+  public func write(_ block: (() throws -> Swift.Void)) throws
+  public func delete<S>(_ objects: S, cascading: Swift.Bool = false) where S : Swift.Sequence, S.Element : RealmSwiftObject
+  public func delete(_ object: RealmSwift.Object, cascading: Swift.Bool = false)
+  public func add(_ object: RealmSwift.Object, update: Swift.Bool)
+  public func add<S>(_ objects: S, update: Swift.Bool) where S : Swift.Sequence, S.Element : RealmSwiftObject
+  @discardableResult
+  public func create<T>(_ type: T.Type, value: Any, update: Swift.Bool) -> T where T : RealmSwiftObject
+}
+extension MeetingDoctorsSchema.ConversationSchema : MeetingDoctorsStorage.Persistable {
+  public var managedObject: MeetingDoctorsStorage.ConversationEntity {
+    get
+  }
+  public init(managedObject _: MeetingDoctorsStorage.ConversationEntity) throws
+  public typealias ManagedObject = MeetingDoctorsStorage.ConversationEntity
+}
+extension MeetingDoctorsController.VideoCallReportModel : MeetingDoctorsStorage.Persistable {
+  public typealias ManagedObject = MeetingDoctorsStorage.VideoCallReportEntity
+  public var managedObject: MeetingDoctorsStorage.VideoCallReportEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.VideoCallReportEntity) throws
+}
+public struct RealmStoreMigrationV0 : MeetingDoctorsStorage.StoreMigration {
+  public var version: Swift.UInt64 {
+    get
+  }
+  public init()
+  public func migrate(_ migration: RealmSwift.Migration, to _: Swift.UInt64, from oldSchemaVersion: Swift.UInt64) -> Swift.Bool
+  public func validate(schema: RealmSwift.Schema) -> Swift.Bool
+}
+public struct RealmStoreMigrationV1 : MeetingDoctorsStorage.StoreMigration {
+  public var version: Swift.UInt64 {
+    get
+  }
+  public init()
+  public func migrate(_ migration: RealmSwift.Migration, to _: Swift.UInt64, from oldSchemaVersion: Swift.UInt64) -> Swift.Bool
+  public func validate(schema: RealmSwift.Schema) -> Swift.Bool
+}
+public struct RealmStoreMigrationV2 : MeetingDoctorsStorage.StoreMigration {
+  public var version: Swift.UInt64 {
+    get
+  }
+  public init()
+  public func migrate(_ migration: RealmSwift.Migration, to _: Swift.UInt64, from oldSchemaVersion: Swift.UInt64) -> Swift.Bool
+  public func validate(schema: RealmSwift.Schema) -> Swift.Bool
+}
+public struct RealmStoreMigrationV3 : MeetingDoctorsStorage.StoreMigration {
+  public var version: Swift.UInt64 {
+    get
+  }
+  public init()
+  public func migrate(_ migration: RealmSwift.Migration, to _: Swift.UInt64, from oldSchemaVersion: Swift.UInt64) -> Swift.Bool
+  public func validate(schema: RealmSwift.Schema) -> Swift.Bool
+}
+public struct RealmStoreMigrationV4 : MeetingDoctorsStorage.StoreMigration {
+  public var version: Swift.UInt64 {
+    get
+  }
+  public init()
+  public func migrate(_ migration: RealmSwift.Migration, to _: Swift.UInt64, from oldSchemaVersion: Swift.UInt64) -> Swift.Bool
+  public func validate(schema: RealmSwift.Schema) -> Swift.Bool
+}
+extension MeetingDoctorsController.MessageModel : MeetingDoctorsStorage.Persistable {
+  public var managedObject: MeetingDoctorsStorage.MessageEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.MessageEntity) throws
+  public typealias ManagedObject = MeetingDoctorsStorage.MessageEntity
+}
+extension MeetingDoctorsStorage.MessageEntity.Status {
+  public var model: MeetingDoctorsController.MessageStatusModel {
+    get
+  }
+}
+extension MeetingDoctorsController.MessageStatusModel {
+  public var object: MeetingDoctorsStorage.MessageEntity.Status {
+    get
+  }
+}
+extension MeetingDoctorsController.MessageTypeModel {
+  public var object: MeetingDoctorsStorage.MessageEntity.Kind {
+    get
+  }
+}
+extension MeetingDoctorsController.CustomerAuthModel : MeetingDoctorsStorage.Persistable {
+  public var managedObject: MeetingDoctorsStorage.CustomerAuthEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.CustomerAuthEntity) throws
+  public typealias ManagedObject = MeetingDoctorsStorage.CustomerAuthEntity
+}
+extension MeetingDoctorsSchema.MessageSchema : MeetingDoctorsStorage.Persistable {
+  public var managedObject: MeetingDoctorsStorage.MessageEntity {
+    get
+  }
+  public init(managedObject _: MeetingDoctorsStorage.MessageEntity) throws
+  public typealias ManagedObject = MeetingDoctorsStorage.MessageEntity
+}
+extension MeetingDoctorsSchema.MessageSchema.Kind {
+  public var object: MeetingDoctorsStorage.MessageEntity.Kind {
+    get
+  }
+}
+extension MeetingDoctorsSchema.MessageSchema.Status {
+  public var object: MeetingDoctorsStorage.MessageEntity.Status {
+    get
+  }
+}
+public protocol RealmStoreMigrationProviderAssembly {
+  func resolve() -> MeetingDoctorsStorage.StoreMigrationProvider?
+}
+public class RealmStoreMigrationProviderAssembler : MeetingDoctorsStorage.RealmStoreMigrationProviderAssembly {
+  public init()
+  public func resolve() -> MeetingDoctorsStorage.StoreMigrationProvider?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ConversationEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  final public let lastMessageTimestamp: RealmSwift.RealmOptional<Foundation.TimeInterval>
+  final public let messages: RealmSwift.List<MeetingDoctorsStorage.MessageEntity>
+  final public let pending: RealmSwift.RealmOptional<Swift.Int>
+  final public let members: RealmSwift.LinkingObjects<MeetingDoctorsStorage.ContactEntity>
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.ConversationEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case lastMessageTimestamp
+    case messages
+    case pending
+    case members
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+extension MeetingDoctorsController.AccountModel : MeetingDoctorsStorage.Persistable {
+  public var managedObject: MeetingDoctorsStorage.AccountEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.AccountEntity) throws
+  public typealias ManagedObject = MeetingDoctorsStorage.AccountEntity
+}
+@objc @_inheritsConvenienceInitializers public class DiseaseEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  @objc dynamic public var name: Swift.String?
+  @objc dynamic public var details: Swift.String?
+  @objc dynamic public var diagnosis: Foundation.Date?
+  @objc dynamic public var resolution: Foundation.Date?
+  @objc dynamic public var patientHash: Swift.String?
+  @objc dynamic public var updatedAt: Foundation.Date
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override public static func indexedProperties() -> [Swift.String]
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.DiseaseEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case name
+    case details
+    case diagnosis
+    case resolution
+    case patientHash
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+extension MeetingDoctorsController.MedicalSpecialityModel : MeetingDoctorsStorage.Persistable {
+  public typealias ManagedObject = MeetingDoctorsStorage.MedicalSpecialityEntity
+  public var managedObject: MeetingDoctorsStorage.MedicalSpecialityEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.MedicalSpecialityEntity) throws
+}
+extension MeetingDoctorsController.ScheduleModel : MeetingDoctorsStorage.Persistable {
+  public var managedObject: MeetingDoctorsStorage.ScheduleEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.ScheduleEntity) throws
+  public typealias ManagedObject = MeetingDoctorsStorage.ScheduleEntity
+}
+extension MeetingDoctorsStorage.ScheduleEntity {
+  public var stateModel: MeetingDoctorsController.ScheduleStateModel {
+    get
+  }
+}
+extension MeetingDoctorsController.ScheduleStateModel {
+  public var object: MeetingDoctorsStorage.ScheduleEntity.State {
+    get
+  }
+}
+extension MeetingDoctorsStorage.ScheduleEntity {
+  public var weekDayModel: MeetingDoctorsController.ScheduleWeekDayModel {
+    get
+  }
+}
+extension MeetingDoctorsController.ScheduleWeekDayModel {
+  public var object: MeetingDoctorsStorage.ScheduleEntity.WeekDay {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class InstallationEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  @objc dynamic public var name: Swift.String?
+  @objc dynamic public var uuid: Swift.String?
+  @objc dynamic public var osType: Swift.String?
+  @objc dynamic public var osVersion: Swift.String?
+  @objc dynamic public var libVersion: Swift.String?
+  @objc dynamic public var model: Swift.String?
+  @objc dynamic public var deviceToken: Swift.String?
+  @objc dynamic public var locale: Swift.String?
+  @objc dynamic public var timeZone: Swift.String?
+  @objc dynamic public var referrer: Swift.String?
+  @objc dynamic public var location: MeetingDoctorsStorage.LocationEntity?
+  @objc dynamic public var createdAt: Foundation.Date
+  @objc dynamic public var updatedAt: Foundation.Date
+  final public let account: RealmSwift.LinkingObjects<MeetingDoctorsStorage.AccountEntity>
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override public static func indexedProperties() -> [Swift.String]
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.InstallationEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case name
+    case uuid
+    case osType
+    case osVersion
+    case libVersion
+    case model
+    case deviceToken
+    case locale
+    case timeZone
+    case referrer
+    case location
+    case createdAt
+    case updatedAt
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+@objc @_inheritsConvenienceInitializers public class AccountEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  @objc dynamic public var token: Swift.String?
+  @objc dynamic public var user: MeetingDoctorsStorage.UserEntity?
+  @objc dynamic public var installation: MeetingDoctorsStorage.InstallationEntity?
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.AccountEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case token
+    case user
+    case installation
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+@objc @_inheritsConvenienceInitializers public class CustomerInstallationEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  @objc dynamic public var installationGuid: Swift.String?
+  @objc dynamic public var pushToken: Swift.String?
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override public static func indexedProperties() -> [Swift.String]
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.CustomerInstallationEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case installationGuid
+    case pushToken
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+@objc @_inheritsConvenienceInitializers public class ScoreEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  final public let freemium: RealmSwift.RealmOptional<Swift.Int>
+  final public let processing: RealmSwift.RealmOptional<Swift.Int>
+  final public let formalized: RealmSwift.RealmOptional<Swift.Int>
+  final public let canceled: RealmSwift.RealmOptional<Swift.Int>
+  final public let timestamp: RealmSwift.RealmOptional<Foundation.TimeInterval>
+  @objc dynamic public var updatedAt: Foundation.Date
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.ScoreEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case freemium
+    case processing
+    case formalized
+    case canceled
+    case timestamp
+    case updatedAt
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+extension MeetingDoctorsStorage.ScoreEntity {
+  convenience public init(contact: MeetingDoctorsStorage.ContactEntity)
+  public func freemium(from contact: MeetingDoctorsStorage.ContactEntity) -> Swift.Int
+  public func processing(from contact: MeetingDoctorsStorage.ContactEntity) -> Swift.Int
+  public func formalized(from contact: MeetingDoctorsStorage.ContactEntity) -> Swift.Int
+}
+extension MeetingDoctorsController.ConversationModel : MeetingDoctorsStorage.Persistable {
+  public var managedObject: MeetingDoctorsStorage.ConversationEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.ConversationEntity) throws
+  public typealias ManagedObject = MeetingDoctorsStorage.ConversationEntity
+}
+@objc @_inheritsConvenienceInitializers public class LocationEntity : RealmSwift.Object {
+  @objc dynamic public var latitude: Swift.Double
+  @objc dynamic public var longitude: Swift.Double
+  @objc dynamic public var altitude: Swift.Double
+  @objc dynamic public var verticalAccuracy: Swift.Double
+  @objc dynamic public var horizontalAccuracy: Swift.Double
+  @objc dynamic public var timestamp: Foundation.Date
+  convenience public init(_ location: CoreLocation.CLLocation)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ScheduleEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  @objc dynamic public var userId: Swift.String?
+  final public let firstPeriodStart: RealmSwift.RealmOptional<Swift.Int>
+  final public let firstPeriodEnd: RealmSwift.RealmOptional<Swift.Int>
+  final public let secondPeriodStart: RealmSwift.RealmOptional<Swift.Int>
+  final public let secondPeriodEnd: RealmSwift.RealmOptional<Swift.Int>
+  final public let contact: RealmSwift.LinkingObjects<MeetingDoctorsStorage.ContactEntity>
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override public static func indexedProperties() -> [Swift.String]
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.ScheduleEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case userId
+    case stateValue
+    case weekDayValue
+    case firstPeriodStart
+    case firstPeriodEnd
+    case secondPeriodStart
+    case secondPeriodEnd
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+extension MeetingDoctorsStorage.ScheduleEntity {
+  public enum State : Swift.String {
+    case unknown
+    case disabled
+    case enabled
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var state: MeetingDoctorsStorage.ScheduleEntity.State? {
+    get
+    set
+  }
+}
+extension MeetingDoctorsStorage.ScheduleEntity {
+  public enum WeekDay : Swift.String {
+    case unknown
+    case sunday
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+    case saturday
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var weekDay: MeetingDoctorsStorage.ScheduleEntity.WeekDay? {
+    get
+    set
+  }
+}
+extension MeetingDoctorsController.LocationModel : MeetingDoctorsStorage.Persistable {
+  final public var managedObject: MeetingDoctorsStorage.LocationEntity {
+    get
+  }
+  convenience public init(managedObject: MeetingDoctorsStorage.LocationEntity) throws
+  public typealias ManagedObject = MeetingDoctorsStorage.LocationEntity
+}
+extension MeetingDoctorsSchema.ScheduleSchema : MeetingDoctorsStorage.Persistable {
+  public var managedObject: MeetingDoctorsStorage.ScheduleEntity {
+    get
+  }
+  public init(managedObject _: MeetingDoctorsStorage.ScheduleEntity) throws
+  public typealias ManagedObject = MeetingDoctorsStorage.ScheduleEntity
+}
+extension MeetingDoctorsSchema.ScheduleSchema.State {
+  public var object: MeetingDoctorsStorage.ScheduleEntity.State {
+    get
+  }
+}
+extension MeetingDoctorsSchema.ScheduleSchema.WeekDay {
+  public var object: MeetingDoctorsStorage.ScheduleEntity.WeekDay {
+    get
+  }
+}
+extension MeetingDoctorsController.AllergyModel : MeetingDoctorsStorage.Persistable {
+  public typealias ManagedObject = MeetingDoctorsStorage.AllergyEntity
+  public var managedObject: MeetingDoctorsStorage.AllergyEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.AllergyEntity) throws
+}
+public struct PersistableSocketInputStream : MeetingDoctorsController.SocketInputStream {
+  public var name: Swift.String {
+    get
+  }
+  public init(client: MeetingDoctorsController.AnySocketInputStream<MeetingDoctorsSchema.SocketClientSchema.Input>, configuration: RealmSwift.Realm.Configuration)
+  public init(client: MeetingDoctorsController.AnySocketInputStream<MeetingDoctorsSchema.SocketClientSchema.Input>, provider: MeetingDoctorsStorage.RealmStoreProvider, configuration: RealmSwift.Realm.Configuration)
+  public func on() -> RxSwift.Observable<MeetingDoctorsSchema.SocketClientSchema.Input>
+  public typealias EventType = MeetingDoctorsSchema.SocketClientSchema.Input
+}
+@objc @_inheritsConvenienceInitializers public class DerivationReportEntity : RealmSwift.Object {
+  final public let id: RealmSwift.RealmOptional<Swift.Int>
+  @objc dynamic public var type: Swift.String?
+  @objc dynamic public var payload: Swift.String?
+  @objc dynamic public var filename: Swift.String?
+  @objc dynamic public var url: Swift.String?
+  @objc dynamic public var company: MeetingDoctorsStorage.CompanyReportEntity?
+  @objc dynamic public var professional: MeetingDoctorsStorage.ProfessionalReportEntity?
+  @objc dynamic public var createdAt: Swift.String?
+  @objc dynamic public var customerHash: Swift.String?
+  @objc dynamic public var friendlyName: Swift.String?
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.DerivationReportEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case type
+    case payload
+    case filename
+    case url
+    case company
+    case professional
+    case createdAt
+    case customerHash
+    case friendlyName
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+@objc @_inheritsConvenienceInitializers public class CompanyReportEntity : RealmSwift.Object {
+  final public let id: RealmSwift.RealmOptional<Swift.Int>
+  @objc dynamic public var name: Swift.String?
+  @objc dynamic public var logo: Swift.String?
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.CompanyReportEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case name
+    case logo
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+@objc @_inheritsConvenienceInitializers public class ProfessionalReportEntity : RealmSwift.Object {
+  final public let id: RealmSwift.RealmOptional<Swift.Int>
+  @objc dynamic public var name: Swift.String?
+  @objc dynamic public var token: Swift.String?
+  final public let connected: RealmSwift.RealmOptional<Swift.Bool>
+  @objc dynamic public var professionalHash: Swift.String?
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.ProfessionalReportEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case name
+    case token
+    case connected
+    case professionalHash
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+extension MeetingDoctorsController.InboxContactModel : MeetingDoctorsStorage.Persistable {
+  public var managedObject: MeetingDoctorsStorage.ContactEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.ContactEntity) throws
+  public typealias ManagedObject = MeetingDoctorsStorage.ContactEntity
+}
+extension MeetingDoctorsStorage.ContactEntity.Role {
+  public var model: MeetingDoctorsController.ContactRoleModel {
+    get
+  }
+}
+extension MeetingDoctorsStorage.ContactEntity.Status {
+  public var model: MeetingDoctorsController.ContactStatusModel {
+    get
+  }
+}
+extension MeetingDoctorsStorage.ContactEntity {
+  public var specialityType: MeetingDoctorsController.SpecialityTypeModel {
+    get
+  }
+}
+extension MeetingDoctorsController.IMCModel : MeetingDoctorsStorage.Persistable {
+  public typealias ManagedObject = MeetingDoctorsStorage.IMCEntity
+  public var managedObject: MeetingDoctorsStorage.IMCEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.IMCEntity) throws
+}
+@objc @_inheritsConvenienceInitializers public class CustomerUserEntity : RealmSwift.Object {
+  @objc dynamic public var userHash: Swift.String?
+  @objc dynamic public var token: Swift.String?
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.CustomerUserEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case userHash
+    case token
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+public protocol StoreMigration : MeetingDoctorsStorage.AutoMockable {
+  var version: Swift.UInt64 { get }
+  func migrate(_ migration: RealmSwift.Migration, to currentSchemaVersion: Swift.UInt64, from oldSchemaVersion: Swift.UInt64) -> Swift.Bool
+  func validate(schema: RealmSwift.Schema) -> Swift.Bool
+}
+extension MeetingDoctorsStorage.StoreMigration {
+  public var version: Swift.UInt64 {
+    get
+  }
+  public func migrate(_: RealmSwift.Migration, to currentSchemaVersion: Swift.UInt64, from oldSchemaVersion: Swift.UInt64)
+  public func validate(schema _: RealmSwift.Schema) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers public class MedicationEntity : RealmSwift.Object {
+  @objc dynamic public var id: Swift.String?
+  @objc dynamic public var name: Swift.String?
+  @objc dynamic public var details: Swift.String?
+  @objc dynamic public var posology: Swift.String?
+  @objc dynamic public var patientHash: Swift.String?
+  @objc dynamic public var updatedAt: Foundation.Date
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override public static func indexedProperties() -> [Swift.String]
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.MedicationEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    case name
+    case details
+    case posology
+    case patientHash
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+extension MeetingDoctorsController.UserModel : MeetingDoctorsStorage.Persistable {
+  public var managedObject: MeetingDoctorsStorage.UserEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.UserEntity) throws
+  public typealias ManagedObject = MeetingDoctorsStorage.UserEntity
+}
+extension MeetingDoctorsController.UserFeaturesModel : MeetingDoctorsStorage.Persistable {
+  public init(managedObject: MeetingDoctorsStorage.UserFeaturesEntity) throws
+  public var managedObject: MeetingDoctorsStorage.UserFeaturesEntity {
+    get
+  }
+  public typealias ManagedObject = MeetingDoctorsStorage.UserFeaturesEntity
+}
+extension MeetingDoctorsController.UserGenderModel {
+  public var object: MeetingDoctorsStorage.UserEntity.Gender {
+    get
+  }
+}
+extension MeetingDoctorsStorage.UserEntity.Gender {
+  public var model: MeetingDoctorsController.UserGenderModel {
+    get
+  }
+}
+extension MeetingDoctorsController.UserRegistrationStatusModel {
+  public var object: MeetingDoctorsStorage.UserEntity.RegistrationStatus {
+    get
+  }
+}
+extension MeetingDoctorsStorage.UserEntity.RegistrationStatus {
+  public var model: MeetingDoctorsController.UserRegistrationStatusModel {
+    get
+  }
+}
+extension MeetingDoctorsController.VideoCallUserModel : MeetingDoctorsStorage.Persistable {
+  public typealias ManagedObject = MeetingDoctorsStorage.VideoCallUserEntity
+  public var managedObject: MeetingDoctorsStorage.VideoCallUserEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.VideoCallUserEntity) throws
+}
+extension MeetingDoctorsController.MedicalCoverageModel : MeetingDoctorsStorage.Persistable {
+  public typealias ManagedObject = MeetingDoctorsStorage.MedicalCoverageEntity
+  public var managedObject: MeetingDoctorsStorage.MedicalCoverageEntity {
+    get
+  }
+  public init(managedObject: MeetingDoctorsStorage.MedicalCoverageEntity) throws
+}
+@objc @_inheritsConvenienceInitializers public class TagEntity : RealmSwift.Object {
+  convenience public init(id: Swift.String)
+  @objc override public static func primaryKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsStorage.TagEntity {
+  public enum Attributes : Swift.String, Swift.CodingKey {
+    case id
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+public class RealmSocketController : MeetingDoctorsController.SocketController {
+  public var error: RxSwift.Observable<MeetingDoctorsController.SocketControllerModel> {
+    get
+  }
+  public var status: RxSwift.Observable<MeetingDoctorsController.SocketControllerModel> {
+    get
+  }
+  convenience public init(client: MeetingDoctorsSocket.SocketClientStream, configuration: RealmSwift.Realm.Configuration)
+  public init(client: MeetingDoctorsSocket.SocketClientStream, provider: MeetingDoctorsStorage.RealmStoreProvider, configuration: RealmSwift.Realm.Configuration)
+  public func connect<Credentials>(credentials: Credentials? = nil) -> RxSwift.Observable<MeetingDoctorsController.SocketControllerModel> where Credentials : MeetingDoctorsSchema.SocketCredentials
+  public func disconnect() -> RxSwift.Observable<MeetingDoctorsController.SocketControllerModel>
+  public func input(stream event: MeetingDoctorsSchema.SocketListenerType) throws -> MeetingDoctorsController.AnySocketInputStream<MeetingDoctorsSchema.SocketClientSchema.Input>
+  public func output(stream event: MeetingDoctorsSchema.SocketEmissionType) throws -> MeetingDoctorsController.AnySocketOutputStream<MeetingDoctorsSchema.SocketClientSchema.Output>
+  public func join(namespace: Swift.String)
+  public func leave()
+  public func clear()
+  public typealias SocketInputType = MeetingDoctorsSchema.SocketClientSchema.Input
+  public typealias SocketNativeType = MeetingDoctorsController.SocketControllerModel
+  public typealias SocketOutputType = MeetingDoctorsSchema.SocketClientSchema.Output
+  @objc deinit
+}
+public protocol AutoMockable {
+}
+extension MeetingDoctorsStorage.VideoCallUserEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.VideoCallUserEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.VideoCallUserEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.IMCEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.IMCEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.IMCEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.CustomerAuthEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.CustomerAuthEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.CustomerAuthEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.ContactEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.ContactEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.ContactEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.ContactEntity.Status : Swift.Equatable {}
+extension MeetingDoctorsStorage.ContactEntity.Status : Swift.Hashable {}
+extension MeetingDoctorsStorage.ContactEntity.Status : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.ContactEntity.Role : Swift.Equatable {}
+extension MeetingDoctorsStorage.ContactEntity.Role : Swift.Hashable {}
+extension MeetingDoctorsStorage.ContactEntity.Role : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.MedicalCoverageEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.MedicalCoverageEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.MedicalCoverageEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.MedicalProfessionalEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.MedicalProfessionalEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.MedicalProfessionalEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.MedicalProfessionalEntity.Kind : Swift.Equatable {}
+extension MeetingDoctorsStorage.MedicalProfessionalEntity.Kind : Swift.Hashable {}
+extension MeetingDoctorsStorage.MedicalProfessionalEntity.Kind : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.MessageEntity.Status : Swift.Equatable {}
+extension MeetingDoctorsStorage.MessageEntity.Status : Swift.Hashable {}
+extension MeetingDoctorsStorage.MessageEntity.Status : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.MessageEntity.Kind : Swift.Equatable {}
+extension MeetingDoctorsStorage.MessageEntity.Kind : Swift.Hashable {}
+extension MeetingDoctorsStorage.MessageEntity.Kind : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.UserEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.UserEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.UserEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.UserEntity.Gender : Swift.Equatable {}
+extension MeetingDoctorsStorage.UserEntity.Gender : Swift.Hashable {}
+extension MeetingDoctorsStorage.UserEntity.Gender : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.UserEntity.RegistrationStatus : Swift.Equatable {}
+extension MeetingDoctorsStorage.UserEntity.RegistrationStatus : Swift.Hashable {}
+extension MeetingDoctorsStorage.UserEntity.RegistrationStatus : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.UserFeaturesEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.UserFeaturesEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.UserFeaturesEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.StorageError.ManagedObjectFailureReason : Swift.Equatable {}
+extension MeetingDoctorsStorage.StorageError.ManagedObjectFailureReason : Swift.Hashable {}
+extension MeetingDoctorsStorage.StorageError.PersistableFailureReason : Swift.Equatable {}
+extension MeetingDoctorsStorage.StorageError.PersistableFailureReason : Swift.Hashable {}
+extension MeetingDoctorsStorage.AllergyEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.AllergyEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.AllergyEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.VideoCallReportEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.VideoCallReportEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.VideoCallReportEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.MedicalSpecialityEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.MedicalSpecialityEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.MedicalSpecialityEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.ConversationEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.ConversationEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.ConversationEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.DiseaseEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.DiseaseEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.DiseaseEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.InstallationEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.InstallationEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.InstallationEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.AccountEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.AccountEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.AccountEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.CustomerInstallationEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.CustomerInstallationEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.CustomerInstallationEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.ScoreEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.ScoreEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.ScoreEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.ScheduleEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.ScheduleEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.ScheduleEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.ScheduleEntity.State : Swift.Equatable {}
+extension MeetingDoctorsStorage.ScheduleEntity.State : Swift.Hashable {}
+extension MeetingDoctorsStorage.ScheduleEntity.State : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.ScheduleEntity.WeekDay : Swift.Equatable {}
+extension MeetingDoctorsStorage.ScheduleEntity.WeekDay : Swift.Hashable {}
+extension MeetingDoctorsStorage.ScheduleEntity.WeekDay : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.DerivationReportEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.DerivationReportEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.DerivationReportEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.CompanyReportEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.CompanyReportEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.CompanyReportEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.ProfessionalReportEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.ProfessionalReportEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.ProfessionalReportEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.CustomerUserEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.CustomerUserEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.CustomerUserEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.MedicationEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.MedicationEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.MedicationEntity.Attributes : Swift.RawRepresentable {}
+extension MeetingDoctorsStorage.TagEntity.Attributes : Swift.Equatable {}
+extension MeetingDoctorsStorage.TagEntity.Attributes : Swift.Hashable {}
+extension MeetingDoctorsStorage.TagEntity.Attributes : Swift.RawRepresentable {}

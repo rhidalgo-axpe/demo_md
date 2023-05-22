@@ -1,0 +1,851 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MeetingDoctorsCore
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import CoreLocation
+import CryptoSwift
+import FirebaseAnalytics
+import Foundation
+import Photos
+import Security
+import Swift
+import UIKit
+import UserNotifications
+import _Concurrency
+import _StringProcessing
+extension MeetingDoctorsCore.Endpoint : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsCore.Endpoint, rhs: MeetingDoctorsCore.Endpoint) -> Swift.Bool
+extension MeetingDoctorsCore.Environment : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsCore.Environment, rhs: MeetingDoctorsCore.Environment) -> Swift.Bool
+extension MeetingDoctorsCore.Keystore : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsCore.Keystore, rhs: MeetingDoctorsCore.Keystore) -> Swift.Bool
+@_inheritsConvenienceInitializers public class DataLoader : MeetingDoctorsCore.Loader<Foundation.URL, Foundation.Data> {
+  override public init()
+  @_semantics("optimize.sil.never") override public func load(_ source: Foundation.URL) -> Foundation.Data?
+  @objc deinit
+}
+public enum MDPermissionTypeEnum : Swift.Int {
+  case camera
+  case photoLibrary
+  case notification
+  case microphone
+  case calendar
+  case contacts
+  case reminders
+  case speech
+  case locationWhenInUse
+  case locationAlways
+  case motion
+  case mediaLibrary
+  case bluetooth
+  case tracking
+  case faceID
+  case siri
+  case health
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public class JsonLoader : MeetingDoctorsCore.Loader<Foundation.URL, [Swift.String : Any]> {
+  public init(_ loader: MeetingDoctorsCore.Loader<Foundation.URL, Foundation.Data>)
+  @_semantics("optimize.sil.never") override public func load(_ source: Foundation.URL) -> [Swift.String : Any]?
+  @objc deinit
+}
+public struct AnyAssembler<Component> : MeetingDoctorsCore.Assembler {
+  public init<Concrete>(_ concrete: Concrete) where Component == Concrete.Component, Concrete : MeetingDoctorsCore.Assembler
+  public func resolve() -> Component?
+}
+public protocol AutoMockable {
+}
+public protocol Navigatable {
+  associatedtype Destination
+  func navigate(to destination: Self.Destination)
+}
+extension MeetingDoctorsCore.Navigatable {
+  public func navigate(to _: Self.Destination)
+}
+public struct Navigator<T> : MeetingDoctorsCore.Navigatable {
+  public typealias Destination = T
+  public init(navigationController: UIKit.UINavigationController?)
+}
+extension MeetingDoctorsCore.Navigator where T : UIKit.UIViewController {
+  public func navigate(to destination: T)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CryptoManager : ObjectiveC.NSObject {
+  public static func decrypt(_ data: Foundation.Data?) -> Swift.Result<Foundation.Data, Swift.Error>
+  public static func decrypt(_ data: Foundation.Data?) -> Foundation.Data?
+  public static func encrypt(_ data: Foundation.Data?) -> Swift.Result<Foundation.Data, Swift.Error>
+  public static func encrypt(_ data: Foundation.Data?) -> Foundation.Data?
+  public static func decryptString(_ data: Foundation.Data) -> Swift.Result<Swift.String, Swift.Error>
+  public static func encrypt(_ string: Swift.String) -> Swift.Result<Foundation.Data, Swift.Error>
+  @objc deinit
+}
+public enum CryptoManagerError : Swift.Error {
+  case unexpectedError
+  case cypherDontInitialized
+  case cantDecryptData
+  case cantEncryptData
+  case cantDecryptString
+  case cantEncryptString
+  case dataEmpty
+  public static func == (a: MeetingDoctorsCore.CryptoManagerError, b: MeetingDoctorsCore.CryptoManagerError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol MDLoggingServiceProtocol {
+  func log(_ format: Swift.String, _ args: Swift.CVarArg...)
+  func log(_ error: Swift.Error)
+  func log(_ string: Swift.String)
+}
+public class MDLoggingService {
+  public init()
+  @objc deinit
+}
+extension MeetingDoctorsCore.MDLoggingService : MeetingDoctorsCore.MDLoggingServiceProtocol {
+  public func log(_ format: Swift.String, _ args: Swift.CVarArg...)
+  public func log(_ error: Swift.Error)
+  public func log(_ string: Swift.String)
+}
+public struct JsonMapper : MeetingDoctorsCore.CodableMapper {
+  public let encoder: Foundation.JSONEncoder
+  public let decoder: Foundation.JSONDecoder
+  public init(decoder: Foundation.JSONDecoder = JSONDecoder(), encoder: Foundation.JSONEncoder = JSONEncoder())
+  public func decode<T>(_ type: T.Type, from data: Foundation.Data) throws -> T where T : Swift.Decodable
+  public func encode<T>(_ value: T) throws -> Foundation.Data where T : Swift.Encodable
+}
+extension MeetingDoctorsCore.MDPermission {
+  public static var microphone: MeetingDoctorsCore.MDMicrophonePermission {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class MDMicrophonePermission : MeetingDoctorsCore.MDPermission {
+  override open var type: MeetingDoctorsCore.MDPermissionTypeEnum {
+    get
+  }
+  open var usageDescriptionKey: Swift.String? {
+    get
+  }
+  override public var status: MeetingDoctorsCore.MDPermissionStatusEnum {
+    get
+  }
+  override public func request(completion: @escaping () -> Swift.Void)
+  override public init()
+  @objc deinit
+}
+public protocol MDEventProviderProtocol {
+  func logEvent()
+  func logEvent(_ event: MeetingDoctorsCore.MDEventProtocol)
+}
+extension MeetingDoctorsCore.MDEventProviderProtocol {
+  public func logEvent()
+  public func logEvent(_: MeetingDoctorsCore.MDEventProtocol)
+}
+open class MDEventProvider : MeetingDoctorsCore.MDEventProviderProtocol {
+  public var event: MeetingDoctorsCore.MDEventProtocol?
+  public init(event: MeetingDoctorsCore.MDEventProtocol? = nil)
+  public func logEvent()
+  public func logEvent(_ event: MeetingDoctorsCore.MDEventProtocol)
+  @objc deinit
+}
+extension Foundation.NSAttributedString {
+  public func size(maxWidth: CoreFoundation.CGFloat, font: UIKit.UIFont? = nil) -> CoreFoundation.CGSize
+}
+extension Swift.Collection {
+  public func toDictionary<K, V>(_ transform: (_ element: Self.Iterator.Element) -> [K : V]) -> [K : V] where K : Swift.Hashable
+  public subscript(optional i: Self.Index) -> Self.Iterator.Element? {
+    get
+  }
+}
+extension Swift.Decodable {
+  public static func decode(_ decoder: Foundation.JSONDecoder, data: Foundation.Data) throws -> Self
+  public static func decode(_ decoder: MeetingDoctorsCore.CodableMapper, data: Foundation.Data) throws -> Self
+}
+extension Swift.Encodable {
+  public func encode(_ encoder: Foundation.JSONEncoder) throws -> Foundation.Data
+  public func encode(_ encoder: MeetingDoctorsCore.CodableMapper) throws -> Foundation.Data
+  public var dictionary: [Swift.String : Any]? {
+    get
+  }
+}
+public struct MeetingDoctorsDateDecodingStrategy : MeetingDoctorsCore.DateDecodingStrategy {
+  public init()
+  public func date(_ decoder: Swift.Decoder) throws -> Foundation.Date
+}
+public struct MeetingDoctorsDateEncodingStrategy : MeetingDoctorsCore.DateEncodingStrategy {
+  public init()
+  public func value(_ date: Foundation.Date, _ encoder: Swift.Encoder) throws
+}
+extension Foundation.DateFormatter {
+  public static let iso8601: Foundation.DateFormatter
+  public static let yyyyMMdd: Foundation.DateFormatter
+  public static let ddMMyyy: Foundation.DateFormatter
+  public static let dd_MM_yyyy: Foundation.DateFormatter
+  public static let HHmm: Foundation.DateFormatter
+}
+public protocol AutoDiffable {
+}
+public typealias Decoration<T> = (T) -> Swift.Void
+public struct ViewStyle<T> where T : UIKit.UIView {
+  public init(styling: @escaping MeetingDoctorsCore.Decoration<T>)
+  public static func compose(_ styles: MeetingDoctorsCore.ViewStyle<T>...) -> MeetingDoctorsCore.ViewStyle<T>
+  public func composing(with other: MeetingDoctorsCore.ViewStyle<T>) -> MeetingDoctorsCore.ViewStyle<T>
+  public func composing(with otherStyling: @escaping MeetingDoctorsCore.Decoration<T>) -> MeetingDoctorsCore.ViewStyle<T>
+  public func apply(to view: T)
+  public func apply(to views: T...)
+}
+extension UIKit.UIAlertAction {
+  @_Concurrency.MainActor(unsafe) convenience public init(title: Swift.String?, style: UIKit.UIAlertAction.Style, image: UIKit.UIImage?, handler: ((UIKit.UIAlertAction) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) convenience public init?(title: Swift.String?, style: UIKit.UIAlertAction.Style, imageNamed imageName: Swift.String, handler: ((UIKit.UIAlertAction) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public var image: UIKit.UIImage? {
+    get
+    set(image)
+  }
+}
+public protocol DateDecodingStrategy {
+  func date(_ decoder: Swift.Decoder) throws -> Foundation.Date
+}
+extension MeetingDoctorsCore.DateDecodingStrategy {
+  public func date(_: Swift.Decoder) throws -> Foundation.Date
+}
+open class MDPermission {
+  open var authorized: Swift.Bool {
+    get
+  }
+  open var denied: Swift.Bool {
+    get
+  }
+  open var notDetermined: Swift.Bool {
+    get
+  }
+  open func openSettingPage()
+  open var type: MeetingDoctorsCore.MDPermissionTypeEnum {
+    get
+  }
+  open var status: MeetingDoctorsCore.MDPermissionStatusEnum {
+    get
+  }
+  open func request(completion _: @escaping () -> Swift.Void)
+  public init()
+  @objc deinit
+}
+extension MeetingDoctorsCore.MDPermission : Swift.Equatable {
+  public static func == (lhs: MeetingDoctorsCore.MDPermission, rhs: MeetingDoctorsCore.MDPermission) -> Swift.Bool
+}
+extension Foundation.Bundle {
+  public static var packageBundle: Foundation.Bundle {
+    get
+  }
+  public var versionNumber: Swift.String? {
+    get
+  }
+  public var shortVersionNumber: Swift.String? {
+    get
+  }
+  public var launchStoryboardName: Swift.String? {
+    get
+  }
+  public var statusBarStyle: UIKit.UIStatusBarStyle? {
+    get
+  }
+  public var isStatusBarHidden: Swift.Bool? {
+    get
+  }
+  public var configuration: MeetingDoctorsCore.BuildConfigurationType? {
+    get
+  }
+  public var buildTime: Swift.String? {
+    get
+  }
+  public var buildNumber: Swift.String? {
+    get
+  }
+  public var gitVersion: Swift.String? {
+    get
+  }
+  public var isDebug: Swift.Bool? {
+    get
+  }
+}
+public protocol MDEventProtocol {
+  var eventName: Swift.String { get }
+  var eventParameters: [Swift.String : Any]? { get }
+}
+open class MDEvent : MeetingDoctorsCore.MDEventProtocol {
+  public var eventName: Swift.String
+  public var eventParameters: [Swift.String : Any]?
+  public init(eventName: Swift.String, eventParameters: [Swift.String : Any]? = nil)
+  @objc deinit
+}
+public struct Keystore : Swift.Codable {
+  public let clientId: Swift.String
+  public let clientSecret: Swift.String
+  public init(clientId: Swift.String, clientSecret: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension MeetingDoctorsCore.Keystore : MeetingDoctorsCore.AutoEquatable {
+}
+public struct PropertyListMapper : MeetingDoctorsCore.CodableMapper {
+  public let encoder: Foundation.PropertyListEncoder
+  public let decoder: Foundation.PropertyListDecoder
+  public init(decoder: Foundation.PropertyListDecoder = PropertyListDecoder(), encoder: Foundation.PropertyListEncoder = PropertyListEncoder())
+  public func decode<T>(_ type: T.Type, from data: Foundation.Data) throws -> T where T : Swift.Decodable
+  public func encode<T>(_ value: T) throws -> Foundation.Data where T : Swift.Encodable
+}
+public protocol Loadable {
+  associatedtype Source
+  associatedtype Element
+  func load(_ source: Self.Source) -> Self.Element?
+}
+open class Loader<S, T> : MeetingDoctorsCore.Loadable {
+  public init()
+  open func load(_: S) -> T?
+  public typealias Element = T
+  public typealias Source = S
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ApplicationServiceDelegate : UIKit.UIResponder, UIKit.UIApplicationDelegate {
+  @_Concurrency.MainActor(unsafe) @objc public var window: UIKit.UIWindow?
+  @_Concurrency.MainActor(unsafe) open var services: [MeetingDoctorsCore.ApplicationServicePlugin] {
+    get
+  }
+  @available(iOS 2.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func applicationDidFinishLaunching(_ application: UIKit.UIApplication)
+  @available(iOS 6.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, willFinishLaunchingWithOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]? = nil) -> Swift.Bool
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, didFinishLaunchingWithOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]? = nil) -> Swift.Bool
+  @available(iOS 2.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func applicationDidBecomeActive(_ application: UIKit.UIApplication)
+  @available(iOS 2.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func applicationWillResignActive(_ application: UIKit.UIApplication)
+  @available(iOS, introduced: 2.0, deprecated: 9.0, message: "Please use application:openURL:options:")
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, handleOpen url: Foundation.URL) -> Swift.Bool
+  @available(iOS, introduced: 4.2, deprecated: 9.0, message: "Please use application:openURL:options:")
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, open url: Foundation.URL, sourceApplication: Swift.String?, annotation: Any) -> Swift.Bool
+  @available(iOS 9.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ app: UIKit.UIApplication, open url: Foundation.URL, options: [UIKit.UIApplication.OpenURLOptionsKey : Any] = [:]) -> Swift.Bool
+  @available(iOS 2.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func applicationDidReceiveMemoryWarning(_ application: UIKit.UIApplication)
+  @available(iOS 2.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func applicationWillTerminate(_ application: UIKit.UIApplication)
+  @available(iOS 2.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func applicationSignificantTimeChange(_ application: UIKit.UIApplication)
+  @available(iOS 2.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, willChangeStatusBarOrientation newStatusBarOrientation: UIKit.UIInterfaceOrientation, duration: Foundation.TimeInterval)
+  @available(iOS 2.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, didChangeStatusBarOrientation oldStatusBarOrientation: UIKit.UIInterfaceOrientation)
+  @available(iOS, introduced: 8.0, deprecated: 10.0, message: "Use UserNotification UNNotification Settings instead")
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, didRegister notificationSettings: UIKit.UIUserNotificationSettings)
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Foundation.Data)
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Swift.Error)
+  @available(iOS, introduced: 3.0, deprecated: 10.0, message: "Use UserNotifications Framework's -[UNUserNotificationCenterDelegate willPresentNotification:withCompletionHandler:] or -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:] for user visible notifications and -[UIApplicationDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:] for silent remote notifications")
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, didReceiveRemoteNotification userInfo: [Swift.AnyHashable : Any])
+  @available(iOS, introduced: 4.0, deprecated: 10.0, message: "Use UserNotifications Framework's -[UNUserNotificationCenterDelegate willPresentNotification:withCompletionHandler:] or -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]")
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, didReceive notification: UIKit.UILocalNotification)
+  @available(iOS, introduced: 8.0, deprecated: 10.0, message: "Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]")
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, handleActionWithIdentifier identifier: Swift.String?, for notification: UIKit.UILocalNotification, completionHandler: @escaping () -> Swift.Void)
+  @available(iOS, introduced: 9.0, deprecated: 10.0, message: "Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]")
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, handleActionWithIdentifier identifier: Swift.String?, forRemoteNotification userInfo: [Swift.AnyHashable : Any], withResponseInfo responseInfo: [Swift.AnyHashable : Any], completionHandler: @escaping () -> Swift.Void)
+  @available(iOS, introduced: 8.0, deprecated: 10.0, message: "Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]")
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, handleActionWithIdentifier identifier: Swift.String?, forRemoteNotification userInfo: [Swift.AnyHashable : Any], completionHandler: @escaping () -> Swift.Void)
+  @available(iOS, introduced: 9.0, deprecated: 10.0, message: "Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]")
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, handleActionWithIdentifier identifier: Swift.String?, for notification: UIKit.UILocalNotification, withResponseInfo responseInfo: [Swift.AnyHashable : Any], completionHandler: @escaping () -> Swift.Void)
+  @available(iOS 7.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, didReceiveRemoteNotification userInfo: [Swift.AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void)
+  @available(iOS 7.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void)
+  @available(iOS 9.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, performActionFor shortcutItem: UIKit.UIApplicationShortcutItem, completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  @available(iOS 7.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, handleEventsForBackgroundURLSession identifier: Swift.String, completionHandler: @escaping () -> Swift.Void)
+  @available(iOS 8.2, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, handleWatchKitExtensionRequest userInfo: [Swift.AnyHashable : Any]?, reply: @escaping ([Swift.AnyHashable : Any]?) -> Swift.Void)
+  @available(iOS 9.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func applicationShouldRequestHealthAuthorization(_ application: UIKit.UIApplication)
+  @available(iOS 4.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func applicationDidEnterBackground(_ application: UIKit.UIApplication)
+  @available(iOS 4.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func applicationWillEnterForeground(_ application: UIKit.UIApplication)
+  @available(iOS 4.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func applicationProtectedDataWillBecomeUnavailable(_ application: UIKit.UIApplication)
+  @available(iOS 4.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func applicationProtectedDataDidBecomeAvailable(_ application: UIKit.UIApplication)
+  @available(iOS 8.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, shouldAllowExtensionPointIdentifier extensionPointIdentifier: UIKit.UIApplication.ExtensionPointIdentifier) -> Swift.Bool
+  @available(iOS 6.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, viewControllerWithRestorationIdentifierPath identifierComponents: [Swift.String], coder: Foundation.NSCoder) -> UIKit.UIViewController?
+  @available(iOS 6.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, shouldSaveApplicationState coder: Foundation.NSCoder) -> Swift.Bool
+  @available(iOS 6.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, shouldRestoreApplicationState coder: Foundation.NSCoder) -> Swift.Bool
+  @available(iOS 6.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, willEncodeRestorableStateWith coder: Foundation.NSCoder)
+  @available(iOS 6.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, didDecodeRestorableStateWith coder: Foundation.NSCoder)
+  @available(iOS 8.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, willContinueUserActivityWithType userActivityType: Swift.String) -> Swift.Bool
+  @available(iOS 8.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, continue userActivity: Foundation.NSUserActivity, restorationHandler: @escaping ([UIKit.UIUserActivityRestoring]?) -> Swift.Void) -> Swift.Bool
+  @available(iOS 8.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, didFailToContinueUserActivityWithType userActivityType: Swift.String, error: Swift.Error)
+  @available(iOS 8.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, didUpdate userActivity: Foundation.NSUserActivity)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
+  @objc deinit
+}
+public protocol CodableMapper {
+  func decode<T>(_ type: T.Type, from data: Foundation.Data) throws -> T where T : Swift.Decodable
+  func encode<T>(_ value: T) throws -> Foundation.Data where T : Swift.Encodable
+}
+@objc @_inheritsConvenienceInitializers public class WatchDog : ObjectiveC.NSObject {
+  final public let repeatTime: Foundation.TimeInterval
+  public var action: (() -> Swift.Void)?
+  public var isRunning: Swift.Bool {
+    get
+  }
+  public var isValid: Swift.Bool {
+    get
+  }
+  @objc override dynamic public init()
+  public init(repeatTime: Foundation.TimeInterval)
+  @objc deinit
+  public func start()
+  public func stop()
+}
+@_inheritsConvenienceInitializers public class EnvironmentProperty<T> : MeetingDoctorsCore.NamedProperty<T> where T : Swift.LosslessStringConvertible {
+  convenience override public init(_ name: Swift.String, default value: T? = nil)
+  public init(_ name: Swift.String, store: Foundation.ProcessInfo, default value: T? = nil)
+  override public var value: T? {
+    get
+    set
+  }
+  @objc deinit
+}
+public protocol AutoHashable {
+}
+public protocol ApplicationServicePlugin : UIKit.UIApplicationDelegate {
+}
+public protocol Transmittable {
+  associatedtype SchemaObject : Swift.Decodable, Swift.Encodable
+  var schemaObject: Self.SchemaObject { get }
+  init(schemaObject: Self.SchemaObject) throws
+}
+public protocol Property {
+  associatedtype ValueType
+  var name: Swift.String { get }
+  var value: Self.ValueType? { get }
+}
+public class BundleDataLoader : MeetingDoctorsCore.Loader<Swift.String, Foundation.Data> {
+  public init(_ bundle: Foundation.Bundle, loader: MeetingDoctorsCore.Loader<Foundation.URL, Foundation.Data>, ofType type: Swift.String)
+  @_semantics("optimize.sil.never") override public func load(_ source: Swift.String) -> Foundation.Data?
+  @objc deinit
+}
+public protocol Assembler {
+  associatedtype Component
+  func resolve() -> Self.Component?
+}
+public class NamedProperty<T> : MeetingDoctorsCore.Property {
+  final public let name: Swift.String
+  public var value: T?
+  public init(_ name: Swift.String, default value: T? = nil)
+  public typealias ValueType = T
+  @objc deinit
+}
+extension CoreLocation.CLLocationCoordinate2D {
+  public func calculateBoundingCoordinates(withDistance distance: Swift.Double) -> (CoreLocation.CLLocationCoordinate2D, CoreLocation.CLLocationCoordinate2D)
+  public func formatAsLatLonString(withDecimalPlaces places: Swift.Int = 5) -> (Swift.String, Swift.String)
+}
+@_inheritsConvenienceInitializers public class UserDefaultsProperty<T> : MeetingDoctorsCore.NamedProperty<T> where T : Swift.Decodable, T : Swift.Encodable {
+  public enum Keys : Swift.String {
+    case jwt
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  convenience public init(_ key: MeetingDoctorsCore.UserDefaultsProperty<T>.Keys, default value: T? = nil)
+  convenience override public init(_ name: Swift.String, default value: T? = nil)
+  public init(_ name: Swift.String, store: Foundation.UserDefaults = UserDefaults.standard, mapper: MeetingDoctorsCore.CodableMapper = PropertyListMapper(), default value: T? = nil)
+  override public var value: T? {
+    get
+    set
+  }
+  @objc deinit
+}
+public protocol AutoCases {
+}
+@_hasMissingDesignatedInitializers public class DateFormatterManager {
+  @_hasMissingDesignatedInitializers public class Formats {
+    public static let ddMMyyyy: Swift.String
+    public static let ddMMyy: Swift.String
+    public static let dd_MM_yyyy: Swift.String
+    public static let HH: Swift.String
+    public static let HHmm: Swift.String
+    public static let Hmm: Swift.String
+    public static let dd_MM_yyyy_HHmm: Swift.String
+    public static let yyyy_MM_dd_HHmmss: Swift.String
+    public static let dd_MM_yy_Hmm: Swift.String
+    public static let yyyy_MM_dd: Swift.String
+    public static let iso8601: Swift.String
+    @objc deinit
+  }
+  public static let shared: MeetingDoctorsCore.DateFormatterManager
+  public func formatter(format: Swift.String) -> Foundation.DateFormatter
+  public func date(_ format: Swift.String, from string: Swift.String?, timeZone: Foundation.TimeZone = TimeZone.current) -> Foundation.Date?
+  public func string(_ format: Swift.String, from date: Foundation.Date?, timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String?
+  public func string(_ inFormat: Swift.String, outFormat: Swift.String, from string: Swift.String?, timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String?
+  @objc deinit
+}
+public protocol CodableMapperAssembly {
+  func resolve() -> MeetingDoctorsCore.CodableMapper?
+}
+public class JsonMapperAssembler : MeetingDoctorsCore.CodableMapperAssembly {
+  public var encoder: Foundation.JSONEncoder? {
+    get
+  }
+  public var decoder: Foundation.JSONDecoder? {
+    get
+  }
+  public init()
+  public func resolve() -> MeetingDoctorsCore.CodableMapper?
+  @objc deinit
+}
+extension MeetingDoctorsCore.JsonMapperAssembler : MeetingDoctorsCore.Assembler {
+  public typealias Component = MeetingDoctorsCore.CodableMapper
+}
+public class PropertyListLoader : MeetingDoctorsCore.Loader<Foundation.URL, [Swift.String : Any]> {
+  public init(_ loader: MeetingDoctorsCore.Loader<Foundation.URL, Foundation.Data>, format: Foundation.PropertyListSerialization.PropertyListFormat = .xml)
+  @_semantics("optimize.sil.never") override public func load(_ source: Foundation.URL) -> [Swift.String : Any]?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class KeyChainManager : ObjectiveC.NSObject {
+  public static func getValue(_ key: Swift.String, for userAccount: Swift.String, _ defaultQuery: [Swift.String : Any] = KeyChainManager.unlockQuery()) throws -> Swift.String?
+  public static func unlockQuery() -> [Swift.String : Any]
+  public static func oldQuery() -> [Swift.String : Any]
+  public static func removeValue(_ key: Swift.String, for userAccount: Swift.String, _ defaultQuery: [Swift.String : Any] = KeyChainManager.unlockQuery()) throws
+  public static func migrate(_ value: Swift.String, key: Swift.String, for userAccount: Swift.String, _ oldQuery: [Swift.String : Any] = KeyChainManager.oldQuery(), _ newQuery: [Swift.String : Any] = KeyChainManager.unlockQuery()) throws
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum KeyChainManagerError : Swift.Error {
+  case unhandledError(message: Swift.String, code: Swift.Int32)
+  case stringToDataConversionError
+  case dataToStringConversionError
+}
+extension MeetingDoctorsCore.KeyChainManagerError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public var code: Swift.Int32 {
+    get
+  }
+}
+extension Foundation.NSLocale {
+  public static var is12hClockFormat: Swift.Bool {
+    get
+  }
+}
+public protocol AutoLenses {
+}
+infix operator *~ : MultiplicationPrecedence
+infix operator |> : AdditionPrecedence
+public struct Lens<Whole, Part> {
+}
+public func * <A, B, C>(lhs: MeetingDoctorsCore.Lens<A, B>, rhs: MeetingDoctorsCore.Lens<B, C>) -> MeetingDoctorsCore.Lens<A, C>
+public func *~ <A, B>(lhs: MeetingDoctorsCore.Lens<A, B>, rhs: B) -> (A) -> A
+public func |> <A, B>(x: A, f: (A) -> B) -> B
+public func |> <A, B, C>(f: @escaping (A) -> B, g: @escaping (B) -> C) -> (A) -> C
+public protocol AutoEquatable {
+}
+public func abstractMethod(file: Swift.StaticString = #file, line: Swift.UInt = #line, function: Swift.StaticString = #function) -> Swift.Never
+public enum CoreError : Swift.Error {
+  public enum MapperFailureReason {
+    case unexpectedFormat(event: Swift.String, data: [Any])
+    case decoderFailed(error: Swift.Error)
+    case encoderFailed(error: Swift.Error)
+  }
+  case mapperFailed(reason: MeetingDoctorsCore.CoreError.MapperFailureReason)
+}
+extension MeetingDoctorsCore.CoreError {
+  public var underlyingError: Swift.Error? {
+    get
+  }
+}
+public class EnvironmentLoader : MeetingDoctorsCore.Loader<MeetingDoctorsCore.BuildConfigurationType, MeetingDoctorsCore.Environment> {
+  public init(loader: MeetingDoctorsCore.Loader<Swift.String, Foundation.Data>, mapper: MeetingDoctorsCore.CodableMapper = PropertyListMapper())
+  @_semantics("optimize.sil.never") override public func load(_ source: MeetingDoctorsCore.BuildConfigurationType) -> MeetingDoctorsCore.Environment?
+  @objc deinit
+}
+public enum BuildConfigurationType : Swift.String, Swift.Codable, Swift.CodingKey {
+  case debug
+  case release
+  case staging
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
+}
+public enum EndpointType : Swift.String, Swift.CodingKey, Swift.CaseIterable {
+  case directory
+  case console
+  case core
+  case api
+  case customer
+  case notifications
+  case consultations
+  case consultationsCustomer
+  case sdk
+  case electronicPrescription
+  case coreV2
+  case videocall
+  case consultationsV2
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias AllCases = [MeetingDoctorsCore.EndpointType]
+  public typealias RawValue = Swift.String
+  public static var allCases: [MeetingDoctorsCore.EndpointType] {
+    get
+  }
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
+}
+public enum EnvironmentType : Swift.String, Swift.Codable, Swift.CodingKey {
+  case development
+  case production
+  case staging
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
+}
+public enum LogLevel : Swift.String, Swift.Codable {
+  case off
+  case error
+  case warning
+  case info
+  case debug
+  case verbose
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class ClosureSelector<T> {
+  final public let selector: ObjectiveC.Selector
+  public init(_ closure: @escaping MeetingDoctorsCore.Decoration<T>)
+  @objc deinit
+}
+public protocol MDPermissionsProviderProtocol {
+  static func request(permission: MeetingDoctorsCore.MDPermission, completion: @escaping (Swift.Bool) -> Swift.Void)
+}
+@_hasMissingDesignatedInitializers public class MDPermissionsProvider : MeetingDoctorsCore.MDPermissionsProviderProtocol {
+  public static func request(permission: MeetingDoctorsCore.MDPermission, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
+}
+public enum MDPermissionStatusEnum : Swift.Int {
+  case authorized
+  case denied
+  case notDetermined
+  case notSupported
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class FileManagerWrapper {
+  public static func download(url: Foundation.URL, completion: @escaping (Foundation.URL?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void)
+  @objc deinit
+}
+public struct Endpoint : Swift.Codable {
+  public var url: Foundation.URL? {
+    get
+  }
+  public let scheme: Swift.String?
+  public let host: Swift.String?
+  public let port: Swift.Int?
+  public let path: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension MeetingDoctorsCore.Endpoint {
+  public init(url: Foundation.URL)
+}
+extension MeetingDoctorsCore.Endpoint : MeetingDoctorsCore.AutoEquatable {
+}
+extension UIKit.UIImage {
+  public func croppedImage(bounds: CoreFoundation.CGRect) -> UIKit.UIImage
+  public func thumbnailImage(thumbnailSize: Swift.Int, transparentBorder _: Swift.Int, cornerRadius _: Swift.Int, interpolationQuality quality: CoreGraphics.CGInterpolationQuality) -> UIKit.UIImage
+  public func resizedImage(newSize: CoreFoundation.CGSize, interpolationQuality quality: CoreGraphics.CGInterpolationQuality) -> UIKit.UIImage
+  public func resizedImageWithContentMode(contentMode: UIKit.UIView.ContentMode, bounds: CoreFoundation.CGSize, interpolationQuality quality: CoreGraphics.CGInterpolationQuality) -> UIKit.UIImage
+  public func resizedImage(newSize: CoreFoundation.CGSize, transform: CoreFoundation.CGAffineTransform, drawTransposed transpose: Swift.Bool, interpolationQuality quality: CoreGraphics.CGInterpolationQuality) -> UIKit.UIImage
+  public func transformForOrientation(newSize: CoreFoundation.CGSize) -> CoreFoundation.CGAffineTransform
+  public func resizedData(maxCount: Swift.Int = 512) -> (Foundation.Data?, CoreFoundation.CGSize)
+  public func withShadow(blur: CoreFoundation.CGFloat = 10, offset: CoreFoundation.CGSize = .zero, color: UIKit.UIColor = UIColor(white: 0, alpha: 0.8)) -> UIKit.UIImage
+}
+@objc @_inheritsConvenienceInitializers public class PermissionWrapper : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MeetingDoctorsCore.PermissionWrapper {
+  public static var microphonePermissions: AVFAudio.AVAudioSession.RecordPermission
+  public static func checkMicrophoneAvailable(completion: @escaping ((Swift.Bool) -> Swift.Void))
+  public static func requestMicrophonePermissions(completion: @escaping ((Swift.Bool) -> Swift.Void))
+}
+extension MeetingDoctorsCore.PermissionWrapper {
+  public static var cameraPermissions: AVFoundation.AVAuthorizationStatus
+  public static func checkVideoCameraAvailable(completion: @escaping ((AVFoundation.AVAuthorizationStatus) -> Swift.Void))
+  public static func requestCameraPermissions(completion: @escaping ((Swift.Bool) -> Swift.Void))
+}
+extension MeetingDoctorsCore.PermissionWrapper {
+  public static func notificationSettings(completion: @escaping (UserNotifications.UNAuthorizationStatus) -> Swift.Void)
+}
+public struct Environment : Swift.Decodable {
+  public let endpoint: [MeetingDoctorsCore.EndpointType : MeetingDoctorsCore.Endpoint]
+  public let requestTimeout: Swift.Int?
+  public let logLevel: MeetingDoctorsCore.LogLevel?
+  public let reportCrashes: Swift.Bool?
+  public init(from decoder: Swift.Decoder) throws
+}
+extension MeetingDoctorsCore.Environment : MeetingDoctorsCore.AutoEquatable {
+}
+public struct AnyNavigatable<Destination> : MeetingDoctorsCore.Navigatable {
+  public init<Concrete>(_ concrete: Concrete) where Destination == Concrete.Destination, Concrete : MeetingDoctorsCore.Navigatable
+  public func navigate(to destination: Destination)
+}
+extension MeetingDoctorsCore.MDPermission {
+  public static var camera: MeetingDoctorsCore.MDCameraPermission {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class MDCameraPermission : MeetingDoctorsCore.MDPermission {
+  override open var type: MeetingDoctorsCore.MDPermissionTypeEnum {
+    get
+  }
+  open var usageDescriptionKey: Swift.String? {
+    get
+  }
+  override public var status: MeetingDoctorsCore.MDPermissionStatusEnum {
+    get
+  }
+  override public func request(completion: @escaping () -> Swift.Void)
+  override public init()
+  @objc deinit
+}
+extension MeetingDoctorsCore.MDPermission {
+  public static var notification: MeetingDoctorsCore.MDNotificationPermission {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class MDNotificationPermission : MeetingDoctorsCore.MDPermission {
+  override open var type: MeetingDoctorsCore.MDPermissionTypeEnum {
+    get
+  }
+  override public var status: MeetingDoctorsCore.MDPermissionStatusEnum {
+    get
+  }
+  override public func request(completion: @escaping () -> Swift.Void)
+  override public init()
+  @objc deinit
+}
+extension MeetingDoctorsCore.MDPermission {
+  public static var photoLibrary: MeetingDoctorsCore.MDPhotoLibraryPermission {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class MDPhotoLibraryPermission : MeetingDoctorsCore.MDPermission {
+  override open var type: MeetingDoctorsCore.MDPermissionTypeEnum {
+    get
+  }
+  open var fullAccessUsageDescriptionKey: Swift.String? {
+    get
+  }
+  open var addingOnlyUsageDescriptionKey: Swift.String? {
+    get
+  }
+  override public var status: MeetingDoctorsCore.MDPermissionStatusEnum {
+    get
+  }
+  override public func request(completion: @escaping () -> Swift.Void)
+  override public init()
+  @objc deinit
+}
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor(unsafe) public var modelId: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var modelName: Swift.String {
+    get
+  }
+}
+public protocol DateEncodingStrategy {
+  func value(_ date: Foundation.Date, _ encoder: Swift.Encoder) throws
+}
+extension MeetingDoctorsCore.DateEncodingStrategy {
+  public func value(_: Foundation.Date, _: Swift.Encoder) throws
+}
+extension MeetingDoctorsCore.MDPermissionTypeEnum : Swift.Equatable {}
+extension MeetingDoctorsCore.MDPermissionTypeEnum : Swift.Hashable {}
+extension MeetingDoctorsCore.MDPermissionTypeEnum : Swift.RawRepresentable {}
+extension MeetingDoctorsCore.CryptoManagerError : Swift.Equatable {}
+extension MeetingDoctorsCore.CryptoManagerError : Swift.Hashable {}
+extension MeetingDoctorsCore.UserDefaultsProperty.Keys : Swift.Equatable {}
+extension MeetingDoctorsCore.UserDefaultsProperty.Keys : Swift.Hashable {}
+extension MeetingDoctorsCore.UserDefaultsProperty.Keys : Swift.RawRepresentable {}
+extension MeetingDoctorsCore.BuildConfigurationType : Swift.Equatable {}
+extension MeetingDoctorsCore.BuildConfigurationType : Swift.Hashable {}
+extension MeetingDoctorsCore.BuildConfigurationType : Swift.RawRepresentable {}
+extension MeetingDoctorsCore.EndpointType : Swift.Equatable {}
+extension MeetingDoctorsCore.EndpointType : Swift.Hashable {}
+extension MeetingDoctorsCore.EndpointType : Swift.RawRepresentable {}
+extension MeetingDoctorsCore.EnvironmentType : Swift.Equatable {}
+extension MeetingDoctorsCore.EnvironmentType : Swift.Hashable {}
+extension MeetingDoctorsCore.EnvironmentType : Swift.RawRepresentable {}
+extension MeetingDoctorsCore.LogLevel : Swift.Equatable {}
+extension MeetingDoctorsCore.LogLevel : Swift.Hashable {}
+extension MeetingDoctorsCore.LogLevel : Swift.RawRepresentable {}
+extension MeetingDoctorsCore.MDPermissionStatusEnum : Swift.Equatable {}
+extension MeetingDoctorsCore.MDPermissionStatusEnum : Swift.Hashable {}
+extension MeetingDoctorsCore.MDPermissionStatusEnum : Swift.RawRepresentable {}

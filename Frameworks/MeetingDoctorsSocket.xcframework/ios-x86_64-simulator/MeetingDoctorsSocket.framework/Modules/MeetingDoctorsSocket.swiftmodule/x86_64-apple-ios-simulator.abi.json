@@ -1,0 +1,4031 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsController",
+        "printedName": "MeetingDoctorsController",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsCore",
+        "printedName": "MeetingDoctorsCore",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsSchema",
+        "printedName": "MeetingDoctorsSchema",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "RxSwift",
+        "printedName": "RxSwift",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "SocketIO",
+        "printedName": "SocketIO",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SocketClientStream",
+        "printedName": "SocketClientStream",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Observable",
+                "printedName": "RxSwift.Observable<MeetingDoctorsSchema.SocketClientSchema>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketClientSchema",
+                    "printedName": "MeetingDoctorsSchema.SocketClientSchema",
+                    "usr": "s:20MeetingDoctorsSchema012SocketClientC0O"
+                  }
+                ],
+                "usr": "s:7RxSwift10ObservableC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MeetingDoctorsSocket0C12ClientStreamC5error7RxSwift10ObservableCy0aB6Schema0cdJ0OGvp",
+            "mangledName": "$s20MeetingDoctorsSocket0C12ClientStreamC5error7RxSwift10ObservableCy0aB6Schema0cdJ0OGvp",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Observable",
+                    "printedName": "RxSwift.Observable<MeetingDoctorsSchema.SocketClientSchema>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SocketClientSchema",
+                        "printedName": "MeetingDoctorsSchema.SocketClientSchema",
+                        "usr": "s:20MeetingDoctorsSchema012SocketClientC0O"
+                      }
+                    ],
+                    "usr": "s:7RxSwift10ObservableC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MeetingDoctorsSocket0C12ClientStreamC5error7RxSwift10ObservableCy0aB6Schema0cdJ0OGvg",
+                "mangledName": "$s20MeetingDoctorsSocket0C12ClientStreamC5error7RxSwift10ObservableCy0aB6Schema0cdJ0OGvg",
+                "moduleName": "MeetingDoctorsSocket",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Observable",
+                "printedName": "RxSwift.Observable<MeetingDoctorsSchema.SocketClientSchema>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketClientSchema",
+                    "printedName": "MeetingDoctorsSchema.SocketClientSchema",
+                    "usr": "s:20MeetingDoctorsSchema012SocketClientC0O"
+                  }
+                ],
+                "usr": "s:7RxSwift10ObservableC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MeetingDoctorsSocket0C12ClientStreamC6status7RxSwift10ObservableCy0aB6Schema0cdJ0OGvp",
+            "mangledName": "$s20MeetingDoctorsSocket0C12ClientStreamC6status7RxSwift10ObservableCy0aB6Schema0cdJ0OGvp",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Observable",
+                    "printedName": "RxSwift.Observable<MeetingDoctorsSchema.SocketClientSchema>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SocketClientSchema",
+                        "printedName": "MeetingDoctorsSchema.SocketClientSchema",
+                        "usr": "s:20MeetingDoctorsSchema012SocketClientC0O"
+                      }
+                    ],
+                    "usr": "s:7RxSwift10ObservableC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MeetingDoctorsSocket0C12ClientStreamC6status7RxSwift10ObservableCy0aB6Schema0cdJ0OGvg",
+                "mangledName": "$s20MeetingDoctorsSocket0C12ClientStreamC6status7RxSwift10ObservableCy0aB6Schema0cdJ0OGvg",
+                "moduleName": "MeetingDoctorsSocket",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(client:mapper:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SocketClientStream",
+                "printedName": "MeetingDoctorsSocket.SocketClientStream",
+                "usr": "s:20MeetingDoctorsSocket0C12ClientStreamC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketNativeStream",
+                "printedName": "MeetingDoctorsSocket.SocketNativeStream",
+                "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CodableMapper",
+                "printedName": "MeetingDoctorsCore.CodableMapper",
+                "usr": "s:18MeetingDoctorsCore13CodableMapperP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20MeetingDoctorsSocket0C12ClientStreamC6client6mapperAcA0c6NativeE0C_0aB4Core13CodableMapper_ptcfc",
+            "mangledName": "$s20MeetingDoctorsSocket0C12ClientStreamC6client6mapperAcA0c6NativeE0C_0aB4Core13CodableMapper_ptcfc",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect(credentials:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Observable",
+                "printedName": "RxSwift.Observable<MeetingDoctorsSchema.SocketClientSchema>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketClientSchema",
+                    "printedName": "MeetingDoctorsSchema.SocketClientSchema",
+                    "usr": "s:20MeetingDoctorsSchema012SocketClientC0O"
+                  }
+                ],
+                "usr": "s:7RxSwift10ObservableC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C12ClientStreamC7connect11credentials7RxSwift10ObservableCy0aB6Schema0cdK0OGxSg_tAI0C11CredentialsRzlF",
+            "mangledName": "$s20MeetingDoctorsSocket0C12ClientStreamC7connect11credentials7RxSwift10ObservableCy0aB6Schema0cdK0OGxSg_tAI0C11CredentialsRzlF",
+            "moduleName": "MeetingDoctorsSocket",
+            "genericSig": "<τ_0_0 where τ_0_0 : MeetingDoctorsSchema.SocketCredentials>",
+            "sugared_genericSig": "<Credentials where Credentials : MeetingDoctorsSchema.SocketCredentials>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnect",
+            "printedName": "disconnect()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Observable",
+                "printedName": "RxSwift.Observable<MeetingDoctorsSchema.SocketClientSchema>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketClientSchema",
+                    "printedName": "MeetingDoctorsSchema.SocketClientSchema",
+                    "usr": "s:20MeetingDoctorsSchema012SocketClientC0O"
+                  }
+                ],
+                "usr": "s:7RxSwift10ObservableC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C12ClientStreamC10disconnect7RxSwift10ObservableCy0aB6Schema0cdJ0OGyF",
+            "mangledName": "$s20MeetingDoctorsSocket0C12ClientStreamC10disconnect7RxSwift10ObservableCy0aB6Schema0cdJ0OGyF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "input",
+            "printedName": "input(stream:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnySocketInputStream",
+                "printedName": "MeetingDoctorsController.AnySocketInputStream<MeetingDoctorsSchema.SocketClientSchema.Input>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Input",
+                    "printedName": "MeetingDoctorsSchema.SocketClientSchema.Input",
+                    "usr": "s:20MeetingDoctorsSchema012SocketClientC0O5InputO"
+                  }
+                ],
+                "usr": "s:24MeetingDoctorsController20AnySocketInputStreamV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketListenerType",
+                "printedName": "MeetingDoctorsSchema.SocketListenerType",
+                "usr": "s:20MeetingDoctorsSchema18SocketListenerTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C12ClientStreamC5input6stream0aB10Controller03Anyc5InputE0Vy0aB6Schema0cdK0O0J0OGAI0C12ListenerTypeO_tKF",
+            "mangledName": "$s20MeetingDoctorsSocket0C12ClientStreamC5input6stream0aB10Controller03Anyc5InputE0Vy0aB6Schema0cdK0O0J0OGAI0C12ListenerTypeO_tKF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "output",
+            "printedName": "output(stream:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnySocketOutputStream",
+                "printedName": "MeetingDoctorsController.AnySocketOutputStream<MeetingDoctorsSchema.SocketClientSchema.Output>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Output",
+                    "printedName": "MeetingDoctorsSchema.SocketClientSchema.Output",
+                    "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO"
+                  }
+                ],
+                "usr": "s:24MeetingDoctorsController21AnySocketOutputStreamV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketEmissionType",
+                "printedName": "MeetingDoctorsSchema.SocketEmissionType",
+                "usr": "s:20MeetingDoctorsSchema18SocketEmissionTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C12ClientStreamC6output6stream0aB10Controller03Anyc6OutputE0Vy0aB6Schema0cdK0O0J0OGAI0C12EmissionTypeO_tKF",
+            "mangledName": "$s20MeetingDoctorsSocket0C12ClientStreamC6output6stream0aB10Controller03Anyc6OutputE0Vy0aB6Schema0cdK0O0J0OGAI0C12EmissionTypeO_tKF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "join",
+            "printedName": "join(namespace:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C12ClientStreamC4join9namespaceySS_tF",
+            "mangledName": "$s20MeetingDoctorsSocket0C12ClientStreamC4join9namespaceySS_tF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "leave",
+            "printedName": "leave()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C12ClientStreamC5leaveyyF",
+            "mangledName": "$s20MeetingDoctorsSocket0C12ClientStreamC5leaveyyF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clear",
+            "printedName": "clear()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C12ClientStreamC5clearyyF",
+            "mangledName": "$s20MeetingDoctorsSocket0C12ClientStreamC5clearyyF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:20MeetingDoctorsSocket0C12ClientStreamC",
+        "mangledName": "$s20MeetingDoctorsSocket0C12ClientStreamC",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SocketStream",
+            "printedName": "SocketStream",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "SocketNativeType",
+                "printedName": "SocketNativeType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketClientSchema",
+                    "printedName": "MeetingDoctorsSchema.SocketClientSchema",
+                    "usr": "s:20MeetingDoctorsSchema012SocketClientC0O"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SocketInputType",
+                "printedName": "SocketInputType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Input",
+                    "printedName": "MeetingDoctorsSchema.SocketClientSchema.Input",
+                    "usr": "s:20MeetingDoctorsSchema012SocketClientC0O5InputO"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SocketOutputType",
+                "printedName": "SocketOutputType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Output",
+                    "printedName": "MeetingDoctorsSchema.SocketClientSchema.Output",
+                    "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:24MeetingDoctorsController12SocketStreamP",
+            "mangledName": "$s24MeetingDoctorsController12SocketStreamP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsCore",
+        "printedName": "MeetingDoctorsCore",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "SocketIO",
+        "printedName": "SocketIO",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SocketManagerAssembly",
+        "printedName": "SocketManagerAssembly",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "resolve",
+            "printedName": "resolve()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SocketIO.SocketManager?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketManager",
+                    "printedName": "SocketIO.SocketManager",
+                    "usr": "c:@M@SocketIO@objc(cs)SocketManager"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C15ManagerAssemblyP7resolve0C2IO0cD0CSgyF",
+            "mangledName": "$s20MeetingDoctorsSocket0C15ManagerAssemblyP7resolve0C2IO0cD0CSgyF",
+            "moduleName": "MeetingDoctorsSocket",
+            "genericSig": "<τ_0_0 where τ_0_0 : MeetingDoctorsSocket.SocketManagerAssembly>",
+            "sugared_genericSig": "<Self where Self : MeetingDoctorsSocket.SocketManagerAssembly>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:20MeetingDoctorsSocket0C15ManagerAssemblyP",
+        "mangledName": "$s20MeetingDoctorsSocket0C15ManagerAssemblyP",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SocketManagerAssembler",
+        "printedName": "SocketManagerAssembler",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "configuration",
+            "printedName": "configuration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SocketIOClientConfiguration",
+                "printedName": "SocketIO.SocketIOClientConfiguration",
+                "usr": "s:8SocketIO0A21IOClientConfigurationV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MeetingDoctorsSocket0C16ManagerAssemblerC13configuration0C2IO0C21IOClientConfigurationVvp",
+            "mangledName": "$s20MeetingDoctorsSocket0C16ManagerAssemblerC13configuration0C2IO0C21IOClientConfigurationVvp",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketIOClientConfiguration",
+                    "printedName": "SocketIO.SocketIOClientConfiguration",
+                    "usr": "s:8SocketIO0A21IOClientConfigurationV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MeetingDoctorsSocket0C16ManagerAssemblerC13configuration0C2IO0C21IOClientConfigurationVvg",
+                "mangledName": "$s20MeetingDoctorsSocket0C16ManagerAssemblerC13configuration0C2IO0C21IOClientConfigurationVvg",
+                "moduleName": "MeetingDoctorsSocket",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketIOClientConfiguration",
+                    "printedName": "SocketIO.SocketIOClientConfiguration",
+                    "usr": "s:8SocketIO0A21IOClientConfigurationV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MeetingDoctorsSocket0C16ManagerAssemblerC13configuration0C2IO0C21IOClientConfigurationVvs",
+                "mangledName": "$s20MeetingDoctorsSocket0C16ManagerAssemblerC13configuration0C2IO0C21IOClientConfigurationVvs",
+                "moduleName": "MeetingDoctorsSocket",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MeetingDoctorsSocket0C16ManagerAssemblerC13configuration0C2IO0C21IOClientConfigurationVvM",
+                "mangledName": "$s20MeetingDoctorsSocket0C16ManagerAssemblerC13configuration0C2IO0C21IOClientConfigurationVvM",
+                "moduleName": "MeetingDoctorsSocket",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "environment",
+            "printedName": "environment",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Environment",
+                "printedName": "MeetingDoctorsCore.Environment",
+                "usr": "s:18MeetingDoctorsCore11EnvironmentV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MeetingDoctorsSocket0C16ManagerAssemblerC11environment0aB4Core11EnvironmentVvp",
+            "mangledName": "$s20MeetingDoctorsSocket0C16ManagerAssemblerC11environment0aB4Core11EnvironmentVvp",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Environment",
+                    "printedName": "MeetingDoctorsCore.Environment",
+                    "usr": "s:18MeetingDoctorsCore11EnvironmentV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MeetingDoctorsSocket0C16ManagerAssemblerC11environment0aB4Core11EnvironmentVvg",
+                "mangledName": "$s20MeetingDoctorsSocket0C16ManagerAssemblerC11environment0aB4Core11EnvironmentVvg",
+                "moduleName": "MeetingDoctorsSocket",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(environment:configuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SocketManagerAssembler",
+                "printedName": "MeetingDoctorsSocket.SocketManagerAssembler",
+                "usr": "s:20MeetingDoctorsSocket0C16ManagerAssemblerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Environment",
+                "printedName": "MeetingDoctorsCore.Environment",
+                "usr": "s:18MeetingDoctorsCore11EnvironmentV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketIOClientConfiguration",
+                "printedName": "SocketIO.SocketIOClientConfiguration",
+                "usr": "s:8SocketIO0A21IOClientConfigurationV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20MeetingDoctorsSocket0C16ManagerAssemblerC11environment13configurationAC0aB4Core11EnvironmentV_0C2IO0C21IOClientConfigurationVtcfc",
+            "mangledName": "$s20MeetingDoctorsSocket0C16ManagerAssemblerC11environment13configurationAC0aB4Core11EnvironmentV_0C2IO0C21IOClientConfigurationVtcfc",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "resolve",
+            "printedName": "resolve()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SocketIO.SocketManager?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketManager",
+                    "printedName": "SocketIO.SocketManager",
+                    "usr": "c:@M@SocketIO@objc(cs)SocketManager"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C16ManagerAssemblerC7resolve0C2IO0cD0CSgyF",
+            "mangledName": "$s20MeetingDoctorsSocket0C16ManagerAssemblerC7resolve0C2IO0cD0CSgyF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:20MeetingDoctorsSocket0C16ManagerAssemblerC",
+        "mangledName": "$s20MeetingDoctorsSocket0C16ManagerAssemblerC",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SocketManagerAssembly",
+            "printedName": "SocketManagerAssembly",
+            "usr": "s:20MeetingDoctorsSocket0C15ManagerAssemblyP",
+            "mangledName": "$s20MeetingDoctorsSocket0C15ManagerAssemblyP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Assembler",
+            "printedName": "Assembler",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Component",
+                "printedName": "Component",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketManager",
+                    "printedName": "SocketIO.SocketManager",
+                    "usr": "c:@M@SocketIO@objc(cs)SocketManager"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:18MeetingDoctorsCore9AssemblerP",
+            "mangledName": "$s18MeetingDoctorsCore9AssemblerP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsController",
+        "printedName": "MeetingDoctorsController",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsSchema",
+        "printedName": "MeetingDoctorsSchema",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "RxSwift",
+        "printedName": "RxSwift",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "SocketIO",
+        "printedName": "SocketIO",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ClientSocketOutputStream",
+        "printedName": "ClientSocketOutputStream",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MeetingDoctorsSocket06ClientC12OutputStreamV4nameSSvp",
+            "mangledName": "$s20MeetingDoctorsSocket06ClientC12OutputStreamV4nameSSvp",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MeetingDoctorsSocket06ClientC12OutputStreamV4nameSSvg",
+                "mangledName": "$s20MeetingDoctorsSocket06ClientC12OutputStreamV4nameSSvg",
+                "moduleName": "MeetingDoctorsSocket",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ClientSocketOutputStream",
+                "printedName": "MeetingDoctorsSocket.ClientSocketOutputStream",
+                "usr": "s:20MeetingDoctorsSocket06ClientC12OutputStreamV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnySocketOutputStream",
+                "printedName": "MeetingDoctorsController.AnySocketOutputStream<SocketIO.SocketData>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketData",
+                    "printedName": "SocketIO.SocketData",
+                    "usr": "s:8SocketIO0A4DataP"
+                  }
+                ],
+                "usr": "s:24MeetingDoctorsController21AnySocketOutputStreamV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20MeetingDoctorsSocket06ClientC12OutputStreamVyAC0aB10Controller03AnyceF0Vy0C2IO0C4Data_pGcfc",
+            "mangledName": "$s20MeetingDoctorsSocket06ClientC12OutputStreamVyAC0aB10Controller03AnyceF0Vy0C2IO0C4Data_pGcfc",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "emit",
+            "printedName": "emit(event:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Output",
+                "printedName": "MeetingDoctorsSchema.SocketClientSchema.Output",
+                "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket06ClientC12OutputStreamV4emit5eventy0aB6Schema0cdI0O0E0O_tKF",
+            "mangledName": "$s20MeetingDoctorsSocket06ClientC12OutputStreamV4emit5eventy0aB6Schema0cdI0O0E0O_tKF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "acknowledge",
+            "printedName": "acknowledge(event:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PrimitiveSequence",
+                "printedName": "RxSwift.PrimitiveSequence<RxSwift.SingleTrait, MeetingDoctorsSchema.SocketClientSchema.Input>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SingleTrait",
+                    "printedName": "RxSwift.SingleTrait",
+                    "usr": "s:7RxSwift11SingleTraitO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Input",
+                    "printedName": "MeetingDoctorsSchema.SocketClientSchema.Input",
+                    "usr": "s:20MeetingDoctorsSchema012SocketClientC0O5InputO"
+                  }
+                ],
+                "usr": "s:7RxSwift17PrimitiveSequenceV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Output",
+                "printedName": "MeetingDoctorsSchema.SocketClientSchema.Output",
+                "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket06ClientC12OutputStreamV11acknowledge5event7RxSwift17PrimitiveSequenceVyAF11SingleTraitO0aB6Schema0cdO0O5InputOGAM0E0O_tKF",
+            "mangledName": "$s20MeetingDoctorsSocket06ClientC12OutputStreamV11acknowledge5event7RxSwift17PrimitiveSequenceVyAF11SingleTraitO0aB6Schema0cdO0O5InputOGAM0E0O_tKF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20MeetingDoctorsSocket06ClientC12OutputStreamV",
+        "mangledName": "$s20MeetingDoctorsSocket06ClientC12OutputStreamV",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SocketOutputStream",
+            "printedName": "SocketOutputStream",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "EventType",
+                "printedName": "EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Output",
+                    "printedName": "MeetingDoctorsSchema.SocketClientSchema.Output",
+                    "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:24MeetingDoctorsController18SocketOutputStreamP",
+            "mangledName": "$s24MeetingDoctorsController18SocketOutputStreamP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SocketEventType",
+            "printedName": "SocketEventType",
+            "usr": "s:20MeetingDoctorsSchema15SocketEventTypeP",
+            "mangledName": "$s20MeetingDoctorsSchema15SocketEventTypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsController",
+        "printedName": "MeetingDoctorsController",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsCore",
+        "printedName": "MeetingDoctorsCore",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsSchema",
+        "printedName": "MeetingDoctorsSchema",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "RxSwift",
+        "printedName": "RxSwift",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "SocketIO",
+        "printedName": "SocketIO",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SocketNativeStream",
+        "printedName": "SocketNativeStream",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Observable",
+                "printedName": "RxSwift.Observable<[Any]>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:7RxSwift10ObservableC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC5error7RxSwift10ObservableCySayypGGvp",
+            "mangledName": "$s20MeetingDoctorsSocket0C12NativeStreamC5error7RxSwift10ObservableCySayypGGvp",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Observable",
+                    "printedName": "RxSwift.Observable<[Any]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:7RxSwift10ObservableC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC5error7RxSwift10ObservableCySayypGGvg",
+                "mangledName": "$s20MeetingDoctorsSocket0C12NativeStreamC5error7RxSwift10ObservableCySayypGGvg",
+                "moduleName": "MeetingDoctorsSocket",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Observable",
+                "printedName": "RxSwift.Observable<[Any]>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:7RxSwift10ObservableC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC6status7RxSwift10ObservableCySayypGGvp",
+            "mangledName": "$s20MeetingDoctorsSocket0C12NativeStreamC6status7RxSwift10ObservableCySayypGGvp",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Observable",
+                    "printedName": "RxSwift.Observable<[Any]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:7RxSwift10ObservableC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC6status7RxSwift10ObservableCySayypGGvg",
+                "mangledName": "$s20MeetingDoctorsSocket0C12NativeStreamC6status7RxSwift10ObservableCySayypGGvg",
+                "moduleName": "MeetingDoctorsSocket",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(manager:timeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SocketNativeStream",
+                "printedName": "MeetingDoctorsSocket.SocketNativeStream",
+                "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketManager",
+                "printedName": "SocketIO.SocketManager",
+                "usr": "c:@M@SocketIO@objc(cs)SocketManager"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC7manager7timeoutAC0C2IO0C7ManagerC_Sdtcfc",
+            "mangledName": "$s20MeetingDoctorsSocket0C12NativeStreamC7manager7timeoutAC0C2IO0C7ManagerC_Sdtcfc",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect(credentials:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Observable",
+                "printedName": "RxSwift.Observable<[Any]>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:7RxSwift10ObservableC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC7connect11credentials7RxSwift10ObservableCySayypGGxSg_t0aB6Schema0C11CredentialsRzlF",
+            "mangledName": "$s20MeetingDoctorsSocket0C12NativeStreamC7connect11credentials7RxSwift10ObservableCySayypGGxSg_t0aB6Schema0C11CredentialsRzlF",
+            "moduleName": "MeetingDoctorsSocket",
+            "genericSig": "<τ_0_0 where τ_0_0 : MeetingDoctorsSchema.SocketCredentials>",
+            "sugared_genericSig": "<Credentials where Credentials : MeetingDoctorsSchema.SocketCredentials>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnect",
+            "printedName": "disconnect()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Observable",
+                "printedName": "RxSwift.Observable<[Any]>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:7RxSwift10ObservableC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC10disconnect7RxSwift10ObservableCySayypGGyF",
+            "mangledName": "$s20MeetingDoctorsSocket0C12NativeStreamC10disconnect7RxSwift10ObservableCySayypGGyF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "input",
+            "printedName": "input(stream:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnySocketInputStream",
+                "printedName": "MeetingDoctorsController.AnySocketInputStream<[Any]>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:24MeetingDoctorsController20AnySocketInputStreamV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketListenerType",
+                "printedName": "MeetingDoctorsSchema.SocketListenerType",
+                "usr": "s:20MeetingDoctorsSchema18SocketListenerTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC5input6stream0aB10Controller03Anyc5InputE0VySayypGG0aB6Schema0C12ListenerTypeO_tKF",
+            "mangledName": "$s20MeetingDoctorsSocket0C12NativeStreamC5input6stream0aB10Controller03Anyc5InputE0VySayypGG0aB6Schema0C12ListenerTypeO_tKF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "output",
+            "printedName": "output(stream:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnySocketOutputStream",
+                "printedName": "MeetingDoctorsController.AnySocketOutputStream<SocketIO.SocketData>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketData",
+                    "printedName": "SocketIO.SocketData",
+                    "usr": "s:8SocketIO0A4DataP"
+                  }
+                ],
+                "usr": "s:24MeetingDoctorsController21AnySocketOutputStreamV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketEmissionType",
+                "printedName": "MeetingDoctorsSchema.SocketEmissionType",
+                "usr": "s:20MeetingDoctorsSchema18SocketEmissionTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC6output6stream0aB10Controller03Anyc6OutputE0Vy0C2IO0C4Data_pG0aB6Schema0C12EmissionTypeO_tKF",
+            "mangledName": "$s20MeetingDoctorsSocket0C12NativeStreamC6output6stream0aB10Controller03Anyc6OutputE0Vy0C2IO0C4Data_pG0aB6Schema0C12EmissionTypeO_tKF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "join",
+            "printedName": "join(namespace:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC4join9namespaceySS_tF",
+            "mangledName": "$s20MeetingDoctorsSocket0C12NativeStreamC4join9namespaceySS_tF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "leave",
+            "printedName": "leave()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC5leaveyyF",
+            "mangledName": "$s20MeetingDoctorsSocket0C12NativeStreamC5leaveyyF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clear",
+            "printedName": "clear()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC5clearyyF",
+            "mangledName": "$s20MeetingDoctorsSocket0C12NativeStreamC5clearyyF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC",
+        "mangledName": "$s20MeetingDoctorsSocket0C12NativeStreamC",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SocketStream",
+            "printedName": "SocketStream",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "SocketNativeType",
+                "printedName": "SocketNativeType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SocketInputType",
+                "printedName": "SocketInputType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "SocketOutputType",
+                "printedName": "SocketOutputType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketData",
+                    "printedName": "SocketIO.SocketData",
+                    "usr": "s:8SocketIO0A4DataP"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:24MeetingDoctorsController12SocketStreamP",
+            "mangledName": "$s24MeetingDoctorsController12SocketStreamP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SocketStreamError",
+        "printedName": "SocketStreamError",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "EventDecodingFailureReason",
+            "printedName": "EventDecodingFailureReason",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "unexpectedResponseFormat",
+                "printedName": "unexpectedResponseFormat",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MeetingDoctorsSocket.SocketStreamError.EventDecodingFailureReason.Type) -> (Swift.String, [Any]) -> MeetingDoctorsSocket.SocketStreamError.EventDecodingFailureReason",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String, [Any]) -> MeetingDoctorsSocket.SocketStreamError.EventDecodingFailureReason",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "EventDecodingFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.EventDecodingFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO26EventDecodingFailureReasonO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(event: Swift.String, data: [Any])",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[Any]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "ProtocolComposition",
+                                    "printedName": "Any"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError.EventDecodingFailureReason.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "EventDecodingFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.EventDecodingFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO26EventDecodingFailureReasonO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO26EventDecodingFailureReasonO24unexpectedResponseFormatyAESS_SayypGtcAEmF",
+                "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO26EventDecodingFailureReasonO24unexpectedResponseFormatyAESS_SayypGtcAEmF",
+                "moduleName": "MeetingDoctorsSocket"
+              },
+              {
+                "kind": "Var",
+                "name": "undefinedAckTransformation",
+                "printedName": "undefinedAckTransformation",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MeetingDoctorsSocket.SocketStreamError.EventDecodingFailureReason.Type) -> MeetingDoctorsSocket.SocketStreamError.EventDecodingFailureReason",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventDecodingFailureReason",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError.EventDecodingFailureReason",
+                        "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO26EventDecodingFailureReasonO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError.EventDecodingFailureReason.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "EventDecodingFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.EventDecodingFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO26EventDecodingFailureReasonO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO26EventDecodingFailureReasonO26undefinedAckTransformationyA2EmF",
+                "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO26EventDecodingFailureReasonO26undefinedAckTransformationyA2EmF",
+                "moduleName": "MeetingDoctorsSocket"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO26EventDecodingFailureReasonO",
+            "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO26EventDecodingFailureReasonO",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "SocketFailureReason",
+            "printedName": "SocketFailureReason",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "emitFailed",
+                "printedName": "emitFailed",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MeetingDoctorsSocket.SocketStreamError.SocketFailureReason.Type) -> (Swift.String, [Any], Swift.Error) -> MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String, [Any], Swift.Error) -> MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SocketFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(event: Swift.String, items: [Any], underlyingError: Swift.Error)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[Any]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "ProtocolComposition",
+                                    "printedName": "Any"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError.SocketFailureReason.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SocketFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO10emitFailedyAESS_SayypGs0E0_ptcAEmF",
+                "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO10emitFailedyAESS_SayypGs0E0_ptcAEmF",
+                "moduleName": "MeetingDoctorsSocket"
+              },
+              {
+                "kind": "Var",
+                "name": "ackFailed",
+                "printedName": "ackFailed",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MeetingDoctorsSocket.SocketStreamError.SocketFailureReason.Type) -> (Swift.Int, [Any], Swift.Error) -> MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Int, [Any], Swift.Error) -> MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SocketFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(ack: Swift.Int, items: [Any], underlyingError: Swift.Error)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Int",
+                                "printedName": "Swift.Int",
+                                "usr": "s:Si"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[Any]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "ProtocolComposition",
+                                    "printedName": "Any"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError.SocketFailureReason.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SocketFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO9ackFailedyAESi_SayypGs0E0_ptcAEmF",
+                "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO9ackFailedyAESi_SayypGs0E0_ptcAEmF",
+                "moduleName": "MeetingDoctorsSocket"
+              },
+              {
+                "kind": "Var",
+                "name": "ackNotFound",
+                "printedName": "ackNotFound",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MeetingDoctorsSocket.SocketStreamError.SocketFailureReason.Type) -> MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SocketFailureReason",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                        "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError.SocketFailureReason.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SocketFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO11ackNotFoundyA2EmF",
+                "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO11ackNotFoundyA2EmF",
+                "moduleName": "MeetingDoctorsSocket"
+              },
+              {
+                "kind": "Var",
+                "name": "description",
+                "printedName": "description",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MeetingDoctorsSocket.SocketStreamError.SocketFailureReason.Type) -> (Swift.String) -> MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String) -> MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SocketFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(reason: Swift.String)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError.SocketFailureReason.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SocketFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO11descriptionyAESS_tcAEmF",
+                "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO11descriptionyAESS_tcAEmF",
+                "moduleName": "MeetingDoctorsSocket"
+              },
+              {
+                "kind": "Var",
+                "name": "unknown",
+                "printedName": "unknown",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MeetingDoctorsSocket.SocketStreamError.SocketFailureReason.Type) -> MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SocketFailureReason",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                        "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError.SocketFailureReason.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SocketFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO7unknownyA2EmF",
+                "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO7unknownyA2EmF",
+                "moduleName": "MeetingDoctorsSocket"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO",
+            "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "StreamFailureReason",
+            "printedName": "StreamFailureReason",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "factoryMethodFailed",
+                "printedName": "factoryMethodFailed",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MeetingDoctorsSocket.SocketStreamError.StreamFailureReason.Type) -> MeetingDoctorsSocket.SocketStreamError.StreamFailureReason",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StreamFailureReason",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError.StreamFailureReason",
+                        "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError.StreamFailureReason.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "StreamFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.StreamFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO19factoryMethodFailedyA2EmF",
+                "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO19factoryMethodFailedyA2EmF",
+                "moduleName": "MeetingDoctorsSocket"
+              },
+              {
+                "kind": "Var",
+                "name": "illegalStreamState",
+                "printedName": "illegalStreamState",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MeetingDoctorsSocket.SocketStreamError.StreamFailureReason.Type) -> MeetingDoctorsSocket.SocketStreamError.StreamFailureReason",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StreamFailureReason",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError.StreamFailureReason",
+                        "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError.StreamFailureReason.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "StreamFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.StreamFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO07illegalD5StateyA2EmF",
+                "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO07illegalD5StateyA2EmF",
+                "moduleName": "MeetingDoctorsSocket"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "StreamFailureReason",
+                    "printedName": "MeetingDoctorsSocket.SocketStreamError.StreamFailureReason",
+                    "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "StreamFailureReason",
+                    "printedName": "MeetingDoctorsSocket.SocketStreamError.StreamFailureReason",
+                    "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO2eeoiySbAE_AEtFZ",
+                "moduleName": "MeetingDoctorsSocket",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO9hashValueSivp",
+                "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO9hashValueSivp",
+                "moduleName": "MeetingDoctorsSocket",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO9hashValueSivg",
+                    "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO9hashValueSivg",
+                    "moduleName": "MeetingDoctorsSocket",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO4hash4intoys6HasherVz_tF",
+                "moduleName": "MeetingDoctorsSocket",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO",
+            "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "eventDecodingFailed",
+            "printedName": "eventDecodingFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MeetingDoctorsSocket.SocketStreamError.Type) -> (MeetingDoctorsSocket.SocketStreamError.EventDecodingFailureReason) -> MeetingDoctorsSocket.SocketStreamError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MeetingDoctorsSocket.SocketStreamError.EventDecodingFailureReason) -> MeetingDoctorsSocket.SocketStreamError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SocketStreamError",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError",
+                        "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(reason: MeetingDoctorsSocket.SocketStreamError.EventDecodingFailureReason)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "EventDecodingFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.EventDecodingFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO26EventDecodingFailureReasonO"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MeetingDoctorsSocket.SocketStreamError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SocketStreamError",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError",
+                        "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO19eventDecodingFailedyA2C05EventG13FailureReasonO_tcACmF",
+            "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO19eventDecodingFailedyA2C05EventG13FailureReasonO_tcACmF",
+            "moduleName": "MeetingDoctorsSocket"
+          },
+          {
+            "kind": "Var",
+            "name": "socketFailed",
+            "printedName": "socketFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MeetingDoctorsSocket.SocketStreamError.Type) -> (MeetingDoctorsSocket.SocketStreamError.SocketFailureReason) -> MeetingDoctorsSocket.SocketStreamError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MeetingDoctorsSocket.SocketStreamError.SocketFailureReason) -> MeetingDoctorsSocket.SocketStreamError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SocketStreamError",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError",
+                        "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(reason: MeetingDoctorsSocket.SocketStreamError.SocketFailureReason)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SocketFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.SocketFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0C13FailureReasonO"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MeetingDoctorsSocket.SocketStreamError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SocketStreamError",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError",
+                        "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO12socketFailedyA2C0C13FailureReasonO_tcACmF",
+            "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO12socketFailedyA2C0C13FailureReasonO_tcACmF",
+            "moduleName": "MeetingDoctorsSocket"
+          },
+          {
+            "kind": "Var",
+            "name": "outputStreamFailed",
+            "printedName": "outputStreamFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MeetingDoctorsSocket.SocketStreamError.Type) -> (MeetingDoctorsSocket.SocketStreamError.StreamFailureReason) -> MeetingDoctorsSocket.SocketStreamError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MeetingDoctorsSocket.SocketStreamError.StreamFailureReason) -> MeetingDoctorsSocket.SocketStreamError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SocketStreamError",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError",
+                        "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(reason: MeetingDoctorsSocket.SocketStreamError.StreamFailureReason)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "StreamFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.StreamFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MeetingDoctorsSocket.SocketStreamError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SocketStreamError",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError",
+                        "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO06outputD6FailedyA2C0D13FailureReasonO_tcACmF",
+            "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO06outputD6FailedyA2C0D13FailureReasonO_tcACmF",
+            "moduleName": "MeetingDoctorsSocket"
+          },
+          {
+            "kind": "Var",
+            "name": "inputStreamFailed",
+            "printedName": "inputStreamFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MeetingDoctorsSocket.SocketStreamError.Type) -> (MeetingDoctorsSocket.SocketStreamError.StreamFailureReason) -> MeetingDoctorsSocket.SocketStreamError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MeetingDoctorsSocket.SocketStreamError.StreamFailureReason) -> MeetingDoctorsSocket.SocketStreamError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SocketStreamError",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError",
+                        "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(reason: MeetingDoctorsSocket.SocketStreamError.StreamFailureReason)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "StreamFailureReason",
+                            "printedName": "MeetingDoctorsSocket.SocketStreamError.StreamFailureReason",
+                            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO0D13FailureReasonO"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MeetingDoctorsSocket.SocketStreamError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SocketStreamError",
+                        "printedName": "MeetingDoctorsSocket.SocketStreamError",
+                        "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO05inputD6FailedyA2C0D13FailureReasonO_tcACmF",
+            "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO05inputD6FailedyA2C0D13FailureReasonO_tcACmF",
+            "moduleName": "MeetingDoctorsSocket"
+          },
+          {
+            "kind": "Var",
+            "name": "underlyingError",
+            "printedName": "underlyingError",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Error?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO010underlyingE0s0E0_pSgvp",
+            "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO010underlyingE0s0E0_pSgvp",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Error?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO010underlyingE0s0E0_pSgvg",
+                "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO010underlyingE0s0E0_pSgvg",
+                "moduleName": "MeetingDoctorsSocket",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:20MeetingDoctorsSocket0C11StreamErrorO",
+        "mangledName": "$s20MeetingDoctorsSocket0C11StreamErrorO",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsController",
+        "printedName": "MeetingDoctorsController",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsSchema",
+        "printedName": "MeetingDoctorsSchema",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "RxSwift",
+        "printedName": "RxSwift",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "SocketIO",
+        "printedName": "SocketIO",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NativeSocketInputStream",
+        "printedName": "NativeSocketInputStream",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MeetingDoctorsSocket06NativeC11InputStreamV4nameSSvp",
+            "mangledName": "$s20MeetingDoctorsSocket06NativeC11InputStreamV4nameSSvp",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MeetingDoctorsSocket06NativeC11InputStreamV4nameSSvg",
+                "mangledName": "$s20MeetingDoctorsSocket06NativeC11InputStreamV4nameSSvg",
+                "moduleName": "MeetingDoctorsSocket",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(client:event:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NativeSocketInputStream",
+                "printedName": "MeetingDoctorsSocket.NativeSocketInputStream",
+                "usr": "s:20MeetingDoctorsSocket06NativeC11InputStreamV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketIOClient",
+                "printedName": "SocketIO.SocketIOClient",
+                "usr": "c:@M@SocketIO@objc(cs)SocketIOClient"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketListenerType",
+                "printedName": "MeetingDoctorsSchema.SocketListenerType",
+                "usr": "s:20MeetingDoctorsSchema18SocketListenerTypeO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20MeetingDoctorsSocket06NativeC11InputStreamV6client5eventAC0C2IO0C8IOClientC_0aB6Schema0C12ListenerTypeOtcfc",
+            "mangledName": "$s20MeetingDoctorsSocket06NativeC11InputStreamV6client5eventAC0C2IO0C8IOClientC_0aB6Schema0C12ListenerTypeOtcfc",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(client:event:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NativeSocketInputStream",
+                "printedName": "MeetingDoctorsSocket.NativeSocketInputStream",
+                "usr": "s:20MeetingDoctorsSocket06NativeC11InputStreamV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketIOClient",
+                "printedName": "SocketIO.SocketIOClient",
+                "usr": "c:@M@SocketIO@objc(cs)SocketIOClient"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketClientEvent",
+                "printedName": "SocketIO.SocketClientEvent",
+                "usr": "s:8SocketIO0A11ClientEventO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20MeetingDoctorsSocket06NativeC11InputStreamV6client5eventAC0C2IO0C8IOClientC_AF0C11ClientEventOtcfc",
+            "mangledName": "$s20MeetingDoctorsSocket06NativeC11InputStreamV6client5eventAC0C2IO0C8IOClientC_AF0C11ClientEventOtcfc",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "on",
+            "printedName": "on()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Observable",
+                "printedName": "RxSwift.Observable<[Any]>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:7RxSwift10ObservableC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket06NativeC11InputStreamV2on7RxSwift10ObservableCySayypGGyF",
+            "mangledName": "$s20MeetingDoctorsSocket06NativeC11InputStreamV2on7RxSwift10ObservableCySayypGGyF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20MeetingDoctorsSocket06NativeC11InputStreamV",
+        "mangledName": "$s20MeetingDoctorsSocket06NativeC11InputStreamV",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SocketInputStream",
+            "printedName": "SocketInputStream",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "EventType",
+                "printedName": "EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:24MeetingDoctorsController17SocketInputStreamP",
+            "mangledName": "$s24MeetingDoctorsController17SocketInputStreamP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SocketEventType",
+            "printedName": "SocketEventType",
+            "usr": "s:20MeetingDoctorsSchema15SocketEventTypeP",
+            "mangledName": "$s20MeetingDoctorsSchema15SocketEventTypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsSchema",
+        "printedName": "MeetingDoctorsSchema",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "SocketIO",
+        "printedName": "SocketIO",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsController",
+        "printedName": "MeetingDoctorsController",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsCore",
+        "printedName": "MeetingDoctorsCore",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsSchema",
+        "printedName": "MeetingDoctorsSchema",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "RxSwift",
+        "printedName": "RxSwift",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "SocketIO",
+        "printedName": "SocketIO",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NativeSocketOutputStream",
+        "printedName": "NativeSocketOutputStream",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MeetingDoctorsSocket06NativeC12OutputStreamV4nameSSvp",
+            "mangledName": "$s20MeetingDoctorsSocket06NativeC12OutputStreamV4nameSSvp",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MeetingDoctorsSocket06NativeC12OutputStreamV4nameSSvg",
+                "mangledName": "$s20MeetingDoctorsSocket06NativeC12OutputStreamV4nameSSvg",
+                "moduleName": "MeetingDoctorsSocket",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(client:event:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NativeSocketOutputStream",
+                "printedName": "MeetingDoctorsSocket.NativeSocketOutputStream",
+                "usr": "s:20MeetingDoctorsSocket06NativeC12OutputStreamV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketIOClient",
+                "printedName": "SocketIO.SocketIOClient",
+                "usr": "c:@M@SocketIO@objc(cs)SocketIOClient"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketEmissionType",
+                "printedName": "MeetingDoctorsSchema.SocketEmissionType",
+                "usr": "s:20MeetingDoctorsSchema18SocketEmissionTypeO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20MeetingDoctorsSocket06NativeC12OutputStreamV6client5eventAC0C2IO0C8IOClientC_0aB6Schema0C12EmissionTypeOtcfc",
+            "mangledName": "$s20MeetingDoctorsSocket06NativeC12OutputStreamV6client5eventAC0C2IO0C8IOClientC_0aB6Schema0C12EmissionTypeOtcfc",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "emit",
+            "printedName": "emit(event:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketData",
+                "printedName": "SocketIO.SocketData",
+                "usr": "s:8SocketIO0A4DataP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket06NativeC12OutputStreamV4emit5eventy0C2IO0C4Data_p_tKF",
+            "mangledName": "$s20MeetingDoctorsSocket06NativeC12OutputStreamV4emit5eventy0C2IO0C4Data_p_tKF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "acknowledge",
+            "printedName": "acknowledge(event:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PrimitiveSequence",
+                "printedName": "RxSwift.PrimitiveSequence<RxSwift.SingleTrait, MeetingDoctorsSchema.SocketClientSchema.Input>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SingleTrait",
+                    "printedName": "RxSwift.SingleTrait",
+                    "usr": "s:7RxSwift11SingleTraitO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Input",
+                    "printedName": "MeetingDoctorsSchema.SocketClientSchema.Input",
+                    "usr": "s:20MeetingDoctorsSchema012SocketClientC0O5InputO"
+                  }
+                ],
+                "usr": "s:7RxSwift17PrimitiveSequenceV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketData",
+                "printedName": "SocketIO.SocketData",
+                "usr": "s:8SocketIO0A4DataP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket06NativeC12OutputStreamV11acknowledge5event7RxSwift17PrimitiveSequenceVyAF11SingleTraitO0aB6Schema0c6ClientO0O5InputOG0C2IO0C4Data_p_tKF",
+            "mangledName": "$s20MeetingDoctorsSocket06NativeC12OutputStreamV11acknowledge5event7RxSwift17PrimitiveSequenceVyAF11SingleTraitO0aB6Schema0c6ClientO0O5InputOG0C2IO0C4Data_p_tKF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20MeetingDoctorsSocket06NativeC12OutputStreamV",
+        "mangledName": "$s20MeetingDoctorsSocket06NativeC12OutputStreamV",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SocketOutputStream",
+            "printedName": "SocketOutputStream",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "EventType",
+                "printedName": "EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketData",
+                    "printedName": "SocketIO.SocketData",
+                    "usr": "s:8SocketIO0A4DataP"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:24MeetingDoctorsController18SocketOutputStreamP",
+            "mangledName": "$s24MeetingDoctorsController18SocketOutputStreamP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SocketEventType",
+            "printedName": "SocketEventType",
+            "usr": "s:20MeetingDoctorsSchema15SocketEventTypeP",
+            "mangledName": "$s20MeetingDoctorsSchema15SocketEventTypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsCore",
+        "printedName": "MeetingDoctorsCore",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsSchema",
+        "printedName": "MeetingDoctorsSchema",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "SocketIO",
+        "printedName": "SocketIO",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsController",
+        "printedName": "MeetingDoctorsController",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsCore",
+        "printedName": "MeetingDoctorsCore",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsSchema",
+        "printedName": "MeetingDoctorsSchema",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "RxSwift",
+        "printedName": "RxSwift",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ClientSocketInputStream",
+        "printedName": "ClientSocketInputStream",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MeetingDoctorsSocket06ClientC11InputStreamV4nameSSvp",
+            "mangledName": "$s20MeetingDoctorsSocket06ClientC11InputStreamV4nameSSvp",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MeetingDoctorsSocket06ClientC11InputStreamV4nameSSvg",
+                "mangledName": "$s20MeetingDoctorsSocket06ClientC11InputStreamV4nameSSvg",
+                "moduleName": "MeetingDoctorsSocket",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:stream:mapper:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ClientSocketInputStream",
+                "printedName": "MeetingDoctorsSocket.ClientSocketInputStream",
+                "usr": "s:20MeetingDoctorsSocket06ClientC11InputStreamV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketListenerType",
+                "printedName": "MeetingDoctorsSchema.SocketListenerType",
+                "usr": "s:20MeetingDoctorsSchema18SocketListenerTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnySocketInputStream",
+                "printedName": "MeetingDoctorsController.AnySocketInputStream<[Any]>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:24MeetingDoctorsController20AnySocketInputStreamV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CodableMapper",
+                "printedName": "MeetingDoctorsCore.CodableMapper",
+                "usr": "s:18MeetingDoctorsCore13CodableMapperP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20MeetingDoctorsSocket06ClientC11InputStreamV_6stream6mapperAC0aB6Schema0C12ListenerTypeO_0aB10Controller03AnyceF0VySayypGG0aB4Core13CodableMapper_ptcfc",
+            "mangledName": "$s20MeetingDoctorsSocket06ClientC11InputStreamV_6stream6mapperAC0aB6Schema0C12ListenerTypeO_0aB10Controller03AnyceF0VySayypGG0aB4Core13CodableMapper_ptcfc",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "on",
+            "printedName": "on()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Observable",
+                "printedName": "RxSwift.Observable<MeetingDoctorsSchema.SocketClientSchema.Input>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Input",
+                    "printedName": "MeetingDoctorsSchema.SocketClientSchema.Input",
+                    "usr": "s:20MeetingDoctorsSchema012SocketClientC0O5InputO"
+                  }
+                ],
+                "usr": "s:7RxSwift10ObservableC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket06ClientC11InputStreamV2on7RxSwift10ObservableCy0aB6Schema0cdK0O0E0OGyF",
+            "mangledName": "$s20MeetingDoctorsSocket06ClientC11InputStreamV2on7RxSwift10ObservableCy0aB6Schema0cdK0O0E0OGyF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:20MeetingDoctorsSocket06ClientC11InputStreamV",
+        "mangledName": "$s20MeetingDoctorsSocket06ClientC11InputStreamV",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SocketInputStream",
+            "printedName": "SocketInputStream",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "EventType",
+                "printedName": "EventType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Input",
+                    "printedName": "MeetingDoctorsSchema.SocketClientSchema.Input",
+                    "usr": "s:20MeetingDoctorsSchema012SocketClientC0O5InputO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:24MeetingDoctorsController17SocketInputStreamP",
+            "mangledName": "$s24MeetingDoctorsController17SocketInputStreamP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SocketEventType",
+            "printedName": "SocketEventType",
+            "usr": "s:20MeetingDoctorsSchema15SocketEventTypeP",
+            "mangledName": "$s20MeetingDoctorsSchema15SocketEventTypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MeetingDoctorsCore",
+        "printedName": "MeetingDoctorsCore",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "Import",
+        "name": "SocketIO",
+        "printedName": "SocketIO",
+        "declKind": "Import",
+        "moduleName": "MeetingDoctorsSocket"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SocketNativeStreamAssembly",
+        "printedName": "SocketNativeStreamAssembly",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "resolve",
+            "printedName": "resolve()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MeetingDoctorsSocket.SocketNativeStream?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketNativeStream",
+                    "printedName": "MeetingDoctorsSocket.SocketNativeStream",
+                    "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C20NativeStreamAssemblyP7resolveAA0cdE0CSgyF",
+            "mangledName": "$s20MeetingDoctorsSocket0C20NativeStreamAssemblyP7resolveAA0cdE0CSgyF",
+            "moduleName": "MeetingDoctorsSocket",
+            "genericSig": "<τ_0_0 where τ_0_0 : MeetingDoctorsSocket.SocketNativeStreamAssembly>",
+            "sugared_genericSig": "<Self where Self : MeetingDoctorsSocket.SocketNativeStreamAssembly>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:20MeetingDoctorsSocket0C20NativeStreamAssemblyP",
+        "mangledName": "$s20MeetingDoctorsSocket0C20NativeStreamAssemblyP",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SocketNativeStreamAssembler",
+        "printedName": "SocketNativeStreamAssembler",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "environment",
+            "printedName": "environment",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Environment",
+                "printedName": "MeetingDoctorsCore.Environment",
+                "usr": "s:18MeetingDoctorsCore11EnvironmentV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MeetingDoctorsSocket0C21NativeStreamAssemblerC11environment0aB4Core11EnvironmentVvp",
+            "mangledName": "$s20MeetingDoctorsSocket0C21NativeStreamAssemblerC11environment0aB4Core11EnvironmentVvp",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Environment",
+                    "printedName": "MeetingDoctorsCore.Environment",
+                    "usr": "s:18MeetingDoctorsCore11EnvironmentV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MeetingDoctorsSocket0C21NativeStreamAssemblerC11environment0aB4Core11EnvironmentVvg",
+                "mangledName": "$s20MeetingDoctorsSocket0C21NativeStreamAssemblerC11environment0aB4Core11EnvironmentVvg",
+                "moduleName": "MeetingDoctorsSocket",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "manager",
+            "printedName": "manager",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SocketManager",
+                "printedName": "SocketIO.SocketManager",
+                "usr": "c:@M@SocketIO@objc(cs)SocketManager"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20MeetingDoctorsSocket0C21NativeStreamAssemblerC7manager0C2IO0C7ManagerCvp",
+            "mangledName": "$s20MeetingDoctorsSocket0C21NativeStreamAssemblerC7manager0C2IO0C7ManagerCvp",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketManager",
+                    "printedName": "SocketIO.SocketManager",
+                    "usr": "c:@M@SocketIO@objc(cs)SocketManager"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20MeetingDoctorsSocket0C21NativeStreamAssemblerC7manager0C2IO0C7ManagerCvg",
+                "mangledName": "$s20MeetingDoctorsSocket0C21NativeStreamAssemblerC7manager0C2IO0C7ManagerCvg",
+                "moduleName": "MeetingDoctorsSocket",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(manager:environment:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SocketNativeStreamAssembler",
+                "printedName": "MeetingDoctorsSocket.SocketNativeStreamAssembler",
+                "usr": "s:20MeetingDoctorsSocket0C21NativeStreamAssemblerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketManager",
+                "printedName": "SocketIO.SocketManager",
+                "usr": "c:@M@SocketIO@objc(cs)SocketManager"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Environment",
+                "printedName": "MeetingDoctorsCore.Environment",
+                "usr": "s:18MeetingDoctorsCore11EnvironmentV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:20MeetingDoctorsSocket0C21NativeStreamAssemblerC7manager11environmentAC0C2IO0C7ManagerC_0aB4Core11EnvironmentVtcfc",
+            "mangledName": "$s20MeetingDoctorsSocket0C21NativeStreamAssemblerC7manager11environmentAC0C2IO0C7ManagerC_0aB4Core11EnvironmentVtcfc",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "resolve",
+            "printedName": "resolve()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MeetingDoctorsSocket.SocketNativeStream?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketNativeStream",
+                    "printedName": "MeetingDoctorsSocket.SocketNativeStream",
+                    "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSocket0C21NativeStreamAssemblerC7resolveAA0cdE0CSgyF",
+            "mangledName": "$s20MeetingDoctorsSocket0C21NativeStreamAssemblerC7resolveAA0cdE0CSgyF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:20MeetingDoctorsSocket0C21NativeStreamAssemblerC",
+        "mangledName": "$s20MeetingDoctorsSocket0C21NativeStreamAssemblerC",
+        "moduleName": "MeetingDoctorsSocket",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SocketNativeStreamAssembly",
+            "printedName": "SocketNativeStreamAssembly",
+            "usr": "s:20MeetingDoctorsSocket0C20NativeStreamAssemblyP",
+            "mangledName": "$s20MeetingDoctorsSocket0C20NativeStreamAssemblyP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Assembler",
+            "printedName": "Assembler",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Component",
+                "printedName": "Component",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketNativeStream",
+                    "printedName": "MeetingDoctorsSocket.SocketNativeStream",
+                    "usr": "s:20MeetingDoctorsSocket0C12NativeStreamC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:18MeetingDoctorsCore9AssemblerP",
+            "mangledName": "$s18MeetingDoctorsCore9AssemblerP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SocketClientStatus",
+        "printedName": "SocketClientStatus",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "wrap",
+            "printedName": "wrap(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MeetingDoctorsSchema.SocketClientStatus?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketClientStatus",
+                    "printedName": "MeetingDoctorsSchema.SocketClientStatus",
+                    "usr": "s:20MeetingDoctorsSchema18SocketClientStatusO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SocketIO.SocketIOStatus?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketIOStatus",
+                    "printedName": "SocketIO.SocketIOStatus",
+                    "usr": "c:@M@SocketIO@E@SocketIOStatus"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSchema18SocketClientStatusO0abD0E4wrap4fromACSg0D2IO0D8IOStatusOSg_tFZ",
+            "mangledName": "$s20MeetingDoctorsSchema18SocketClientStatusO0abD0E4wrap4fromACSg0D2IO0D8IOStatusOSg_tFZ",
+            "moduleName": "MeetingDoctorsSocket",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:20MeetingDoctorsSchema18SocketClientStatusO",
+        "mangledName": "$s20MeetingDoctorsSchema18SocketClientStatusO",
+        "moduleName": "MeetingDoctorsSchema",
+        "enumRawTypeName": "Int",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SocketClientSchema",
+        "printedName": "SocketClientSchema",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "build",
+            "printedName": "build(connect:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SocketClientSchema",
+                "printedName": "MeetingDoctorsSchema.SocketClientSchema",
+                "usr": "s:20MeetingDoctorsSchema012SocketClientC0O"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSchema012SocketClientC0O0abD0E5build7connectACSayypG_tFZ",
+            "mangledName": "$s20MeetingDoctorsSchema012SocketClientC0O0abD0E5build7connectACSayypG_tFZ",
+            "moduleName": "MeetingDoctorsSocket",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "build",
+            "printedName": "build(disconnect:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SocketClientSchema",
+                "printedName": "MeetingDoctorsSchema.SocketClientSchema",
+                "usr": "s:20MeetingDoctorsSchema012SocketClientC0O"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSchema012SocketClientC0O0abD0E5build10disconnectACSayypG_tFZ",
+            "mangledName": "$s20MeetingDoctorsSchema012SocketClientC0O0abD0E5build10disconnectACSayypG_tFZ",
+            "moduleName": "MeetingDoctorsSocket",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "build",
+            "printedName": "build(status:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SocketClientSchema",
+                "printedName": "MeetingDoctorsSchema.SocketClientSchema",
+                "usr": "s:20MeetingDoctorsSchema012SocketClientC0O"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSchema012SocketClientC0O0abD0E5build6statusACSayypG_tFZ",
+            "mangledName": "$s20MeetingDoctorsSchema012SocketClientC0O0abD0E5build6statusACSayypG_tFZ",
+            "moduleName": "MeetingDoctorsSocket",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "build",
+            "printedName": "build(error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SocketClientSchema",
+                "printedName": "MeetingDoctorsSchema.SocketClientSchema",
+                "usr": "s:20MeetingDoctorsSchema012SocketClientC0O"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSchema012SocketClientC0O0abD0E5build5errorACSayypG_tFZ",
+            "mangledName": "$s20MeetingDoctorsSchema012SocketClientC0O0abD0E5build5errorACSayypG_tFZ",
+            "moduleName": "MeetingDoctorsSocket",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:20MeetingDoctorsSchema012SocketClientC0O",
+        "mangledName": "$s20MeetingDoctorsSchema012SocketClientC0O",
+        "moduleName": "MeetingDoctorsSchema",
+        "isExternal": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Output",
+        "printedName": "Output",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Direction",
+            "printedName": "Direction",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "previous",
+                "printedName": "previous",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MeetingDoctorsSchema.SocketClientSchema.Output.Direction.Type) -> MeetingDoctorsSchema.SocketClientSchema.Output.Direction",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Direction",
+                        "printedName": "MeetingDoctorsSchema.SocketClientSchema.Output.Direction",
+                        "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MeetingDoctorsSchema.SocketClientSchema.Output.Direction.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Direction",
+                            "printedName": "MeetingDoctorsSchema.SocketClientSchema.Output.Direction",
+                            "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO8previousyA2HmF",
+                "mangledName": "$s20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO8previousyA2HmF",
+                "moduleName": "MeetingDoctorsSocket"
+              },
+              {
+                "kind": "Var",
+                "name": "next",
+                "printedName": "next",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MeetingDoctorsSchema.SocketClientSchema.Output.Direction.Type) -> MeetingDoctorsSchema.SocketClientSchema.Output.Direction",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Direction",
+                        "printedName": "MeetingDoctorsSchema.SocketClientSchema.Output.Direction",
+                        "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MeetingDoctorsSchema.SocketClientSchema.Output.Direction.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Direction",
+                            "printedName": "MeetingDoctorsSchema.SocketClientSchema.Output.Direction",
+                            "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO4nextyA2HmF",
+                "mangledName": "$s20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO4nextyA2HmF",
+                "moduleName": "MeetingDoctorsSocket"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "MeetingDoctorsSchema.SocketClientSchema.Output.Direction?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Direction",
+                        "printedName": "MeetingDoctorsSchema.SocketClientSchema.Output.Direction",
+                        "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO8rawValueAHSgSi_tcfc",
+                "mangledName": "$s20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO8rawValueAHSgSi_tcfc",
+                "moduleName": "MeetingDoctorsSocket",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO8rawValueSivp",
+                "mangledName": "$s20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO8rawValueSivp",
+                "moduleName": "MeetingDoctorsSocket",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO8rawValueSivg",
+                    "mangledName": "$s20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO8rawValueSivg",
+                    "moduleName": "MeetingDoctorsSocket",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO",
+            "mangledName": "$s20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E9DirectionO",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "enumRawTypeName": "Int",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "socketRepresentation",
+            "printedName": "socketRepresentation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SocketData",
+                "printedName": "SocketIO.SocketData",
+                "usr": "s:8SocketIO0A4DataP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E20socketRepresentation0D2IO0D4Data_pyF",
+            "mangledName": "$s20MeetingDoctorsSchema012SocketClientC0O6OutputO0abD0E20socketRepresentation0D2IO0D4Data_pyF",
+            "moduleName": "MeetingDoctorsSocket",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:20MeetingDoctorsSchema012SocketClientC0O6OutputO",
+        "mangledName": "$s20MeetingDoctorsSchema012SocketClientC0O6OutputO",
+        "moduleName": "MeetingDoctorsSchema",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SocketData",
+            "printedName": "SocketData",
+            "usr": "s:8SocketIO0A4DataP",
+            "mangledName": "$s8SocketIO0A4DataP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/carlescanadastorrents\/Projects\/meetingdoctors-legacy-library-ios\/Socket\/Socket\/Source\/Socket\/SocketNativeStream.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1469,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/carlescanadastorrents\/Projects\/meetingdoctors-legacy-library-ios\/Socket\/Socket\/Source\/Socket\/SocketClientSchema.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2643,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/carlescanadastorrents\/Projects\/meetingdoctors-legacy-library-ios\/Socket\/Socket\/Source\/Socket\/SocketClientSchema.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2665,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/carlescanadastorrents\/Projects\/meetingdoctors-legacy-library-ios\/Socket\/Socket\/Source\/Socket\/SocketClientSchema.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2643,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/carlescanadastorrents\/Projects\/meetingdoctors-legacy-library-ios\/Socket\/Socket\/Source\/Socket\/SocketClientSchema.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2665,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/carlescanadastorrents\/Projects\/meetingdoctors-legacy-library-ios\/Socket\/Socket\/Source\/Socket\/SocketClientSchema.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2643,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/carlescanadastorrents\/Projects\/meetingdoctors-legacy-library-ios\/Socket\/Socket\/Source\/Socket\/SocketClientSchema.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2665,
+      "length": 1,
+      "value": "2"
+    }
+  ]
+}

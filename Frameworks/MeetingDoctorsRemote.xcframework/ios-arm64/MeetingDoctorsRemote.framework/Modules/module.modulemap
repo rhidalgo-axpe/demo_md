@@ -1,0 +1,4 @@
+framework module MeetingDoctorsRemote {
+  header "MeetingDoctorsRemote-Swift.h"
+  requires objc
+}

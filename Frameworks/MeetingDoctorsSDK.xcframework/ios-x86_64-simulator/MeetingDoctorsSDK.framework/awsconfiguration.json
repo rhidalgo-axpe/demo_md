@@ -1,0 +1,38 @@
+{
+    "UserAgent": "MobileHub/1.0",
+    "Version": "1.0",
+    "CredentialsProvider": {
+        "CognitoIdentity": {
+            "Default": {
+                "PoolId": "eu-central-1:ad5a06c1-0191-44b3-8bf7-a0da1c27f5a0",
+                "Region": "eu-central-1"
+            }
+        }
+    },
+    "IdentityManager": {
+        "Default": {}
+    },
+    "S3TransferUtility": {
+        "Default": {
+            "Bucket": "meetingdoctorsgroups-userfiles-mobilehub-300209103",
+            "Region": "eu-central-1"
+        }
+    },
+    "PinpointAnalytics": {
+        "Default": {
+            "AppId": "c3154cd29ce541cb940898b759d7e290",
+            "Region": "us-east-1"
+        }
+    },
+    "PinpointTargeting": {
+        "Default": {
+            "Region": "us-east-1"
+        }
+    },
+    "UserFileManager": {
+        "Default": {
+            "Bucket": "meetingdoctorsgroups-userfiles-mobilehub-300209103",
+            "Region": "eu-central-1"
+        }
+    }
+}

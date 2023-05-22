@@ -1,0 +1,4 @@
+framework module MeetingDoctorsStorage {
+  header "MeetingDoctorsStorage-Swift.h"
+  requires objc
+}

@@ -1,0 +1,4 @@
+framework module MeetingDoctorsCore {
+  header "MeetingDoctorsCore-Swift.h"
+  requires objc
+}

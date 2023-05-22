@@ -1,0 +1,2818 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MeetingDoctorsSchema
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AdSupport
+import CoreLocation
+import CoreTelephony
+import Foundation
+import MeetingDoctorsCore
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+public struct ConnectSchema : Swift.Codable {
+  public let namespace: Swift.String
+  public init(_ nsp: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension MeetingDoctorsSchema.SocketEmissionType {
+  public static let count: Swift.Int
+  public static let allCases: [MeetingDoctorsSchema.SocketEmissionType]
+}
+extension MeetingDoctorsSchema.SocketListenerType {
+  public static let count: Swift.Int
+  public static let allCases: [MeetingDoctorsSchema.SocketListenerType]
+}
+extension MeetingDoctorsSchema.ActionMessageSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.ActionMessageSchema, rhs: MeetingDoctorsSchema.ActionMessageSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.AllergySchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.AllergySchema, rhs: MeetingDoctorsSchema.AllergySchema) -> Swift.Bool
+extension MeetingDoctorsSchema.AuthenticateRequest : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.AuthenticateRequest, rhs: MeetingDoctorsSchema.AuthenticateRequest) -> Swift.Bool
+extension MeetingDoctorsSchema.ConnectSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.ConnectSchema, rhs: MeetingDoctorsSchema.ConnectSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.ContactSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.ContactSchema, rhs: MeetingDoctorsSchema.ContactSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.ConversationSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.ConversationSchema, rhs: MeetingDoctorsSchema.ConversationSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.CountSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.CountSchema, rhs: MeetingDoctorsSchema.CountSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.CustomerAuthSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.CustomerAuthSchema, rhs: MeetingDoctorsSchema.CustomerAuthSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.CustomerErrorSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.CustomerErrorSchema, rhs: MeetingDoctorsSchema.CustomerErrorSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.CustomerInstallationRequest : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.CustomerInstallationRequest, rhs: MeetingDoctorsSchema.CustomerInstallationRequest) -> Swift.Bool
+extension MeetingDoctorsSchema.CustomerInstallationSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.CustomerInstallationSchema, rhs: MeetingDoctorsSchema.CustomerInstallationSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.CustomerLoginRequest : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.CustomerLoginRequest, rhs: MeetingDoctorsSchema.CustomerLoginRequest) -> Swift.Bool
+extension MeetingDoctorsSchema.CustomerNotificationSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.CustomerNotificationSchema, rhs: MeetingDoctorsSchema.CustomerNotificationSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.CustomerRegisterNotificationRequest : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.CustomerRegisterNotificationRequest, rhs: MeetingDoctorsSchema.CustomerRegisterNotificationRequest) -> Swift.Bool
+extension MeetingDoctorsSchema.CustomerUserSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.CustomerUserSchema, rhs: MeetingDoctorsSchema.CustomerUserSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.DisconnectSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.DisconnectSchema, rhs: MeetingDoctorsSchema.DisconnectSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.DiseaseSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.DiseaseSchema, rhs: MeetingDoctorsSchema.DiseaseSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.ErrorSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.ErrorSchema, rhs: MeetingDoctorsSchema.ErrorSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.FirebaseRemoteNotificationSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.FirebaseRemoteNotificationSchema, rhs: MeetingDoctorsSchema.FirebaseRemoteNotificationSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.IMCSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.IMCSchema, rhs: MeetingDoctorsSchema.IMCSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.IncomingMessageRequest : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.IncomingMessageRequest, rhs: MeetingDoctorsSchema.IncomingMessageRequest) -> Swift.Bool
+extension MeetingDoctorsSchema.JoinConversationSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.JoinConversationSchema, rhs: MeetingDoctorsSchema.JoinConversationSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.LastMessageSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.LastMessageSchema, rhs: MeetingDoctorsSchema.LastMessageSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.MedicalAddressSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.MedicalAddressSchema, rhs: MeetingDoctorsSchema.MedicalAddressSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.MedicalCoverageSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.MedicalCoverageSchema, rhs: MeetingDoctorsSchema.MedicalCoverageSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.MedicalHistory : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.MedicalHistory, rhs: MeetingDoctorsSchema.MedicalHistory) -> Swift.Bool
+extension MeetingDoctorsSchema.MedicalProfessionalSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.MedicalProfessionalSchema, rhs: MeetingDoctorsSchema.MedicalProfessionalSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.MedicalSpecialitySchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.MedicalSpecialitySchema, rhs: MeetingDoctorsSchema.MedicalSpecialitySchema) -> Swift.Bool
+extension MeetingDoctorsSchema.MedicationSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.MedicationSchema, rhs: MeetingDoctorsSchema.MedicationSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.MessageSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.MessageSchema, rhs: MeetingDoctorsSchema.MessageSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.MessageStatusSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.MessageStatusSchema, rhs: MeetingDoctorsSchema.MessageStatusSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.MessengerProfessionalRemoteNotificationSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.MessengerProfessionalRemoteNotificationSchema, rhs: MeetingDoctorsSchema.MessengerProfessionalRemoteNotificationSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.MessengerRemoteNotificationSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.MessengerRemoteNotificationSchema, rhs: MeetingDoctorsSchema.MessengerRemoteNotificationSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.OptionsSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.OptionsSchema, rhs: MeetingDoctorsSchema.OptionsSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.ProductSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.ProductSchema, rhs: MeetingDoctorsSchema.ProductSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.RoleSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.RoleSchema, rhs: MeetingDoctorsSchema.RoleSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.ScheduleSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.ScheduleSchema, rhs: MeetingDoctorsSchema.ScheduleSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.SearcherRequest : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.SearcherRequest, rhs: MeetingDoctorsSchema.SearcherRequest) -> Swift.Bool
+extension MeetingDoctorsSchema.SessionSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.SessionSchema, rhs: MeetingDoctorsSchema.SessionSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.SetupProfessionalListSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.SetupProfessionalListSchema, rhs: MeetingDoctorsSchema.SetupProfessionalListSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.SetupRequest : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.SetupRequest, rhs: MeetingDoctorsSchema.SetupRequest) -> Swift.Bool
+extension MeetingDoctorsSchema.SetupSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.SetupSchema, rhs: MeetingDoctorsSchema.SetupSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.SpecialitySchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.SpecialitySchema, rhs: MeetingDoctorsSchema.SpecialitySchema) -> Swift.Bool
+extension MeetingDoctorsSchema.StatusChangeSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.StatusChangeSchema, rhs: MeetingDoctorsSchema.StatusChangeSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.TypingSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.TypingSchema, rhs: MeetingDoctorsSchema.TypingSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.UserFeaturesSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.UserFeaturesSchema, rhs: MeetingDoctorsSchema.UserFeaturesSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.UserRequest : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.UserRequest, rhs: MeetingDoctorsSchema.UserRequest) -> Swift.Bool
+extension MeetingDoctorsSchema.UserSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.UserSchema, rhs: MeetingDoctorsSchema.UserSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.VideoCallConsultationSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.VideoCallConsultationSchema, rhs: MeetingDoctorsSchema.VideoCallConsultationSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.VideoCallProfessionalSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.VideoCallProfessionalSchema, rhs: MeetingDoctorsSchema.VideoCallProfessionalSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.VideoCallRemoteNotificationSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.VideoCallRemoteNotificationSchema, rhs: MeetingDoctorsSchema.VideoCallRemoteNotificationSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.VideoCallReportSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.VideoCallReportSchema, rhs: MeetingDoctorsSchema.VideoCallReportSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.VideoCallRequest : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.VideoCallRequest, rhs: MeetingDoctorsSchema.VideoCallRequest) -> Swift.Bool
+extension MeetingDoctorsSchema.VideoCallResponse : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.VideoCallResponse, rhs: MeetingDoctorsSchema.VideoCallResponse) -> Swift.Bool
+extension MeetingDoctorsSchema.VideoCallSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.VideoCallSchema, rhs: MeetingDoctorsSchema.VideoCallSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.VideoCallStatusResponse : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.VideoCallStatusResponse, rhs: MeetingDoctorsSchema.VideoCallStatusResponse) -> Swift.Bool
+extension MeetingDoctorsSchema.VideoCallStatusSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.VideoCallStatusSchema, rhs: MeetingDoctorsSchema.VideoCallStatusSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.VideoCallTrackingRequest : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.VideoCallTrackingRequest, rhs: MeetingDoctorsSchema.VideoCallTrackingRequest) -> Swift.Bool
+extension MeetingDoctorsSchema.VideoCallUserSchema : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.VideoCallUserSchema, rhs: MeetingDoctorsSchema.VideoCallUserSchema) -> Swift.Bool
+extension MeetingDoctorsSchema.FirebaseRemoteNotificationModuleContent : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.FirebaseRemoteNotificationModuleContent, rhs: MeetingDoctorsSchema.FirebaseRemoteNotificationModuleContent) -> Swift.Bool
+extension MeetingDoctorsSchema.FirebaseRemoteNotificationModuleKey : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.FirebaseRemoteNotificationModuleKey, rhs: MeetingDoctorsSchema.FirebaseRemoteNotificationModuleKey) -> Swift.Bool
+extension MeetingDoctorsSchema.MedicalProfessionalSchema.Kind : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.MedicalProfessionalSchema.Kind, rhs: MeetingDoctorsSchema.MedicalProfessionalSchema.Kind) -> Swift.Bool
+extension MeetingDoctorsSchema.MessageSchema.Metadata : Swift.Equatable {
+}
+public func == (lhs: MeetingDoctorsSchema.MessageSchema.Metadata, rhs: MeetingDoctorsSchema.MessageSchema.Metadata) -> Swift.Bool
+public protocol MedicalDirectorySchema : MeetingDoctorsSchema.IdentifiableSchema {
+  var name: Swift.String { get }
+}
+public struct MedicalDirectoryGenericSchema : MeetingDoctorsSchema.MedicalDirectorySchema {
+  public let id: Swift.UInt
+  public let name: Swift.String
+  public init(id: Swift.UInt, name: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct RoleSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case name
+    case overview
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public enum RoleType : Swift.Int {
+    case unknown
+    case commercial
+    case administrative
+    case doctor
+    case support
+    case free
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public let id: Swift.Int
+  public let name: Swift.String?
+  public let overview: Swift.String?
+  public var type: MeetingDoctorsSchema.RoleSchema.RoleType {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct StatusChangeSchema : Swift.Codable {
+  public let status: Swift.Int
+  public init(_ status: Swift.Int)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct CommonDataResponse<Data> : Swift.Codable where Data : Swift.Decodable, Data : Swift.Encodable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case data
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let data: [Data]
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct MedicationSchema : MeetingDoctorsSchema.MedicalHistorySchema {
+  public let id: Swift.UInt
+  public let name: Swift.String?
+  public let posology: Swift.String?
+  public let details: Swift.String?
+  public let patientHash: Swift.String?
+  public init(id: Swift.UInt, name: Swift.String?, posology: Swift.String?, details: Swift.String?, patientHash: Swift.String?)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum SocketClientStatus : Swift.Int {
+  case notConnected
+  case disconnected
+  case connecting
+  case connected
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol AutoCases {
+}
+public struct CustomerInstallationRequest : Swift.Codable {
+  public let installationUUID: Swift.String
+  public let osName: MeetingDoctorsSchema.OSName
+  public let osVersion: Swift.String
+  public let appVersion: Swift.String
+  public let deviceModel: Swift.String?
+  public let advertisingId: Swift.String?
+  public let referrer: Swift.String?
+  public let languageCode: Swift.String?
+  public let countryCode: Swift.String?
+  public init(_ uuid: Foundation.UUID, osVersion: Swift.String, model: Swift.String?, appVersion: Swift.String, advertisingId: Swift.String?, referrer: Swift.String? = nil, languageCode: Swift.String? = Locale.current.languageCode?.lowercased(), countryCode: Swift.String? = nil)
+  public init(_ uuid: Foundation.UUID, bundle: Foundation.Bundle, device: UIKit.UIDevice = UIDevice.current, advertising: AdSupport.ASIdentifierManager = ASIdentifierManager.shared(), referrer: Swift.String? = nil)
+  public init(installationUUID: Swift.String, osName: MeetingDoctorsSchema.OSName, osVersion: Swift.String, appVersion: Swift.String, deviceModel: Swift.String?, advertisingId: Swift.String?, referrer: Swift.String?, languageCode: Swift.String?, countryCode: Swift.String?)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct DerivationReportSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case type
+    case payload
+    case companyApiKey
+    case customerHash
+    case professionalHash
+    case filename
+    case friendlyName
+    case url
+    case company
+    case professional
+    case createdAt
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let id: Swift.Int?
+  public let type: Swift.String?
+  public let payload: Swift.String?
+  public let companyApiKey: Swift.String?
+  public let customerHash: Swift.String?
+  public let professionalHash: Swift.String?
+  public let filename: Swift.String?
+  public let friendlyName: Swift.String?
+  public let url: Swift.String?
+  public let company: MeetingDoctorsSchema.CompanyDerivationSchema?
+  public let professional: MeetingDoctorsSchema.ProfessionalDerivationSchema?
+  public let createdAt: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct CompanyDerivationSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case name
+    case logo
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let id: Swift.Int?
+  public let name: Swift.String?
+  public let logo: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ProfessionalDerivationSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case name
+    case token
+    case connected
+    case hash
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let id: Swift.Int?
+  public let name: Swift.String?
+  public let token: Swift.String?
+  public let connected: Swift.Bool?
+  public let hash: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct VideoCall1to1Schema : Swift.Codable {
+  public let id: Swift.Int?
+  public let roomId: Swift.Int?
+  public let professionalHash: Swift.String?
+  public let customerHash: Swift.String?
+  public let status: Swift.String?
+  public let assignedAt: Foundation.Date?
+  public let cancelledAt: Foundation.Date?
+  public let finishedAt: Foundation.Date?
+  public let workflow: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct DiseaseSchema : MeetingDoctorsSchema.MedicalHistorySchema {
+  public let id: Swift.UInt
+  public let name: Swift.String?
+  public let details: Swift.String?
+  public let diagnosis: Foundation.Date?
+  public let resolution: Foundation.Date?
+  public let patientHash: Swift.String?
+  public init(id: Swift.UInt, name: Swift.String?, details: Swift.String?, diagnosis: Foundation.Date?, resolution: Foundation.Date?, patientHash: Swift.String?)
+}
+extension MeetingDoctorsSchema.DiseaseSchema {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SpecialitySchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case code
+    case name
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let id: Swift.Int
+  public let code: Swift.String?
+  public let name: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ItemSchema<T> : Swift.Codable where T : MeetingDoctorsSchema.IdentifiableSchema {
+  public let item: T
+  public init(item: T)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct IncomingMessageRequest : Swift.Codable {
+  public let message: Swift.String
+  public let professionalHash: Swift.String
+  public init(message: Swift.String, professionalHash: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct PrescriptionSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case type
+    case attributes
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let type: Swift.String?
+  public let attributes: MeetingDoctorsSchema.PrescriptionAttributesSchema?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct PrescriptionAttributesSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case professional
+    case customer
+    case diagnosis
+    case medicalHistory
+    case filepath
+    case prescriptions
+    case createdAt
+    case updatedAt
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let id: Swift.String?
+  public let professional: Swift.String?
+  public let customer: Swift.String?
+  public let diagnosis: Swift.String?
+  public let medicalHistory: Swift.String?
+  public let filepath: Swift.String?
+  public let prescriptions: [MeetingDoctorsSchema.PrescriptionPrescriptionsSchema]?
+  public let createdAt: Swift.String?
+  public let updatedAt: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct PrescriptionPrescriptionsSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case code
+    case activeIngredient
+    case description
+    case dosage
+    case duration
+    case quantity
+    case price
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let code: Swift.String?
+  public let activeIngredient: Swift.String?
+  public let description: Swift.String?
+  public let dosage: Swift.String?
+  public let duration: Swift.String?
+  public let quantity: Swift.Double?
+  public let price: MeetingDoctorsSchema.PrescriptionPriceSchema?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct PrescriptionPriceSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case price
+    case currency
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let price: Swift.Double?
+  public let currency: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct VideoCallReportSchema : MeetingDoctorsSchema.MedicalHistorySchema {
+  public var name: Swift.String?
+  public var patientHash: Swift.String?
+  public let id: Swift.UInt
+  public let pdfUrl: Swift.String?
+  public let owner: MeetingDoctorsSchema.VideoCallUserSchema?
+  public let maker: MeetingDoctorsSchema.VideoCallUserSchema?
+  public let createdAt: Swift.String?
+  public let updatedAt: Swift.String?
+  public init(name: Swift.String?, patientHash: Swift.String?, id: Swift.UInt, pdfUrl: Swift.String?, owner: MeetingDoctorsSchema.VideoCallUserSchema?, maker: MeetingDoctorsSchema.VideoCallUserSchema?, createdAt: Swift.String?, updatedAt: Swift.String?)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct AllergySchema : MeetingDoctorsSchema.MedicalHistorySchema {
+  public let id: Swift.UInt
+  public let name: Swift.String?
+  public let severity: Swift.Int
+  public let details: Swift.String
+  public let patientHash: Swift.String?
+  public init(id: Swift.UInt, name: Swift.String?, severity: Swift.Int, details: Swift.String, patientHash: Swift.String?)
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension MeetingDoctorsSchema.AllergySchema {
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct VideoCall1to1Request : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case professionalHash
+    case component
+    case version
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let professionalHash: Swift.String
+  public let component: Swift.String
+  public let version: Swift.String?
+  public init(professionalHash: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct CommonDataMetaResponse<Data, Meta> : Swift.Codable where Data : Swift.Decodable, Data : Swift.Encodable, Meta : Swift.Decodable, Meta : Swift.Encodable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case data
+    case meta
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let data: [Data]
+  public let meta: Meta
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum ActionMessageSchemaValues : Swift.String {
+  case success
+  case invalidMessage
+  case invalidProfessional
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct ActionMessageSchema : Swift.Codable {
+  public let message: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct AuthenticateRequest : Swift.Codable {
+  public let installationUUID: Swift.String
+  public let sessionToken: Swift.String
+  public let osName: MeetingDoctorsSchema.OSName
+  public let bundleId: Swift.String
+  public init(_ uuid: Foundation.UUID, token: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct IMCSchema : MeetingDoctorsSchema.IdentifiableSchema {
+  public let id: Swift.UInt
+  public let weight: Swift.Int
+  public let height: Swift.Int
+  public let value: Swift.Float
+  public let patientHash: Swift.String?
+  public let updatedAt: Foundation.Date?
+  public let createdAt: Foundation.Date?
+  public init(id: Swift.UInt, weight: Swift.Int, height: Swift.Int, value: Swift.Float, patientHash: Swift.String?, updatedAt: Foundation.Date?, createdAt: Foundation.Date?)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct MessengerRemoteNotificationSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case professional
+    case link
+    case type
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let professional: MeetingDoctorsSchema.MessengerProfessionalRemoteNotificationSchema?
+  public let link: Swift.String?
+  public let type: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum MessengerRemoteNotificationType : Swift.String {
+  case messageCreated
+  case openLink
+  case ratingRequest
+  case silent
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension MeetingDoctorsSchema.MessengerRemoteNotificationSchema {
+  public var notificationType: MeetingDoctorsSchema.MessengerRemoteNotificationType {
+    get
+  }
+  public var linkURL: Foundation.URL? {
+    get
+  }
+}
+public struct MessengerProfessionalRemoteNotificationSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case hash
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let hash: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ConversationSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case lastMessage
+    case pendingMessages
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let id: Swift.Int
+  public let lastMessage: MeetingDoctorsSchema.LastMessageSchema?
+  public let pendingMessages: Swift.Int?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SearcherRequest : Swift.Codable {
+  public let search: Swift.String
+  public init(search: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SetupSchema : Swift.Codable {
+  public let maxOnlineCommercials: Swift.Int?
+  public let minAppVersion: Swift.Int
+  public let referrer: Swift.String?
+  public let medicalHistory: MeetingDoctorsSchema.MedicalHistory?
+  public let termsUrl: Swift.String?
+  public let privacyUrl: Swift.String?
+  public let professionalList: [MeetingDoctorsSchema.SetupProfessionalListSchema]?
+  public static var lastSetup: MeetingDoctorsSchema.SetupSchema? {
+    get
+    set
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct MedicalHistory : Swift.Codable {
+  public let active: Swift.Bool
+  public let options: MeetingDoctorsSchema.OptionsSchema
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct OptionsSchema : Swift.Codable {
+  public let hasMedicalDerivations: Swift.Bool
+  public let hasMedicalReports: Swift.Bool
+  public let hasPrescription: Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SetupProfessionalListSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case type
+    case endpoint
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let type: Swift.String?
+  public let endpoint: Swift.String?
+  public var layoutType: MeetingDoctorsSchema.SetupProfessionalListType? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum SetupProfessionalListType : Swift.String {
+  case vertical
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct TypingSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case conversationId
+    case userId
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let conversationId: Swift.Int
+  public let userId: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum MedicalAddressRequest : MeetingDoctorsSchema.PaginableRequest {
+  case address(Swift.String)
+  case location(CoreLocation.CLLocationCoordinate2D)
+}
+extension MeetingDoctorsSchema.MedicalAddressRequest {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case address
+    case location
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from _: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct CustomerUserSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case hash
+    case token
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let hash: Swift.String
+  public let token: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum VideoCallWorkflow : Swift.String, Swift.Codable {
+  case oneToOne
+  case pull
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct VideoCallSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case workflow
+    case roomId
+    case professionalHash
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let id: Swift.Int
+  public let workflow: MeetingDoctorsSchema.VideoCallWorkflow?
+  public let roomId: Swift.Int?
+  public let professionalHash: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct VideoCallResponse : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case data
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let data: MeetingDoctorsSchema.VideoCallSchema
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct VideoCallStatusResponse : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case data
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let data: MeetingDoctorsSchema.VideoCallStatusSchema
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct VideoCallProfessionalSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case name
+    case avatar
+    case detail
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let name: Swift.String?
+  public let avatar: Swift.String?
+  public let detail: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public protocol PaginableRequest : Swift.Decodable, Swift.Encodable {
+  var page: Swift.UInt? { get }
+  var itemsPerPage: Swift.UInt? { get }
+}
+extension MeetingDoctorsSchema.PaginableRequest {
+  public var page: Swift.UInt? {
+    get
+  }
+  public var itemsPerPage: Swift.UInt? {
+    get
+  }
+}
+public struct PageRequest : MeetingDoctorsSchema.PaginableRequest {
+  public static let `default`: MeetingDoctorsSchema.PageRequest
+  public let page: Swift.UInt?
+  public let itemsPerPage: Swift.UInt?
+  public init(page: Swift.UInt? = nil, itemsPerPage: Swift.UInt? = nil)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct VideoCallUserSchema : Swift.Codable {
+  public let hash: Swift.String
+  public let name: Swift.String?
+  public let avatar: Swift.String?
+  public let description: Swift.String?
+  public init(hash: Swift.String, name: Swift.String?, avatar: Swift.String?, description: Swift.String?)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct FirebaseRemoteNotificationSchema : Swift.Decodable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case data
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let data: MeetingDoctorsSchema.FirebaseRemoteNotificationModuleContent
+  public init(from decoder: Swift.Decoder) throws
+  public init()
+}
+public enum FirebaseRemoteNotificationTypeKey : Swift.String {
+  case invitationCreated
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum FirebaseRemoteNotificationModuleKey : Swift.String {
+  case messenger
+  case videoCall
+  case nps
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension MeetingDoctorsSchema.FirebaseRemoteNotificationModuleKey : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum FirebaseRemoteNotificationModuleContent {
+  case messenger(MeetingDoctorsSchema.MessengerRemoteNotificationSchema)
+  case videoCall(MeetingDoctorsSchema.VideoCallRemoteNotificationSchema)
+  case nps
+  case unknown
+}
+public struct CoreV2ArgumentNPSRequest : Swift.Codable {
+  public let id: Swift.String
+  public let professional: Swift.String
+  public let customer: Swift.String
+  public let type: Swift.String
+  public let service: Swift.String
+  public init(id: Swift.String, professional: Swift.String, customer: Swift.String, type: Swift.String, service: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct CustomerRegisterNotificationRequest : Swift.Codable {
+  public let token: Swift.String
+  public let os: Swift.String
+  public let deviceId: Swift.String
+  public init(token: Swift.String, deviceId: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct MessageStatusSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case conversationId
+    case imageURL
+    case thumbURL
+    case timestamp
+    case status
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let id: Swift.String
+  public let conversationId: Swift.Int
+  public let status: MeetingDoctorsSchema.MessageSchema.Status
+  public let timestamp: Foundation.TimeInterval?
+  public let imageURL: Foundation.URL?
+  public let thumbURL: Foundation.URL?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct MessageSchema {
+  public enum Kind : Swift.String, Swift.Codable {
+    case text
+    case image
+    case file
+    case note
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Status : Swift.Int, Swift.Codable {
+    case pending
+    case sent
+    case delivered
+    case received
+    case read
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum Metadata {
+    case text(content: Swift.String)
+    case image(url: Foundation.URL, thumb: Foundation.URL, width: Swift.Int, height: Swift.Int, size: Swift.Int)
+    case file(name: Swift.String, url: Foundation.URL, size: Swift.Int)
+    case none
+  }
+  public let id: Swift.String
+  public let from: Swift.String
+  public let type: MeetingDoctorsSchema.MessageSchema.Kind
+  public let conversationId: Swift.Int
+  public let status: MeetingDoctorsSchema.MessageSchema.Status
+  public let timestamp: Foundation.TimeInterval
+  public let metadata: MeetingDoctorsSchema.MessageSchema.Metadata
+}
+extension MeetingDoctorsSchema.MessageSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case from
+    case conversationId
+    case createdAt
+    case timestamp
+    case status
+    case type
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension MeetingDoctorsSchema.MessageSchema.Metadata : Swift.Codable {
+  public enum TextCodingKeys : Swift.String, Swift.CodingKey {
+    case content
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public enum ImageCodingKeys : Swift.String, Swift.CodingKey {
+    case url
+    case thumb
+    case width
+    case height
+    case size
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public enum FileCodingKeys : Swift.String, Swift.CodingKey {
+    case url
+    case name
+    case size
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum SocketClientSchema {
+  public enum Input {
+    case update
+    case contacts([MeetingDoctorsSchema.ContactSchema])
+    case joinConversation(MeetingDoctorsSchema.JoinConversationSchema)
+    case message(MeetingDoctorsSchema.MessageSchema)
+    case messageList([MeetingDoctorsSchema.MessageSchema])
+    case messageStatus(MeetingDoctorsSchema.MessageStatusSchema)
+    case startTyping(MeetingDoctorsSchema.TypingSchema)
+    case stopTyping(MeetingDoctorsSchema.TypingSchema)
+  }
+  public enum Output {
+    case contacts(retrieveAll: Swift.Bool)
+    case joinConversation(hash: Swift.String)
+    case leaveConverstation(room: Swift.Int)
+    case message(id: Swift.String, content: Swift.String, room: Swift.Int, type: MeetingDoctorsSchema.MessageSchema.Kind, name: Swift.String?)
+    case messageList(room: Swift.Int, limit: Swift.Int, pivot: Swift.String?, next: Swift.Bool?)
+    case messageStatus(id: Swift.String, room: Swift.Int, status: MeetingDoctorsSchema.MessageSchema.Status)
+    case startTyping(room: Swift.Int)
+    case stopTyping(room: Swift.Int)
+    case deleteConversation(room: Swift.Int)
+  }
+  case connect(MeetingDoctorsSchema.ConnectSchema)
+  case disconnect(MeetingDoctorsSchema.DisconnectSchema)
+  case status(MeetingDoctorsSchema.SocketClientStatus)
+  case error(Swift.Error)
+  case reconnect
+  case reconnectAttempt
+  case input(MeetingDoctorsSchema.SocketClientSchema.Input)
+  case output(MeetingDoctorsSchema.SocketClientSchema.Output)
+}
+extension MeetingDoctorsSchema.SocketClientSchema {
+  public var connect: MeetingDoctorsSchema.ConnectSchema? {
+    get
+  }
+  public var disconnect: MeetingDoctorsSchema.DisconnectSchema? {
+    get
+  }
+  public var status: MeetingDoctorsSchema.SocketClientStatus? {
+    get
+  }
+  public var error: Swift.Error? {
+    get
+  }
+}
+extension MeetingDoctorsSchema.SocketClientSchema.Input {
+  public static func decode(_ event: MeetingDoctorsSchema.SocketListenerType, from data: [Any], with mapper: MeetingDoctorsCore.CodableMapper) throws -> MeetingDoctorsSchema.SocketClientSchema.Input
+}
+extension MeetingDoctorsSchema.SocketClientSchema.Input {
+  public var room: Swift.Int? {
+    get
+  }
+}
+public struct UserRequest : Swift.Codable {
+  public let installationUUID: Swift.String
+  public var userHash: Swift.String?
+  public let osName: MeetingDoctorsSchema.OSName?
+  public let osVersion: Swift.String?
+  public let appVersion: Swift.String?
+  public let latitude: CoreLocation.CLLocationDegrees?
+  public let longitude: CoreLocation.CLLocationDegrees?
+  public let referrer: Swift.String?
+  public init(_ uuid: Foundation.UUID, userHash: Swift.String? = nil, osName: MeetingDoctorsSchema.OSName? = nil, osVersion: Swift.String? = nil, appVersion: Swift.String? = nil, location: CoreLocation.CLLocationCoordinate2D? = nil, referrer: Swift.String? = nil)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public protocol SocketEventType {
+  var name: Swift.String { get }
+}
+public enum SocketEmissionType : Swift.String, MeetingDoctorsSchema.SocketEventType {
+  case contacts
+  case joinConversation
+  case leaveConverstation
+  case message
+  case messageList
+  case messageStatus
+  case startTyping
+  case stopTyping
+  case deleteConversation
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SocketListenerType : Swift.String, MeetingDoctorsSchema.SocketEventType {
+  case update
+  case contacts
+  case joinConversation
+  case message
+  case messageList
+  case messageStatus
+  case startTyping
+  case stopTyping
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension MeetingDoctorsSchema.SocketListenerType {
+  public func decode(_ decoder: MeetingDoctorsCore.CodableMapper, data: Foundation.Data) throws -> MeetingDoctorsSchema.SocketClientSchema.Input
+}
+extension MeetingDoctorsSchema.SocketEmissionType {
+  public var ackTransformation: MeetingDoctorsSchema.SocketListenerType? {
+    get
+  }
+}
+public protocol MedicalHistorySchema : MeetingDoctorsSchema.IdentifiableSchema {
+  var name: Swift.String? { get }
+  var patientHash: Swift.String? { get }
+}
+public struct MedicalHistoryGenericSchema : MeetingDoctorsSchema.MedicalHistorySchema {
+  public let id: Swift.UInt
+  public let name: Swift.String?
+  public let patientHash: Swift.String?
+  public init(id: Swift.UInt, name: Swift.String?, patientHash: Swift.String?)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SessionSchema : Swift.Codable {
+  public let userHash: Swift.String
+  public let sessionToken: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct MedicalProfessionalRequest : MeetingDoctorsSchema.PaginableRequest {
+  public let keywords: Swift.String?
+  public let categoryId: Swift.String?
+  public let specialityId: Swift.String?
+  public let latitude: CoreLocation.CLLocationDegrees?
+  public let longitude: CoreLocation.CLLocationDegrees?
+  public let page: Swift.UInt?
+  public let itemsPerPage: Swift.UInt?
+  public init(page: MeetingDoctorsSchema.PageRequest = PageRequest.default)
+  public init(keywords: Swift.String?, categoryId: Swift.String?, specialityId: Swift.String?, latitude: CoreLocation.CLLocationDegrees?, longitude: CoreLocation.CLLocationDegrees?, page: Swift.UInt?, itemsPerPage: Swift.UInt?)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct MedicalAddressSchema : Swift.Codable {
+  public let address: Swift.String?
+  public let latitude: CoreLocation.CLLocationDegrees?
+  public let longitude: CoreLocation.CLLocationDegrees?
+  public var location: CoreLocation.CLLocationCoordinate2D? {
+    get
+  }
+  public init(address: Swift.String?, latitude: CoreLocation.CLLocationDegrees?, longitude: CoreLocation.CLLocationDegrees?)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension MeetingDoctorsSchema.MedicalAddressSchema : MeetingDoctorsSchema.MedicalDirectorySchema {
+  public var id: Swift.UInt {
+    get
+  }
+  public var name: Swift.String {
+    get
+  }
+}
+public struct VideoCallConsultationSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case videoCallId
+    case tokenId
+    case sessionId
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let videoCallId: Swift.Int?
+  public let tokenId: Swift.String?
+  public let sessionId: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ErrorSchema : Swift.Error, Swift.Decodable {
+  public let error: Swift.String?
+  public let message: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+}
+extension MeetingDoctorsSchema.ErrorSchema : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public struct MedicalCoverageSchema : MeetingDoctorsSchema.MedicalDirectorySchema {
+  public let id: Swift.UInt
+  public let name: Swift.String
+  public init(id: Swift.UInt, name: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public protocol IdentifiableSchema : Swift.Decodable, Swift.Encodable {
+  var id: Swift.UInt { get }
+}
+public protocol SocketCredentials : Swift.Encodable {
+  var clientId: Swift.String { get }
+  var clientSecret: Swift.String { get }
+}
+public protocol ChatSocketCredentials : MeetingDoctorsSchema.SocketCredentials {
+  var sessionId: Swift.String { get }
+}
+public struct ChatSocketClientCredentials : MeetingDoctorsSchema.ChatSocketCredentials {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case clientSecret
+    case sessionId
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let clientId: Swift.String
+  public let clientSecret: Swift.String
+  public let sessionId: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(clientId: Swift.String, clientSecret: Swift.String, sessionId: Swift.String)
+}
+public struct MedicalSpecialityRequest : MeetingDoctorsSchema.PaginableRequest {
+  public let categoryId: Swift.String
+  public let page: Swift.UInt?
+  public let itemsPerPage: Swift.UInt?
+  public init(categoryId: Swift.String, page: MeetingDoctorsSchema.PageRequest = PageRequest.default)
+  public init(categoryId: Swift.String, page: Swift.UInt?, itemsPerPage: Swift.UInt?)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct CommonMetaSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case size
+    case page
+    case total
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let size: Swift.Int?
+  public let page: Swift.Int?
+  public let total: Swift.Int?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct CommonSimpleDataResponse<Data> : Swift.Codable where Data : Swift.Decodable, Data : Swift.Encodable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case data
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let data: Data
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct DeletedSchema : Swift.Codable {
+  public let message: Swift.String
+  public init(message: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct LastMessageSchema {
+  public let type: MeetingDoctorsSchema.MessageSchema.Kind
+  public let timestamp: Foundation.Date
+  public let metadata: MeetingDoctorsSchema.MessageSchema.Metadata
+}
+extension MeetingDoctorsSchema.LastMessageSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case createdAt
+    case type
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct ProductSchema : MeetingDoctorsSchema.MedicalDirectorySchema {
+  public let id: Swift.UInt
+  public let name: Swift.String
+  public init(id: Swift.UInt, name: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ReportSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case type
+    case attributes
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let type: Swift.String?
+  public let attributes: MeetingDoctorsSchema.ReportAttributesSchema?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ReportAttributesSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case professional
+    case professionalName
+    case professionalAvatar
+    case customer
+    case consultation
+    case medicalHistory
+    case diagnosisCode
+    case diagnosis
+    case orientation
+    case recommendation
+    case prescriptions
+    case laboratoryServices
+    case nonLaboratoryServices
+    case radiologyServices
+    case filepath
+    case createdAt
+    case updatedAt
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let id: Swift.String?
+  public let professional: Swift.String?
+  public let professionalName: Swift.String?
+  public let professionalAvatar: Swift.String?
+  public let customer: Swift.String?
+  public let consultation: Swift.String?
+  public let medicalHistory: Swift.String?
+  public let diagnosisCode: Swift.String?
+  public let diagnosis: Swift.String?
+  public let orientation: Swift.String?
+  public let recommendation: Swift.String?
+  public let prescriptions: [MeetingDoctorsSchema.PrescriptionReportSchema]?
+  public let laboratoryServices: [MeetingDoctorsSchema.LaboratoryServicesReportSchema]?
+  public let nonLaboratoryServices: [MeetingDoctorsSchema.NonLaboratoryServicesReportSchema]?
+  public let radiologyServices: [MeetingDoctorsSchema.RadiologyServicesReportSchema]?
+  public let filepath: Swift.String?
+  public let createdAt: Swift.String?
+  public let updatedAt: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct PrescriptionReportSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case code
+    case activeIngredient
+    case description
+    case dosage
+    case duration
+    case quantity
+    case price
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let code: Swift.String?
+  public let activeIngredient: Swift.String?
+  public let description: Swift.String?
+  public let dosage: Swift.String?
+  public let duration: Swift.String?
+  public let quantity: Swift.Int?
+  public let price: MeetingDoctorsSchema.ReportPriceSchema?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct LaboratoryServicesReportSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case code
+    case name
+    case detail
+    case instruction
+    case price
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let code: Swift.String?
+  public let name: Swift.String?
+  public let detail: Swift.String?
+  public let instruction: Swift.String?
+  public let price: MeetingDoctorsSchema.ReportPriceSchema?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct NonLaboratoryServicesReportSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case code
+    case name
+    case detail
+    case instruction
+    case price
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let code: Swift.String?
+  public let name: Swift.String?
+  public let detail: Swift.String?
+  public let instruction: Swift.String?
+  public let price: MeetingDoctorsSchema.ReportPriceSchema?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct RadiologyServicesReportSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case code
+    case name
+    case detail
+    case instruction
+    case price
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let code: Swift.String?
+  public let name: Swift.String?
+  public let detail: Swift.String?
+  public let instruction: Swift.String?
+  public let price: MeetingDoctorsSchema.ReportPriceSchema?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ReportPriceSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case price
+    case currency
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let price: Swift.Double?
+  public let currency: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct DataSchema<T> : Swift.Codable where T : MeetingDoctorsSchema.IdentifiableSchema {
+  public let data: T
+  public init(data: T)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct VideoCallRequest : Swift.Codable {
+  public let id: Swift.Int
+  public init(id: Swift.Int)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct CollectionSchema<T> : Swift.Codable where T : MeetingDoctorsSchema.IdentifiableSchema {
+  public let total: Swift.Int?
+  public let perPage: Swift.Int?
+  public let currentPage: Swift.Int?
+  public let lastPage: Swift.Int?
+  public let from: Swift.Int?
+  public let to: Swift.Int?
+  public let data: [T]
+  public init(total: Swift.Int?, perPage: Swift.Int?, currentPage: Swift.Int?, lastPage: Swift.Int?, from: Swift.Int?, to: Swift.Int?, data: [T])
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct CustomerAuthSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case accessToken
+    case tokenType
+    case user
+    case expiresIn
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let accessToken: Swift.String
+  public let tokenType: Swift.String
+  public let user: MeetingDoctorsSchema.CustomerUserSchema
+  public let expiresIn: Swift.Double
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct DisconnectSchema : Swift.Codable {
+  public let status: Swift.String
+  public init(_ status: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct VideoCallTrackingRequest : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case component
+    case version
+    case videocall
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let component: Swift.String
+  public let version: Swift.String
+  public let videocall: Swift.Bool
+  public static var `default`: MeetingDoctorsSchema.VideoCallTrackingRequest {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct CountSchema : Swift.Codable {
+  public let count: Swift.Int
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public class UniversalDataSchema<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
+  final public let data: T
+  public init(data: T)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+public enum OSName : Swift.String, Swift.Codable {
+  case iOS
+  case android
+  public var id: Swift.Int {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct SetupRequest : Swift.Codable {
+  public let installationUUID: Swift.String
+  public let osName: MeetingDoctorsSchema.OSName
+  public let osVersion: Swift.String
+  public let appVersion: Swift.String
+  public let deviceModel: Swift.String
+  public let advertisingId: Swift.String?
+  public let referrer: Swift.String?
+  public let languageCode: Swift.String?
+  public let countryCode: Swift.String?
+  public let bundleId: Swift.String
+  public init(_ uuid: Foundation.UUID, osVersion: Swift.String, model: Swift.String, appVersion: Swift.String, advertisingId: Swift.String?, referrer: Swift.String? = nil, languageCode: Swift.String? = Locale.current.languageCode?.lowercased(), countryCode: Swift.String? = nil)
+  public init?(_ uuid: Foundation.UUID, bundle: Foundation.Bundle, device: UIKit.UIDevice, advertising: AdSupport.ASIdentifierManager = ASIdentifierManager.shared(), referrer: Swift.String? = nil)
+  public init(installationUUID: Swift.String, osName: MeetingDoctorsSchema.OSName, osVersion: Swift.String, appVersion: Swift.String, deviceModel: Swift.String, advertisingId: Swift.String?, referrer: Swift.String?, languageCode: Swift.String?, countryCode: Swift.String?, bundleId: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ScheduleSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case userId
+    case active
+    case day
+    case firstPeriodStart
+    case firstPeriodEnd
+    case secondPeriodStart
+    case secondPeriodEnd
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public enum State : Swift.Int, Swift.Codable {
+    case disabled
+    case enabled
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum WeekDay : Swift.String, Swift.Codable {
+    case sunday
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+    case saturday
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let id: Swift.Int
+  public let userId: Swift.Int
+  public let active: MeetingDoctorsSchema.ScheduleSchema.State
+  public let day: MeetingDoctorsSchema.ScheduleSchema.WeekDay
+  public let firstPeriodStart: Swift.Int
+  public let firstPeriodEnd: Swift.Int
+  public let secondPeriodStart: Swift.Int
+  public let secondPeriodEnd: Swift.Int
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension MeetingDoctorsSchema.ScheduleSchema {
+  public var firstPeriodTimeInterval: Foundation.TimeInterval {
+    get
+  }
+  public var secondPeriodTimeInterval: Foundation.TimeInterval {
+    get
+  }
+}
+public struct CustomerLoginRequest : Swift.Codable {
+  public let userToken: Swift.String
+  public let installationGuid: Swift.String
+  public init(userToken: Swift.String, installationGuid: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ContactSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case hash
+    case status
+    case avatarURL
+    case name
+    case title
+    case overview
+    case onHolidays
+    case timezone
+    case timezoneOffset
+    case nextOnlineAt
+    case nextOfflineAt
+    case updatedAt
+    case conversation
+    case role
+    case speciality
+    case schedules
+    case saturated
+    case collegiateNumber
+    case isVcAvailable
+    case isAccessible
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public enum Status : Swift.String, Swift.Codable {
+    case offline
+    case online
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let id: Swift.Int
+  public let hash: Swift.String
+  public let status: MeetingDoctorsSchema.ContactSchema.Status
+  public let avatarURL: Foundation.URL
+  public let name: Swift.String
+  public let title: Swift.String?
+  public let overview: Swift.String?
+  public let onHolidays: Swift.Int
+  public let timezone: Swift.String
+  public let timezoneOffset: Swift.Int
+  public let nextOnlineAt: Foundation.Date?
+  public let nextOfflineAt: Foundation.Date?
+  public let updatedAt: Foundation.Date
+  public let conversation: MeetingDoctorsSchema.ConversationSchema?
+  public let role: MeetingDoctorsSchema.RoleSchema?
+  public let speciality: MeetingDoctorsSchema.SpecialitySchema?
+  public let schedules: [MeetingDoctorsSchema.ScheduleSchema]?
+  public let saturated: Swift.String?
+  public let collegiateNumber: Swift.String?
+  public let isVcAvailable: Swift.Bool
+  public var index: Swift.Int
+  public let isAccessible: Swift.Int?
+  public var isOnHolidays: Swift.Bool {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct MessageCountRequest : Swift.Codable {
+  public let user: Swift.String
+  public init(user: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct CustomerNotificationSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let id: Swift.Int
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct MedicalSpecialitySchema : MeetingDoctorsSchema.MedicalDirectorySchema {
+  public let id: Swift.UInt
+  public let name: Swift.String
+  public let description: Swift.String?
+  public init(id: Swift.UInt, name: Swift.String, description: Swift.String?)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ReferralSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case type
+    case attributes
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let type: Swift.String?
+  public let attributes: MeetingDoctorsSchema.ReferralAttributesSchema?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ReferralAttributesSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case professional
+    case professionalName
+    case customer
+    case consultation
+    case medicalHistory
+    case diagnosis
+    case orientation
+    case referral
+    case speciality
+    case doctor
+    case filepath
+    case createdAt
+    case updatedAt
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let id: Swift.String?
+  public let professional: Swift.String?
+  public let professionalName: Swift.String?
+  public let customer: Swift.String?
+  public let consultation: Swift.String?
+  public let medicalHistory: Swift.String?
+  public let diagnosis: Swift.String?
+  public let orientation: Swift.String?
+  public let referral: Swift.String?
+  public let speciality: Swift.String?
+  public let doctor: Swift.String?
+  public let filepath: Swift.String?
+  public let createdAt: Swift.String?
+  public let updatedAt: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct VideoCallStatusSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case professional
+    case tokbox
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let professional: MeetingDoctorsSchema.VideoCallProfessionalSchema?
+  public let tokbox: MeetingDoctorsSchema.VideoCallConsultationSchema?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct UserSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case firstName
+    case lastName
+    case email
+    case phone
+    case documentId
+    case gender
+    case birthday
+    case cardNumber
+    case contract
+    case coverage
+    case company
+    case status
+    case banned
+    case features
+    case termsAcceptedAt
+    case companyGroupCode
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public enum Gender : Swift.Int, Swift.Codable {
+    case male
+    case female
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum RegistrationStatus : Swift.Int, Swift.Codable {
+    case freemium
+    case processing
+    case formalized
+    case canceled
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public let firstName: Swift.String?
+  public let lastName: Swift.String?
+  public let email: Swift.String?
+  public let phone: Swift.String?
+  public let documentId: Swift.String?
+  public let gender: MeetingDoctorsSchema.UserSchema.Gender?
+  public let status: MeetingDoctorsSchema.UserSchema.RegistrationStatus?
+  public let birthday: Foundation.Date?
+  public let cardNumber: Swift.String?
+  public let contract: Swift.String?
+  public let coverage: Swift.String?
+  public let company: Swift.String?
+  public let banned: Swift.Int?
+  public let features: MeetingDoctorsSchema.UserFeaturesSchema?
+  public let termsAcceptedAt: Foundation.Date?
+  public let companyGroupCode: Swift.String?
+  public var isClient: Swift.Bool {
+    get
+  }
+  public var isBanned: Swift.Bool {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension MeetingDoctorsSchema.UserSchema {
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct UserFeaturesSchema : Swift.Codable {
+  public let videoCall: Swift.Bool?
+  public let videoCall1to1: Swift.Bool?
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case videoCall
+    case videoCall1to1
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct VideoCallRemoteNotificationSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case professional
+    case type
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let professional: MeetingDoctorsSchema.VideoCallProfessionalSchema?
+  public let type: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum VideoCallRemoteNotificationType : Swift.String {
+  case assigned
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension MeetingDoctorsSchema.VideoCallRemoteNotificationSchema {
+  public var notificationType: MeetingDoctorsSchema.VideoCallRemoteNotificationType {
+    get
+  }
+}
+public struct CustomerInstallationSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case installationGuid
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let installationGuid: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct MedicalProfessionalSchema : MeetingDoctorsSchema.MedicalDirectorySchema {
+  public enum Kind : Swift.UInt, Swift.Codable {
+    case unknown
+    case professional
+    case center
+    public init?(rawValue: Swift.UInt)
+    public typealias RawValue = Swift.UInt
+    public var rawValue: Swift.UInt {
+      get
+    }
+  }
+  public let id: Swift.UInt
+  public let name: Swift.String
+  public let type: MeetingDoctorsSchema.MedicalProfessionalSchema.Kind
+  public let phone: Swift.String
+  public let address: Swift.String
+  public let zip: Swift.String
+  public let latitude: CoreLocation.CLLocationDegrees?
+  public let longitude: CoreLocation.CLLocationDegrees?
+  public let distance: Swift.String?
+  public let categories: [Swift.UInt]?
+  public let specialities: [Swift.UInt]?
+  public var location: CoreLocation.CLLocationCoordinate2D? {
+    get
+  }
+  public init(id: Swift.UInt, name: Swift.String, type: MeetingDoctorsSchema.MedicalProfessionalSchema.Kind, phone: Swift.String, address: Swift.String, zip: Swift.String, latitude: CoreLocation.CLLocationDegrees?, longitude: CoreLocation.CLLocationDegrees?, distance: Swift.String?, categories: [Swift.UInt]?, specialities: [Swift.UInt]?)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct DerivationSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case type
+    case attributes
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let type: Swift.String?
+  public let attributes: MeetingDoctorsSchema.DerivationAttributesSchema?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct DerivationAttributesSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case id
+    case type
+    case professional
+    case professionalName
+    case customer
+    case consultation
+    case diagnosis
+    case indication
+    case services
+    case filepath
+    case createdAt
+    case updatedAt
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let id: Swift.String?
+  public let type: Swift.String?
+  public let professional: Swift.String?
+  public let professionalName: Swift.String?
+  public let customer: Swift.String?
+  public let consultation: Swift.String?
+  public let diagnosis: Swift.String?
+  public let indication: Swift.String?
+  public let services: [MeetingDoctorsSchema.DerivationServicesSchema]?
+  public let filepath: Swift.String?
+  public let createdAt: Swift.String?
+  public let updatedAt: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct DerivationServicesSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case code
+    case name
+    case detail
+    case instruction
+    case price
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let code: Swift.String?
+  public let name: Swift.String?
+  public let detail: Swift.String?
+  public let instruction: Swift.String?
+  public let price: MeetingDoctorsSchema.DerivationPriceSchema?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct DerivationPriceSchema : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case price
+    case currency
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public let price: Swift.Double?
+  public let currency: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct JoinConversationSchema : Swift.Codable {
+  public let id: Swift.Int
+  public init(_ id: Swift.Int)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct CustomerErrorSchema : Swift.Error, Swift.Decodable {
+  public let message: Swift.String?
+  public let error: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+}
+extension MeetingDoctorsSchema.CustomerErrorSchema : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public struct KeyboardNotification {
+  public let frameBegin: CoreFoundation.CGRect
+  public let frameEnd: CoreFoundation.CGRect
+  public let animationDuration: Swift.Double
+  public let animationCurve: UIKit.UIView.AnimationCurve
+  public let isLocal: Swift.Bool
+  public init?(_ notification: Foundation.Notification)
+}
+extension MeetingDoctorsSchema.SocketEmissionType : Swift.Equatable {}
+extension MeetingDoctorsSchema.SocketEmissionType : Swift.Hashable {}
+extension MeetingDoctorsSchema.SocketEmissionType : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.SocketListenerType : Swift.Equatable {}
+extension MeetingDoctorsSchema.SocketListenerType : Swift.Hashable {}
+extension MeetingDoctorsSchema.SocketListenerType : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.FirebaseRemoteNotificationModuleKey : Swift.Hashable {}
+extension MeetingDoctorsSchema.FirebaseRemoteNotificationModuleKey : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.MedicalProfessionalSchema.Kind : Swift.Hashable {}
+extension MeetingDoctorsSchema.MedicalProfessionalSchema.Kind : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.RoleSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.RoleSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.RoleSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.RoleSchema.RoleType : Swift.Equatable {}
+extension MeetingDoctorsSchema.RoleSchema.RoleType : Swift.Hashable {}
+extension MeetingDoctorsSchema.RoleSchema.RoleType : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.CommonDataResponse.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.CommonDataResponse.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.CommonDataResponse.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.SocketClientStatus : Swift.Equatable {}
+extension MeetingDoctorsSchema.SocketClientStatus : Swift.Hashable {}
+extension MeetingDoctorsSchema.SocketClientStatus : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.DerivationReportSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.DerivationReportSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.DerivationReportSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.CompanyDerivationSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.CompanyDerivationSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.CompanyDerivationSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.ProfessionalDerivationSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.ProfessionalDerivationSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.ProfessionalDerivationSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.SpecialitySchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.SpecialitySchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.SpecialitySchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.PrescriptionSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.PrescriptionSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.PrescriptionSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.PrescriptionAttributesSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.PrescriptionAttributesSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.PrescriptionAttributesSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.PrescriptionPrescriptionsSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.PrescriptionPrescriptionsSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.PrescriptionPrescriptionsSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.PrescriptionPriceSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.PrescriptionPriceSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.PrescriptionPriceSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.VideoCall1to1Request.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.VideoCall1to1Request.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.VideoCall1to1Request.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.CommonDataMetaResponse.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.CommonDataMetaResponse.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.CommonDataMetaResponse.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.ActionMessageSchemaValues : Swift.Equatable {}
+extension MeetingDoctorsSchema.ActionMessageSchemaValues : Swift.Hashable {}
+extension MeetingDoctorsSchema.ActionMessageSchemaValues : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.MessengerRemoteNotificationSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.MessengerRemoteNotificationSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.MessengerRemoteNotificationSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.MessengerRemoteNotificationType : Swift.Equatable {}
+extension MeetingDoctorsSchema.MessengerRemoteNotificationType : Swift.Hashable {}
+extension MeetingDoctorsSchema.MessengerRemoteNotificationType : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.MessengerProfessionalRemoteNotificationSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.MessengerProfessionalRemoteNotificationSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.MessengerProfessionalRemoteNotificationSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.ConversationSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.ConversationSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.ConversationSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.SetupProfessionalListSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.SetupProfessionalListSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.SetupProfessionalListSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.SetupProfessionalListType : Swift.Equatable {}
+extension MeetingDoctorsSchema.SetupProfessionalListType : Swift.Hashable {}
+extension MeetingDoctorsSchema.SetupProfessionalListType : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.TypingSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.TypingSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.TypingSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.MedicalAddressRequest.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.MedicalAddressRequest.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.MedicalAddressRequest.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.CustomerUserSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.CustomerUserSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.CustomerUserSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.VideoCallWorkflow : Swift.Equatable {}
+extension MeetingDoctorsSchema.VideoCallWorkflow : Swift.Hashable {}
+extension MeetingDoctorsSchema.VideoCallWorkflow : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.VideoCallSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.VideoCallSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.VideoCallSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.VideoCallResponse.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.VideoCallResponse.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.VideoCallResponse.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.VideoCallStatusResponse.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.VideoCallStatusResponse.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.VideoCallStatusResponse.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.VideoCallProfessionalSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.VideoCallProfessionalSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.VideoCallProfessionalSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.FirebaseRemoteNotificationSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.FirebaseRemoteNotificationSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.FirebaseRemoteNotificationSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.FirebaseRemoteNotificationTypeKey : Swift.Equatable {}
+extension MeetingDoctorsSchema.FirebaseRemoteNotificationTypeKey : Swift.Hashable {}
+extension MeetingDoctorsSchema.FirebaseRemoteNotificationTypeKey : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.MessageStatusSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.MessageStatusSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.MessageStatusSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.MessageSchema.Kind : Swift.Equatable {}
+extension MeetingDoctorsSchema.MessageSchema.Kind : Swift.Hashable {}
+extension MeetingDoctorsSchema.MessageSchema.Kind : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.MessageSchema.Status : Swift.Equatable {}
+extension MeetingDoctorsSchema.MessageSchema.Status : Swift.Hashable {}
+extension MeetingDoctorsSchema.MessageSchema.Status : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.MessageSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.MessageSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.MessageSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.MessageSchema.Metadata.TextCodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.MessageSchema.Metadata.TextCodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.MessageSchema.Metadata.TextCodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.MessageSchema.Metadata.ImageCodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.MessageSchema.Metadata.ImageCodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.MessageSchema.Metadata.ImageCodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.MessageSchema.Metadata.FileCodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.MessageSchema.Metadata.FileCodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.MessageSchema.Metadata.FileCodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.VideoCallConsultationSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.VideoCallConsultationSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.VideoCallConsultationSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.ChatSocketClientCredentials.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.ChatSocketClientCredentials.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.ChatSocketClientCredentials.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.CommonMetaSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.CommonMetaSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.CommonMetaSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.CommonSimpleDataResponse.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.CommonSimpleDataResponse.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.CommonSimpleDataResponse.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.LastMessageSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.LastMessageSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.LastMessageSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.ReportSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.ReportSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.ReportSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.ReportAttributesSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.ReportAttributesSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.ReportAttributesSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.PrescriptionReportSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.PrescriptionReportSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.PrescriptionReportSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.LaboratoryServicesReportSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.LaboratoryServicesReportSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.LaboratoryServicesReportSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.NonLaboratoryServicesReportSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.NonLaboratoryServicesReportSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.NonLaboratoryServicesReportSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.RadiologyServicesReportSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.RadiologyServicesReportSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.RadiologyServicesReportSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.ReportPriceSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.ReportPriceSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.ReportPriceSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.CustomerAuthSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.CustomerAuthSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.CustomerAuthSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.VideoCallTrackingRequest.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.VideoCallTrackingRequest.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.VideoCallTrackingRequest.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.OSName : Swift.Equatable {}
+extension MeetingDoctorsSchema.OSName : Swift.Hashable {}
+extension MeetingDoctorsSchema.OSName : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.ScheduleSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.ScheduleSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.ScheduleSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.ScheduleSchema.State : Swift.Equatable {}
+extension MeetingDoctorsSchema.ScheduleSchema.State : Swift.Hashable {}
+extension MeetingDoctorsSchema.ScheduleSchema.State : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.ScheduleSchema.WeekDay : Swift.Equatable {}
+extension MeetingDoctorsSchema.ScheduleSchema.WeekDay : Swift.Hashable {}
+extension MeetingDoctorsSchema.ScheduleSchema.WeekDay : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.ContactSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.ContactSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.ContactSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.ContactSchema.Status : Swift.Equatable {}
+extension MeetingDoctorsSchema.ContactSchema.Status : Swift.Hashable {}
+extension MeetingDoctorsSchema.ContactSchema.Status : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.CustomerNotificationSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.CustomerNotificationSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.CustomerNotificationSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.ReferralSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.ReferralSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.ReferralSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.ReferralAttributesSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.ReferralAttributesSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.ReferralAttributesSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.VideoCallStatusSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.VideoCallStatusSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.VideoCallStatusSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.UserSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.UserSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.UserSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.UserSchema.Gender : Swift.Equatable {}
+extension MeetingDoctorsSchema.UserSchema.Gender : Swift.Hashable {}
+extension MeetingDoctorsSchema.UserSchema.Gender : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.UserSchema.RegistrationStatus : Swift.Equatable {}
+extension MeetingDoctorsSchema.UserSchema.RegistrationStatus : Swift.Hashable {}
+extension MeetingDoctorsSchema.UserSchema.RegistrationStatus : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.UserFeaturesSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.UserFeaturesSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.UserFeaturesSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.VideoCallRemoteNotificationSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.VideoCallRemoteNotificationSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.VideoCallRemoteNotificationSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.VideoCallRemoteNotificationType : Swift.Equatable {}
+extension MeetingDoctorsSchema.VideoCallRemoteNotificationType : Swift.Hashable {}
+extension MeetingDoctorsSchema.VideoCallRemoteNotificationType : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.CustomerInstallationSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.CustomerInstallationSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.CustomerInstallationSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.DerivationSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.DerivationSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.DerivationSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.DerivationAttributesSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.DerivationAttributesSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.DerivationAttributesSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.DerivationServicesSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.DerivationServicesSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.DerivationServicesSchema.CodingKeys : Swift.RawRepresentable {}
+extension MeetingDoctorsSchema.DerivationPriceSchema.CodingKeys : Swift.Equatable {}
+extension MeetingDoctorsSchema.DerivationPriceSchema.CodingKeys : Swift.Hashable {}
+extension MeetingDoctorsSchema.DerivationPriceSchema.CodingKeys : Swift.RawRepresentable {}

@@ -1,0 +1,4 @@
+framework module MeetingDoctorsSchema {
+  header "MeetingDoctorsSchema-Swift.h"
+  requires objc
+}
